@@ -1,6 +1,6 @@
 import os
 import json
-from datetime import datetime
+from datetime import datetime, timedelta
 import pytz
 from podgen import Podcast, Episode, Media, Category
 
@@ -62,7 +62,12 @@ def generate_rss(new_title, new_summary, str_date, mp3_url, duration, file_size)
         episode.title = ep_data['title']
         episode.summary = ep_data['summary'] # Apple Podcast 需要的純文字或微量HTML簡介
         episode.publication_date = pub_date
-        episode.media = Media(ep_data['mp3_url'], int(ep_data['file_size']), type="audio/mpeg", duration=ep_data['duration'])
+
+        # 將 HH:MM:SS 轉為 datetime.timedelta
+        h, m, s = map(int, ep_data['duration'].split(':'))
+        td = timedelta(hours=h, minutes=m, seconds=s)
+        
+        episode.media = Media(ep_data['mp3_url'], int(ep_data['file_size']), type="audio/mpeg", duration=td)
         
         p.episodes.append(episode)
 
