@@ -2,7 +2,7 @@ import os
 import json
 from datetime import datetime, timedelta
 import pytz
-from podgen import Podcast, Episode, Media, Category
+from podgen import Podcast, Episode, Media, Category, Person
 
 EPISODES_FILE = "episodes.json"
 FEED_FILE = "feed.xml"
@@ -13,6 +13,8 @@ PODCAST_DESC = "Your go-to podcast for staying on top of the news that truly mat
 PODCAST_WEBSITE = "https://github.com/ericchi-valuation/Taiwan-Daily-Insider"
 PODCAST_EXPLICIT = False
 PODCAST_IMAGE_URL = "https://raw.githubusercontent.com/ericchi-valuation/Taiwan-Daily-Insider/main/cover.png" # 之後我們會教您上傳真正的封面
+AUTHOR_NAME = "Eric Chi"
+AUTHOR_EMAIL = "sally0618@gmail.com"  
 
 def generate_rss(new_title, new_summary, str_date, mp3_url, duration, file_size):
     tz = pytz.timezone('Asia/Taipei')
@@ -53,6 +55,10 @@ def generate_rss(new_title, new_summary, str_date, mp3_url, duration, file_size)
     p.image = PODCAST_IMAGE_URL
     p.language = "en-US"
     p.category = Category('News', 'Daily News')
+    
+    # 👇 更新點：加上 作者 與 Email，以符合 Spotify / Apple Podcast 驗證權限需求
+    p.authors = [Person(AUTHOR_NAME, AUTHOR_EMAIL)]
+    p.owner = Person(AUTHOR_NAME, AUTHOR_EMAIL)
 
     for ep_data in episodes_data:
         # 將 ISO 日期字串轉回 True localized datetime
