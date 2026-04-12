@@ -8,10 +8,10 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Sun, 12 Apr 2026 22:58:33 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 12 Apr 2026 23:07:06 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>sally0618@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Sun, 12 Apr 2026 22:58:31 +0000</pubDate>
+    <pubDate>Sun, 12 Apr 2026 23:07:05 +0000</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -38,11 +38,11 @@
     </item>
     <item>
       <title>Taiwan Daily Insider - 2026-04-13</title>
-      <description><![CDATA[Good morning, good afternoon, or good evening, wherever you are tuning in from! Welcome to the Taiwan Daily Insider, your essential daily briefing for foreign professionals, expats, and Gold Card holders navigating the dynamic landscape of Taiwan. I’m your host, and I’m thrilled to bring you the top stories shaping our island today, Saturday, April 12, 2026.Let’s dive straight into the headlines that matter most to you, starting with some significant economic news that’s making waves across the financial markets.The New Taiwan Dollar, or NTD, is continuing its epic ascent against the US dollar, showcasing an impressive surge that’s turning heads. Just two days ago, we saw a remarkable 3.07% jump in a single day. And today, the momentum hasnt slowed down! The NTD opened at 30.91 to the US dollar, but within a mere fifteen minutes of trading, it had already strengthened by over one New Taiwan Dollar, briefly touching the 29-dollar mark. This isnt just a minor fluctuation; were talking about a significant appreciation, with the currency gaining over eight cents in early trading alone.]]></description>
+      <description><![CDATA[Good morning, afternoon, or evening, wherever you are tuning in from! This is your host, [Host Name - *I will use a placeholder as no name was provided, assuming the TTS will just read the script without needing a specific host name*], and welcome back to the Taiwan Daily Insider. Your essential daily briefing for foreign professionals, expats, and Gold Card holders navigating the vibrant landscape of Taiwan.Today is Saturday, April 12, 2026. Lets dive into the stories making waves across the island and beyond.Were kicking things off with some significant economic news thats sure to catch the attention of anyone dealing with currency exchange. The New Taiwan Dollar, or NTD, is on an absolute tear! Following an epic surge earlier in the week, where it jumped over three percent in a single day, the NTD continued its powerful ascent this morning. It opened at 30.91 against the US Dollar and, within just fifteen minutes, saw its value appreciate by more than one full New Taiwan Dollar, briefly touching the 29 NTD mark. This kind of rapid appreciation is quite remarkable and speaks volumes about the current strength of Taiwans economy and its appeal to foreign capital. For many of you, this means your foreign currency earnings will stretch a bit further when converted, but it also impacts export competitiveness for local businesses. Analysts are pointing to robust export performance, particularly in the tech sector, coupled with sustained foreign investment inflows, as key drivers. The Central Bank will undoubtedly be watching this closely, as such rapid movements can have broader implications for monetary policy and inflation. Well keep you updated on how this develops, but for now, its a testament to the islands economic resilience.]]></description>
       <guid isPermaLink="false">https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-04-13/TaiwanDaily_Podcast_Final.mp3</guid>
-      <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-04-13/TaiwanDaily_Podcast_Final.mp3" length="16077262" type="audio/mpeg"/>
-      <itunes:duration>11:09</itunes:duration>
-      <pubDate>Sun, 12 Apr 2026 22:58:31 +0000</pubDate>
+      <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-04-13/TaiwanDaily_Podcast_Final.mp3" length="15015227" type="audio/mpeg"/>
+      <itunes:duration>10:25</itunes:duration>
+      <pubDate>Sun, 12 Apr 2026 23:07:05 +0000</pubDate>
     </item>
   </channel>
 </rss>
