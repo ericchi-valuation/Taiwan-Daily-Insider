@@ -50,5 +50,26 @@ def main():
     from core.audio_mixer import mix_podcast_audio
     mix_podcast_audio(voice_file=raw_voice_file, bgm_file="bgm.mp3", output_file="TaiwanDaily_Podcast_Final.mp3")
 
+    # ---------------------------------------------------------
+    # 階段 4：內容分發 (電子報與 Threads)
+    # ---------------------------------------------------------
+    print("\n[4/4] 正在將內容分發至電子報與 Threads...")
+    from core.content_reformatter import reformat_for_newsletter, reformat_for_threads
+    
+    # 1. 改寫內容
+    newsletter_html = reformat_for_newsletter(script)
+    threads_text = reformat_for_threads(script)
+    
+    # 2. 發送電子報
+    from publishers.email_sender import send_newsletter
+    today_date = time.strftime("%Y-%m-%d")
+    send_newsletter(f"Taiwan Daily Insider - {today_date}", newsletter_html)
+    
+    # 3. 發布 Threads
+    from publishers.threads_poster import post_to_threads
+    post_to_threads(threads_text)
+    
+    print("\n🎉 今日所有自動化任務完成！")
+
 if __name__ == "__main__":
     main()
