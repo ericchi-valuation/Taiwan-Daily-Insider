@@ -19,7 +19,7 @@ jobs:
       - name: 🐍 設定 Python 執行環境
         uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
+          python-version: '3.13'
           
       - name: ⚙️ 安裝系統級混音套件 (ffmpeg)
         run: sudo apt-get update && sudo apt-get install -y ffmpeg
