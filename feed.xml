@@ -8,12 +8,18 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Sat, 11 Apr 2026 23:03:41 +0000</lastBuildDate>
-    <pubDate>Sat, 11 Apr 2026 23:03:40 +0000</pubDate>
+    <lastBuildDate>Sun, 12 Apr 2026 13:25:59 +0000</lastBuildDate>
+    <itunes:author>Eric Chi</itunes:author>
+    <managingEditor>sally0618@gmail.com (Eric Chi)</managingEditor>
+    <pubDate>Sun, 12 Apr 2026 13:25:56 +0000</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
     <itunes:image href="https://raw.githubusercontent.com/ericchi-valuation/Taiwan-Daily-Insider/main/cover.png"/>
+    <itunes:owner>
+      <itunes:name>Eric Chi</itunes:name>
+      <itunes:email>sally0618@gmail.com</itunes:email>
+    </itunes:owner>
     <item>
       <title>Taiwan Daily Insider - 2026-04-11</title>
       <description><![CDATA[Good morning, good afternoon, or good evening, wherever you are tuning in from! Welcome to Taiwan Daily Insider, your essential guide to navigating the pulse of Taiwan. I’m your host, and today is Saturday, April 11, 2026. Lets dive into the stories making headlines and shaping conversations across the island.We kick things off today with some significant financial news that will undoubtedly catch the eye of every expat and professional here. The New Taiwan Dollar, or NTD, is on an absolutely epic surge! Following a remarkable 3.07% jump earlier this month, the NTD continued its powerful ascent this morning, opening at 30.91 against the US Dollar. Within a mere 15 minutes, it had already surged by over one NTD, briefly touching the 29 NTD mark. This kind of rapid appreciation is something we havent seen in a while, reflecting strong foreign capital inflows and robust export performance.Now, what does this mean for you? If youre earning in NTD, your purchasing power for imported goods and international travel just got a significant boost. For those of you receiving remittances from abroad in US Dollars, you might find your local spending power slightly diminished, but conversely, if youre sending money *out* of Taiwan, your NTD will go further. This strong NTD is often a signal of confidence in Taiwans economic fundamentals, but it also presents challenges for some of Taiwans export-oriented industries. We’ll be keeping a close eye on whether the Central Bank steps in with any measures to stabilize the currency in the coming days.]]></description>
@@ -21,6 +27,14 @@
       <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-04-11/TaiwanDaily_Podcast_Final.mp3" length="15502359" type="audio/mpeg"/>
       <itunes:duration>10:45</itunes:duration>
       <pubDate>Sat, 11 Apr 2026 23:03:40 +0000</pubDate>
+    </item>
+    <item>
+      <title>Taiwan Daily Insider - 2026-04-12</title>
+      <description><![CDATA[Good morning, good afternoon, or good evening, wherever you are tuning in from! Welcome to the Taiwan Daily Insider, your essential daily briefing for foreign professionals, expats, and Gold Card holders right here in Taiwan. Im your host, and today is Saturday, April 12, 2026.Weve got a packed show for you today, diving deep into Taiwans booming economy, critical geopolitical developments, and some intriguing local social media buzz. If youre invested in Taiwans future, literally and figuratively, youll want to stick around.Lets kick things off with a major economic headline thats probably already caught your eye: the New Taiwan Dollar, or NTD, is on an absolute tear! This morning, the NTD continued its epic surge, once again soaring by over one New Taiwan Dollar against the US dollar in early trading, briefly hitting the 29 NTD to 1 US dollar mark. This comes after an astonishing 3.07% single-day appreciation just a couple of days ago. The Taipei foreign exchange market saw the NTD open at 30.91 against the US dollar, immediately strengthening by over 1.5 NTD cents, and then quickly climbing past the 30.25 mark, before pushing even higher.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-04-12/TaiwanDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-04-12/TaiwanDaily_Podcast_Final.mp3" length="16878489" type="audio/mpeg"/>
+      <itunes:duration>11:43</itunes:duration>
+      <pubDate>Sun, 12 Apr 2026 13:25:56 +0000</pubDate>
     </item>
   </channel>
 </rss>
