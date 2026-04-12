@@ -19,7 +19,7 @@ jobs:
       - name: 🐍 設定 Python 執行環境
         uses: actions/setup-python@v5
         with:
-          python-version: '3.13'
+          python-version: '3.11'
           
       - name: ⚙️ 安裝系統級混音套件 (ffmpeg)
         run: sudo apt-get update && sudo apt-get install -y ffmpeg
@@ -39,8 +39,8 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }} # 讓腳本有權限操作您的專案
         run: |
-          # 取得今天日期
-          TODAY=$(date +'%Y-%m-%d')
+          # 取得今天日期 (台灣時間)
+          TODAY=$(TZ='Asia/Taipei' date +'%Y-%m-%d')
           ISO_DATE=$(date -u +'%Y-%m-%dT%H:%M:%SZ')
           
           echo "==== 計算音檔長度與大小 ===="
