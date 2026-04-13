@@ -8,10 +8,10 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Sun, 12 Apr 2026 23:07:06 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 13 Apr 2026 23:16:06 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>sally0618@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Sun, 12 Apr 2026 23:07:05 +0000</pubDate>
+    <pubDate>Mon, 13 Apr 2026 23:16:02 +0000</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -43,6 +43,14 @@
       <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-04-13/TaiwanDaily_Podcast_Final.mp3" length="15015227" type="audio/mpeg"/>
       <itunes:duration>10:25</itunes:duration>
       <pubDate>Sun, 12 Apr 2026 23:07:05 +0000</pubDate>
+    </item>
+    <item>
+      <title>Taiwan Daily Insider - 2026-04-14</title>
+      <description><![CDATA[Welcome to Taiwan Daily Insider, your essential guide to whats happening on the island. Im your host, and today is April 13, 2026. Weve got a packed agenda for you, covering everything from the surging New Taiwan Dollar and its implications for your wallet, to major shifts in the semiconductor power grid, and of course, a deep dive into the latest on the Tai-ex. Lets dive right in.We kick things off today with some truly remarkable news on the currency front. The New Taiwan Dollar, or NTD, is continuing its epic ascent, showing no signs of slowing down. After a staggering 3.07% surge just two days ago, a move that sent ripples through global currency markets, the NTD opened today at 30.91 against the US Dollar. But that wasnt the end of the story. Within a mere fifteen minutes of trading, we saw an even more aggressive appreciation, with the currency gaining over one full New Taiwan Dollar, flashing past the 29-dollar mark at one point, before settling strongly later in the day around the 30.25 level. This isnt just a minor fluctuation; were talking about a significant, sustained upward trend thats catching the eye of global investors and economists alike.So, whats driving this incredible strength? A confluence of factors, primarily Taiwans robust export performance, particularly in the high-tech sector, continues to bring in substantial foreign currency. Furthermore, the massive inflow of foreign investment into the Tai-ex, which well discuss shortly, also bolsters demand for the local currency. The Central Banks measured approach to intervention also suggests a comfort with the NTDs appreciation, reflecting strong confidence in Taiwans economic fundamentals. For foreign professionals, expats, and businesses operating here, this continued strength of the NTD has considerable implications. It means your purchasing power for local goods and services is slightly diminished if youre earning in foreign currency, but it also makes imports cheaper. For those remitting funds back home, its a favorable situation. Overall, it signals a very healthy and dynamic economy, but its certainly a trend to keep a close eye on for financial planning.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-04-14/TaiwanDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-04-14/TaiwanDaily_Podcast_Final.mp3" length="21278973" type="audio/mpeg"/>
+      <itunes:duration>14:46</itunes:duration>
+      <pubDate>Mon, 13 Apr 2026 23:16:02 +0000</pubDate>
     </item>
   </channel>
 </rss>
