@@ -8,10 +8,10 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Mon, 13 Apr 2026 23:16:06 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 14 Apr 2026 23:27:41 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>sally0618@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Mon, 13 Apr 2026 23:16:02 +0000</pubDate>
+    <pubDate>Tue, 14 Apr 2026 23:27:38 +0000</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -51,6 +51,14 @@
       <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-04-14/TaiwanDaily_Podcast_Final.mp3" length="21278973" type="audio/mpeg"/>
       <itunes:duration>14:46</itunes:duration>
       <pubDate>Mon, 13 Apr 2026 23:16:02 +0000</pubDate>
+    </item>
+    <item>
+      <title>Taiwan Daily Insider - 2026-04-15</title>
+      <description><![CDATA[Welcome to Taiwan Daily Insider, your daily dose of all things Taiwan. Today is April 14, 2026. Im your host, and weve got a packed show for you, diving deep into the economic currents, political developments, and a glimpse into whats buzzing across the island.Lets kick things off with a major economic update thats certainly impacting your wallets and business forecasts: the New Taiwan Dollar. The NTD is on an absolute tear, continuing its epic rally. After a dramatic 3.07% surge just a couple of days ago, the currency opened strong today at 30.91 against the US Dollar. But it didnt stop there. Within the first fifteen minutes of trading, the NTD saw an incredible appreciation of over one New Taiwan Dollar, briefly flashing past the 29 mark before settling around 30.25. This kind of rapid appreciation is significant. For foreign professionals and expats, a stronger NTD means your purchasing power for imported goods and services potentially increases, and if youre earning in NTD, your remittances abroad might stretch a little further. However, for businesses involved in exports, this can also mean tighter margins. Its a dynamic situation that well continue to monitor closely, as it reflects strong capital inflows and a robust economic outlook for Taiwan.Speaking of robust, lets turn to the Taiwan Stock Exchange, the TAIEX, which continues its impressive run. The market saw another day of record highs, largely propelled by the semiconductor giant, TSMC, or Taiwan Semiconductor Manufacturing Company. TSMCs shares soared to a new all-time high of 2055 New Taiwan Dollars. This isnt just a win for TSMC; its a powerful indicator of the broader markets confidence, especially in Taiwans pivotal role in the global tech supply chain. The TAIEXs overall ascent today was also fueled by strong performances in related sectors. We saw significant gains in optical components, robotics, and Copper Clad Laminate, or CCL, which is a key material for printed circuit boards. These sectors are often seen as bellwethers for future tech trends, particularly with the surging demand for AI infrastructure.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-04-15/TaiwanDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-04-15/TaiwanDaily_Podcast_Final.mp3" length="13294280" type="audio/mpeg"/>
+      <itunes:duration>09:13</itunes:duration>
+      <pubDate>Tue, 14 Apr 2026 23:27:38 +0000</pubDate>
     </item>
   </channel>
 </rss>
