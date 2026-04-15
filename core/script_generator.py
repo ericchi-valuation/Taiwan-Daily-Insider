@@ -39,7 +39,7 @@ def score_and_sort_articles(client, news_data):
     
     OUTPUT FORMAT:
     Provide only a JSON list of objects with "id" and "score", like this:
-    [{"id": 0, "score": 8}, {"id": 1, "score": 5}, ...]
+    [{{"id": 0, "score": 8}}, {{"id": 1, "score": 5}}, ...]
     
     ARTICLES:
     {articles_list_text}
