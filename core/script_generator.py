@@ -107,7 +107,9 @@ def generate_podcast_script(news_data, social_data):
         topics_str = ', '.join(topics) if topics else 'General'
         sources_text += f"Topic: {title} (From {topics_str})\n"
 
-    today_str = datetime.date.today().strftime("%B %d, %Y")
+    import pytz
+    tz = pytz.timezone('Asia/Taipei')
+    today_str = datetime.datetime.now(tz).strftime("%B %d, %Y")
 
     # Step 2: AI 總編輯的 System Prompt
     system_prompt = f"""

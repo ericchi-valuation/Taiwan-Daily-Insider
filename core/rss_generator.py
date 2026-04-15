@@ -14,7 +14,7 @@ PODCAST_WEBSITE = "https://github.com/ericchi-valuation/Taiwan-Daily-Insider"
 PODCAST_EXPLICIT = False
 PODCAST_IMAGE_URL = "https://raw.githubusercontent.com/ericchi-valuation/Taiwan-Daily-Insider/main/cover.png" # 之後我們會教您上傳真正的封面
 AUTHOR_NAME = "Eric Chi"
-AUTHOR_EMAIL = "sally0618@gmail.com"  
+AUTHOR_EMAIL = "eric.chi1988@gmail.com"  
 
 def generate_rss(new_title, new_summary, str_date, mp3_url, duration, file_size):
     tz = pytz.timezone('Asia/Taipei')
