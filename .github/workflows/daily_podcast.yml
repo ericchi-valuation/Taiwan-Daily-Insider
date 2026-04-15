@@ -45,7 +45,7 @@ jobs:
         run: |
           # 取得今天日期 (台灣時間)
           TODAY=$(TZ='Asia/Taipei' date +'%Y-%m-%d')
-          ISO_DATE=$(date -u +'%Y-%m-%dT%H:%M:%SZ')
+          ISO_DATE=$(TZ='Asia/Taipei' date +'%Y-%m-%dT%H:%M:%S+08:00')
           
           echo "==== 計算音檔長度與大小 ===="
           # 使用 ffprobe 計算秒數
@@ -66,8 +66,8 @@ jobs:
           # 把 mp3 的直接下載連結湊出來
           URL="https://github.com/${{ github.repository }}/releases/download/ep-${TODAY}/TaiwanDaily_Podcast_Final.mp3"
           
-          # 從講稿抓出前三行當作這一集的介紹
-          SUMMARY=$(head -n 5 script.txt | tr -d '\n' | tr -d '"' | tr -d "'")
+          # 從 summary.txt 讀取 AI 生成的精簡摘要
+          SUMMARY=$(cat summary.txt | tr -d '"' | tr -d "'")
           if [ -z "$SUMMARY" ]; then SUMMARY="Today's latest news and tech updates from Taiwan."; fi
           
           python core/rss_generator.py \
