@@ -62,7 +62,10 @@ def main():
     
     # 2. 發送電子報
     from publishers.email_sender import send_newsletter
-    today_date = time.strftime("%Y-%m-%d")
+    import pytz
+    import datetime
+    tz_tw = pytz.timezone('Asia/Taipei')
+    today_date = datetime.datetime.now(tz_tw).strftime("%Y-%m-%d")
     send_newsletter(f"Taiwan Daily Insider - {today_date}", newsletter_html)
     
     # 3. 發布 Threads
