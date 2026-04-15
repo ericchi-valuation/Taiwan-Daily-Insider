@@ -129,19 +129,20 @@ def generate_podcast_script(news_data, social_data):
     8. TONE: Think "NPR Up First". Keep it fast-paced but informative.
     
     ### SCRIPT FORMAT ###
-    - Output ONLY the spoken words. No stage directions ([Intro Music]). No Markdown (**).
-    - Write in a natural spoken English rhythm.
-    - Elaborate extensively on high-scoring stories to ensure the script is sufficiently long and detailed.
+    - Output ONLY a JSON object with two keys:
+      "script": The full spoken broadcast script (natural conversational English, no Markdown, no stage directions).
+      "summary": A concise 1-2 sentence summary of the top news covered today, suitable for a podcast app description.
     """
     
-    print("\n[AI 運作中] 正在編寫講稿 (約需 20~40 秒)...")
+    print("\n[AI 運作中] 正在編寫講稿與摘要 (約需 20~40 秒)...")
     
     config = types.GenerateContentConfig(
         system_instruction=system_prompt,
         temperature=0.6,
+        response_mime_type='application/json',
     )
     
-    prompt_content = f"Here are today's materials. Please write a detailed, expansive script:\n\n{sources_text}"
+    prompt_content = f"Here are today's materials. Please write a detailed, expansive script and a summary:\n\n{sources_text}"
     
     # 移除了不存在的 2.5，專注於 2.0 與穩定的 1.5 系列
     models_to_try = ['gemini-2.0-flash', 'gemini-1.5-flash', 'gemini-1.5-pro']
@@ -155,7 +156,7 @@ def generate_podcast_script(news_data, social_data):
                 contents=prompt_content,
                 config=config
             )
-            print(f"✔️ 成功使用 {model_name} 模型生成講稿！")
+            print(f"✔️ 成功使用 {model_name} 模型生成內容！")
             break
             
         except Exception as e:
@@ -166,18 +167,29 @@ def generate_podcast_script(news_data, social_data):
             if "429" in error_msg or "Quota exceeded" in error_msg:
                 print("⏳ 偵測到 API 額度耗盡 (429)，等待 60 秒後重試...")
                 time.sleep(60)
-                # 這裡設計為直接跳出迴圈，因為如果免費額度沒了，換模型也沒用，需等待
                 break 
             continue
             
     if getattr(response, 'text', None) is None:
-        print("❌ 所有模型皆無回應或 API 額度受限，無法生成講稿。")
+        print("❌ 所有模型皆無回應或 API 額度受限，無法生成內容。")
         return None
         
-    script = response.text
-    
-    with open("script.txt", "w", encoding="utf-8") as f:
-        f.write(script)
+    try:
+        result_json = json.loads(response.text)
+        script = result_json.get('script', '')
+        summary = result_json.get('summary', "Today's latest news and tech updates from Taiwan.")
         
-    print("✅ 講稿生成完畢！已將草稿儲存至 script.txt")
-    return script
+        # 存檔講稿
+        with open("script.txt", "w", encoding="utf-8") as f:
+            f.write(script)
+            
+        # 存檔摘要
+        with open("summary.txt", "w", encoding="utf-8") as f:
+            f.write(summary)
+            
+        print("✅ 講稿與摘要生成完畢！已儲存至 script.txt 與 summary.txt")
+        return script
+        
+    except Exception as e:
+        print(f"❌ JSON 解析失敗: {e}")
+        return None
