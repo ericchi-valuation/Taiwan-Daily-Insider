@@ -8,17 +8,17 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Tue, 14 Apr 2026 23:27:41 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 17 Apr 2026 22:24:22 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
-    <managingEditor>sally0618@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Tue, 14 Apr 2026 23:27:38 +0000</pubDate>
+    <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
+    <pubDate>Sat, 18 Apr 2026 06:24:19 +0800</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
     <itunes:image href="https://raw.githubusercontent.com/ericchi-valuation/Taiwan-Daily-Insider/main/cover.png"/>
     <itunes:owner>
       <itunes:name>Eric Chi</itunes:name>
-      <itunes:email>sally0618@gmail.com</itunes:email>
+      <itunes:email>eric.chi1988@gmail.com</itunes:email>
     </itunes:owner>
     <item>
       <title>Taiwan Daily Insider - 2026-04-11</title>
@@ -59,6 +59,14 @@
       <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-04-15/TaiwanDaily_Podcast_Final.mp3" length="13294280" type="audio/mpeg"/>
       <itunes:duration>09:13</itunes:duration>
       <pubDate>Tue, 14 Apr 2026 23:27:38 +0000</pubDate>
+    </item>
+    <item>
+      <title>Taiwan Daily Insider - 2026-04-18</title>
+      <description><![CDATA[Todays latest news and tech updates from Taiwan.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-04-18/TaiwanDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-04-18/TaiwanDaily_Podcast_Final.mp3" length="8192253" type="audio/mpeg"/>
+      <itunes:duration>05:41</itunes:duration>
+      <pubDate>Sat, 18 Apr 2026 06:24:19 +0800</pubDate>
     </item>
   </channel>
 </rss>
