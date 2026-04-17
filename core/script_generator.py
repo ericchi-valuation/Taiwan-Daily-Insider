@@ -10,7 +10,7 @@ load_dotenv()
 
 def score_and_sort_articles(client, news_data):
     """
-    使用 Gemini 1.5 Flash 快速為所有新聞評分 (1-10)，並依重要性排序。
+    使用 Gemini 2.0 Flash 快速為所有新聞評分 (1-10)，並依重要性排序。
     """
     all_articles = []
     for source, articles in news_data.items():
@@ -49,9 +49,9 @@ def score_and_sort_articles(client, news_data):
 
     try:
         print(f"正在為 {len(all_articles)} 則新聞進行重要性評分 (熱度加權中)...")
-        # 絕對鎖定使用 gemini-1.5-flash
+        # ✅ 已升級為 2.0-flash，解決 404 找不到模型的問題
         response = client.models.generate_content(
-            model='gemini-1.5-flash',
+            model='gemini-2.0-flash',
             contents=scoring_prompt
         )
         
@@ -89,7 +89,7 @@ def generate_podcast_script(news_data, social_data):
         print("⚠️ 警告：沒有收集到任何新聞或社群資料，跳過 AI 生成。")
         return None
 
-    # Step 1: 重要性評分與排序 (強制取前 10 名防爆 Token)
+    # Step 1: 重要性評分與排序 (強制取前 10 名)
     top_articles = score_and_sort_articles(client, news_data)
     
     sources_text = "【Today's Prioritized Taiwan News Headlines】\n"
@@ -145,8 +145,8 @@ def generate_podcast_script(news_data, social_data):
     
     prompt_content = f"Here are today's materials. Please write a detailed, expansive script and a summary:\n\n{sources_text}"
     
-    # 徹底移除所有不存在的模型，僅保留官方穩定版
-    models_to_try = ['gemini-1.5-flash', 'gemini-1.5-pro']
+    # ✅ 鎖定使用付費帳戶支援的最新系列模型
+    models_to_try = ['gemini-2.0-flash', 'gemini-2.5-flash']
     response = None
     
     for model_name in models_to_try:
@@ -168,7 +168,7 @@ def generate_podcast_script(news_data, social_data):
                 error_msg = str(e)
                 print(f"⚠️ {model_name} 失敗: {error_msg}")
                 
-                # 429 額度保護機制
+                # 雖然綁卡了，但仍保留防禦機制以防萬一
                 if "429" in error_msg or "Quota exceeded" in error_msg:
                     print(f"⏳ 偵測到 API 額度耗盡 (429)，暫停 60 秒後重試...")
                     time.sleep(60)
