@@ -49,7 +49,7 @@ def score_and_sort_articles(client, news_data):
         print(f"正在為 {len(all_articles)} 則新聞進行重要性評分 (熱度加權中)...")
         # 使用 Flash 模型進行快速評分
         response = client.models.generate_content(
-            model='gemini-1.5-flash-latest',
+            model='gemini-1.5-flash-002',
             contents=scoring_prompt,
             config=types.GenerateContentConfig(
                 response_mime_type='application/json',
@@ -145,7 +145,7 @@ def generate_podcast_script(news_data, social_data):
     prompt_content = f"Here are today's materials. Please write a detailed, expansive script and a summary:\n\n{sources_text}"
     
     # 移除了不存在的 2.5，專注於 2.0 與穩定的 1.5 系列
-    models_to_try = ['gemini-1.5-flash-latest', 'gemini-2.0-flash', 'gemini-1.5-pro-latest']
+    models_to_try = ['gemini-1.5-flash-002', 'gemini-2.0-flash', 'gemini-1.5-pro-002']
     response = None
     
     for model_name in models_to_try:
