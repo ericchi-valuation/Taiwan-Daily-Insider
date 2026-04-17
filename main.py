@@ -70,6 +70,10 @@ def main():
     
     # 3. 發布 Threads
     from publishers.threads_poster import post_to_threads
+    
+    # 🌟 新增這一行：讓 GitHub Log 印出 Threads 到底拿到了什麼文字
+    print(f"\n👀 [Debug] 準備交給 Threads 發布的內容如下：\n{threads_text}\n" + "-"*30)
+    
     post_to_threads(threads_text)
     
     print("\n🎉 今日所有自動化任務完成！")
