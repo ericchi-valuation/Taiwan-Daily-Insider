@@ -49,9 +49,9 @@ def score_and_sort_articles(client, news_data):
 
     try:
         print(f"正在為 {len(all_articles)} 則新聞進行重要性評分 (熱度加權中)...")
-        # ✅ 已升級為 2.0-flash，解決 404 找不到模型的問題
+        # ✅ 已升級為 2.5-flash，解決 404 找不到模型的問題
         response = client.models.generate_content(
-            model='gemini-2.0-flash',
+            model='gemini-2.5-flash',
             contents=scoring_prompt
         )
         
