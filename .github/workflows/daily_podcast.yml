@@ -30,43 +30,47 @@ jobs:
       - name: 🎙️ 執行主要生成腳本 (AI寫稿、生成語音、混音、發送Email/Threads)
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          # 若您之後買了 ElevenLabs，把 API KEY 加進 Secret，就會自動啟用！
           ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
           GMAIL_ADDRESS: ${{ secrets.GMAIL_ADDRESS }}
           GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
           THREADS_USER_ID: ${{ secrets.THREADS_USER_ID }}
           THREADS_ACCESS_TOKEN: ${{ secrets.THREADS_ACCESS_TOKEN }}
         run: python main.py
-          
+
+      # ==========================================
+      # 🌟 新增：將產出的稿件與音檔打包存檔 (解決找不到 script.txt 的問題)
+      # ==========================================
+      - name: 📤 打包並上傳生成的稿件與音檔 (Artifacts)
+        uses: actions/upload-artifact@v4
+        with:
+          name: Podcast-Daily-Outputs
+          path: |
+            script.txt
+            summary.txt
+            TaiwanDaily_Podcast.mp3
+            TaiwanDaily_Podcast_Final.mp3
+          retention-days: 7 # 檔案會保留 7 天，之後自動刪除以節省空間
+
       - name: 🚀 打包 MP3 上傳至 GitHub Releases 並更新 RSS (feed.xml)
         id: create_release
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }} # 讓腳本有權限操作您的專案
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           # 取得今天日期 (台灣時間)
           TODAY=$(TZ='Asia/Taipei' date +'%Y-%m-%d')
           ISO_DATE=$(TZ='Asia/Taipei' date +'%Y-%m-%dT%H:%M:%S+08:00')
           
           echo "==== 計算音檔長度與大小 ===="
-          # 使用 ffprobe 計算秒數
           DURATION=$(ffprobe -i TaiwanDaily_Podcast_Final.mp3 -show_entries format=duration -v quiet -of csv="p=0" | cut -d'.' -f1)
           if [ -z "$DURATION" ]; then DURATION=600; fi
-          # 轉換成 HH:MM:SS
           FORMATTED_DURATION=$(printf "%02d:%02d:%02d\n" $(($DURATION/3600)) $(($DURATION%3600/60)) $(($DURATION%60)))
-          
-          # 取得檔案大小(bytes)
           FILE_SIZE=$(stat -c%s "TaiwanDaily_Podcast_Final.mp3")
           
           echo "==== 上傳音檔至 GitHub Release ===="
-          # 發布一個 Release (把這集 mp3 丟上去當附件)
-          # 使用 || true 避免同一天點兩次執行導致指令報錯中斷
           gh release create "ep-${TODAY}" TaiwanDaily_Podcast_Final.mp3 --title "Taiwan Daily Insider - ${TODAY}" --notes "Auto-generated daily podcast." || true
           
           echo "==== 更新 RSS Feed ===="
-          # 把 mp3 的直接下載連結湊出來
           URL="https://github.com/${{ github.repository }}/releases/download/ep-${TODAY}/TaiwanDaily_Podcast_Final.mp3"
-          
-          # 從 summary.txt 讀取 AI 生成的精簡摘要
           SUMMARY=$(cat summary.txt | tr -d '"' | tr -d "'")
           if [ -z "$SUMMARY" ]; then SUMMARY="Today's latest news and tech updates from Taiwan."; fi
           
@@ -80,9 +84,9 @@ jobs:
 
       - name: 💾 將最新的 RSS XML 存檔 Commit 到專案中
         run: |
+          TODAY=$(TZ='Asia/Taipei' date +'%Y-%m-%d')
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           git add feed.xml episodes.json
-          # 如果沒有變更就不會報錯
           git commit -m "Auto-update podcast feed for ${TODAY}" || exit 0
           git push
