@@ -25,7 +25,6 @@ def score_and_sort_articles(client, news_data):
     for i, a in enumerate(all_articles):
         articles_list_text += f"ID: {i} | Title: {a['title']}\nSummary: {a['summary']}\n\n"
 
-    # 修改 Prompt：強力要求純 JSON 輸出，移除 markdown 標籤
     scoring_prompt = f"""
     You are an expert news editor. Score the following news articles from 1 to 10 based on their importance for foreign professionals and expats in Taiwan.
     
@@ -50,9 +49,9 @@ def score_and_sort_articles(client, news_data):
 
     try:
         print(f"正在為 {len(all_articles)} 則新聞進行重要性評分 (熱度加權中)...")
-        # 移除 response_mime_type，避免 1.5-flash 報 404
+        # 絕對鎖定使用 gemini-1.5-flash
         response = client.models.generate_content(
-            model='gemini-1.5-flash-002',
+            model='gemini-1.5-flash',
             contents=scoring_prompt
         )
         
@@ -66,7 +65,7 @@ def score_and_sort_articles(client, news_data):
             
     except Exception as e:
         print(f"⚠️ 評分階段發生錯誤 (跳過排序): {e}")
-        # 【防禦機制】就算評分失敗，也不能讓所有文章進入下一關！
+        # 防禦機制：評分失敗時全部給 1 分，維持後續運行
         for a in all_articles:
             a['score'] = 1
 
@@ -90,7 +89,7 @@ def generate_podcast_script(news_data, social_data):
         print("⚠️ 警告：沒有收集到任何新聞或社群資料，跳過 AI 生成。")
         return None
 
-    # Step 1: 重要性評分與排序 (取前 10 名)
+    # Step 1: 重要性評分與排序 (強制取前 10 名防爆 Token)
     top_articles = score_and_sort_articles(client, news_data)
     
     sources_text = "【Today's Prioritized Taiwan News Headlines】\n"
@@ -139,7 +138,6 @@ def generate_podcast_script(news_data, social_data):
     
     print("\n[AI 運作中] 正在編寫講稿與摘要 (約需 20~40 秒)...")
     
-    # 移除 response_mime_type，確保所有模型都能相容
     config = types.GenerateContentConfig(
         system_instruction=system_prompt,
         temperature=0.6,
@@ -147,8 +145,8 @@ def generate_podcast_script(news_data, social_data):
     
     prompt_content = f"Here are today's materials. Please write a detailed, expansive script and a summary:\n\n{sources_text}"
     
-    # 首選 2.0，若失敗則退回 1.5
-    models_to_try = ['gemini-2.0-flash', 'gemini-1.5-flash-002']
+    # 徹底移除所有不存在的模型，僅保留官方穩定版
+    models_to_try = ['gemini-1.5-flash', 'gemini-1.5-pro']
     response = None
     
     for model_name in models_to_try:
@@ -164,29 +162,28 @@ def generate_podcast_script(news_data, social_data):
                     config=config
                 )
                 print(f"✔️ 成功使用 {model_name} 模型生成內容！")
-                break # 成功跳出 while
+                break 
                 
             except Exception as e:
                 error_msg = str(e)
                 print(f"⚠️ {model_name} 失敗: {error_msg}")
                 
-                # 真正的 429 處理邏輯：等待後「重試同一個模型」
+                # 429 額度保護機制
                 if "429" in error_msg or "Quota exceeded" in error_msg:
                     print(f"⏳ 偵測到 API 額度耗盡 (429)，暫停 60 秒後重試...")
                     time.sleep(60)
                     retry_count += 1
                 else:
-                    break # 非額度問題，跳出 while，嘗試下一個模型
+                    break 
                     
         if response:
-            break # 成功取得回應，跳出 for 迴圈
+            break 
             
     if getattr(response, 'text', None) is None:
         print("❌ 所有模型皆無回應或 API 額度受限，無法生成內容。")
         return None
         
     try:
-        # 清理可能殘留的 Markdown 標籤
         clean_text = response.text.replace("```json", "").replace("```", "").strip()
         result_json = json.loads(clean_text)
         
