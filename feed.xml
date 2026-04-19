@@ -8,10 +8,10 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Sun, 19 Apr 2026 14:08:49 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 19 Apr 2026 23:08:54 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Sun, 19 Apr 2026 22:08:48 +0800</pubDate>
+    <pubDate>Mon, 20 Apr 2026 07:08:51 +0800</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -75,6 +75,14 @@
       <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-04-19/TaiwanDaily_Podcast_Final.mp3" length="19670875" type="audio/mpeg"/>
       <itunes:duration>13:39</itunes:duration>
       <pubDate>Sun, 19 Apr 2026 22:08:48 +0800</pubDate>
+    </item>
+    <item>
+      <title>Taiwan Daily Insider - 2026-04-20</title>
+      <description><![CDATA[Today, Monday, April 20, 2026, the Central Bank intervened to stabilize the NTD amidst Middle East conflict, curbing imported inflation, with the currency now projected to hold stable around 31 against the USD in Q2. TSMC continues its meteoric rise, with analysts setting a NT$2600 target price and projecting NT$100 EPS by 2026, driven by its invincible advanced tech lead and a 58% profit jump, boosting the Taiex towards 38,000. Geopolitically, a Japanese warship in the Taiwan Strait affirmed free passage rights, while discussions on non-kinetic warfare and Taiwans defense strategies highlight regional complexities, alongside a local policy debate on integrating old labor pension system workers into the new one. Social media is buzzing with business insights, dating criteria, and TSMC interview tips.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-04-20/TaiwanDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-04-20/TaiwanDaily_Podcast_Final.mp3" length="22798672" type="audio/mpeg"/>
+      <itunes:duration>15:49</itunes:duration>
+      <pubDate>Mon, 20 Apr 2026 07:08:51 +0800</pubDate>
     </item>
   </channel>
 </rss>
