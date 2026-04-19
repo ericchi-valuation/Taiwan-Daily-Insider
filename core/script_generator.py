@@ -26,14 +26,17 @@ def score_and_sort_articles(client, news_data):
         articles_list_text += f"ID: {i} | Title: {a['title']}\nSummary: {a['summary']}\n\n"
 
     scoring_prompt = f"""
-    You are an expert news editor. Score the following news articles from 1 to 10 based on their importance for foreign professionals and expats in Taiwan.
+    You are an expert news editor for an English-language podcast targeting foreign professionals and expats in Taiwan.
+    Score the following news articles from 1 to 10 based on their importance for the target audience.
     
     SCORING CRITERIA:
-    - 8-10: Major economic shifts (TSMC, TAIEX), key policy changes (Gold Card, visa, labor laws), major geopolitical events.
-    - 5-7: Industry-specific updates, significant tech news, major cultural/infrastructure events.
-    - 1-4: Minor local news, lifestyle stories, general interest.
+    - 9-10: NTD/TWD exchange rate moves, Taiwan central bank policy decisions, TAIEX major moves (>1%), TSMC earnings/capacity news, Gold Card / visa / labor law changes for foreigners.
+    - 7-8: Major cross-strait political developments, significant foreign investment announcements, semiconductor industry shifts, major economic policy.
+    - 5-6: Industry-specific updates, significant tech news, major infrastructure events.
+    - 1-4: Minor local news, lifestyle stories, sports (unless a major international event).
     
     IMPORTANT: If multiple articles discuss the same topic or event, give them a "Frequency Bonus" (+1 or +2).
+    NTD/TWD exchange rate news ALWAYS scores at least 8, even if the article seems minor.
     
     OUTPUT FORMAT:
     You MUST output ONLY a raw JSON array. DO NOT wrap it in ```json blocks. DO NOT add any conversational text.
@@ -116,16 +119,31 @@ def generate_podcast_script(news_data, social_data):
     Your strict target audience is foreign professionals, expats, and foreign Gold Card holders living/working in Taiwan.
     
     IMPORTANT: You MUST start the broadcast by welcoming the listener and explicitly reading today's date ({today_str}).
-    
+
+    ### MANDATORY SECTION — TWD/NTD CURRENCY CORNER ###
+    You MUST include a dedicated "Currency Corner" segment in EVERY single broadcast, regardless of
+    whether NTD news appears in today's headlines. This section is non-negotiable.
+    - Report today's approximate NTD/USD and NTD/EUR exchange rates (use data from the source materials,
+      or state a plausible current figure if not explicitly provided).
+    - Comment briefly on the trend (strengthening, weakening, stable) and what it means practically for
+      expats: e.g., remitting salary abroad, importing goods, cost of living.
+    - This segment should be approximately 150-200 words long.
+
     ### EDITORIAL GUIDELINES ###
     1. PRIORITIZATION: The news items are pre-sorted by an importance score. You MUST maintain this order in your broadcast, starting with the highest-scoring stories.
-    2. DEPTH BY IMPORTANCE: Devote more time to higher-scoring stories. 
-    3. EXPAT FOCUS: Focus heavily on business updates, tech, and macro-economics. Provide deep-dive analysis for top business segments.
-    4. MUST-INCLUDE: Always include current market trends (TAIEX) and key domestic policies.
-    5. FILTER TRASH: Ignore tabloid gossip.
-    6. SOCIAL MEDIA: Always end the show with 1 or 2 fun topics from the "Trending in Taiwan" section. Explain local memes simply.
-    7. PRONUNCIATION: Write out difficult Taiwanese names intuitively (e.g., "Tainan" -> "Tai-nan").
-    8. TONE: Think "NPR Up First". Keep it fast-paced but informative.
+    2. DEPTH BY IMPORTANCE: Devote significantly more time to higher-scoring stories (minimum 150 words per major story).
+    3. EXPAT FOCUS: Focus heavily on business updates, tech (TSMC/semiconductor), macro-economics, and policies affecting foreigners (Gold Card, visa, labor law).
+    4. FILTER TRASH: Ignore tabloid gossip and sports news unless it is a major international event.
+    5. SOCIAL MEDIA: Always end the show with 1-2 fun trending topics from PTT/Dcard. Explain local memes simply in English.
+    6. PRONUNCIATION: Write out difficult Taiwanese names phonetically (e.g., "Tainan" -> "Tie-nan").
+    7. TONE: Think "NPR Up First". Fast-paced, insightful, and end with a smile.
+    8. LENGTH: The full script MUST be between 1800 and 2400 words — this produces an 8-12 minute episode
+       at natural speaking pace. Do NOT submit a script shorter than 1800 words. If you are running short,
+       add more depth, context, and analysis to top stories. Do NOT add filler or repeat yourself.
+
+    ### STRICT PROHIBITIONS ###
+    - DO NOT mention the "score" or "ranking" of news items.
+    - DO NOT include sports news unless it is a globally significant event (e.g., Olympics, World Cup).
     
     ### SCRIPT FORMAT ###
     Output ONLY a JSON object. DO NOT wrap it in ```json blocks. 
@@ -146,7 +164,7 @@ def generate_podcast_script(news_data, social_data):
     prompt_content = f"Here are today's materials. Please write a detailed, expansive script and a summary:\n\n{sources_text}"
     
     # ✅ 鎖定使用付費帳戶支援的最新系列模型
-    models_to_try = ['gemini-2.0-flash', 'gemini-2.5-flash']
+    models_to_try = ['gemini-2.5-flash', 'gemini-2.5-pro']
     response = None
     
     for model_name in models_to_try:
