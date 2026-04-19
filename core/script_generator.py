@@ -111,7 +111,7 @@ def generate_podcast_script(news_data, social_data):
 
     import pytz
     tz = pytz.timezone('Asia/Taipei')
-    today_str = datetime.datetime.now(tz).strftime("%B %d, %Y")
+    today_str = datetime.datetime.now(tz).strftime("%A, %B %d, %Y")
 
     # Step 2: AI 總編輯的 System Prompt
     system_prompt = f"""
@@ -144,6 +144,10 @@ def generate_podcast_script(news_data, social_data):
     ### STRICT PROHIBITIONS ###
     - DO NOT mention the "score" or "ranking" of news items.
     - DO NOT include sports news unless it is a globally significant event (e.g., Olympics, World Cup).
+    - DO NOT use rhetorical sentence fragments as transitions. Fragments like "The key question?",
+      "The result?" or "The bottom line?" followed by an answer are lazy writing that sounds odd when
+      read aloud by TTS. Always write in complete, flowing sentences instead.
+    - DO NOT state the wrong day of the week. Today is {today_str}. Use this exact date and weekday.
     
     ### SCRIPT FORMAT ###
     Output ONLY a JSON object. DO NOT wrap it in ```json blocks. 
