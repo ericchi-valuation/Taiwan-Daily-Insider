@@ -8,10 +8,10 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Sun, 19 Apr 2026 23:08:54 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 20 Apr 2026 23:15:19 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Mon, 20 Apr 2026 07:08:51 +0800</pubDate>
+    <pubDate>Tue, 21 Apr 2026 07:15:16 +0800</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -83,6 +83,14 @@
       <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-04-20/TaiwanDaily_Podcast_Final.mp3" length="22798672" type="audio/mpeg"/>
       <itunes:duration>15:49</itunes:duration>
       <pubDate>Mon, 20 Apr 2026 07:08:51 +0800</pubDate>
+    </item>
+    <item>
+      <title>Taiwan Daily Insider - 2026-04-21</title>
+      <description><![CDATA[Taiwans financial regulators are considering a major policy shift to allow US dollar dividend payouts for listed companies, a move aimed at attracting foreign investors. Meanwhile, the military reports a routine transit of a Chinese aircraft carrier group through the Taiwan Strait, and a new survey shows investor optimism is declining due to global geopolitical tensions.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-04-21/TaiwanDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-04-21/TaiwanDaily_Podcast_Final.mp3" length="19360540" type="audio/mpeg"/>
+      <itunes:duration>13:26</itunes:duration>
+      <pubDate>Tue, 21 Apr 2026 07:15:16 +0800</pubDate>
     </item>
   </channel>
 </rss>
