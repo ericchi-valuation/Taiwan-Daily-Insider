@@ -2,6 +2,7 @@ import sys
 import time
 from fetchers.news_fetcher import get_daily_news
 from fetchers.social_fetcher import get_social_trending
+from fetchers.weather_fetcher import get_taipei_weather
 from core.script_generator import generate_podcast_script
 
 def main():
@@ -18,6 +19,9 @@ def main():
     news_data = get_daily_news(items_per_source=3)
     social_data = get_social_trending(limit_per_source=3)
     
+    print("\n🌤️  Fetching today's Taipei weather...")
+    weather_data = get_taipei_weather()
+    
     # 簡單印出我們收集到了幾條資料
     total_news = sum(len(articles) for articles in news_data.values())
     total_social = len(social_data)
@@ -27,7 +31,7 @@ def main():
     # 階段 2：LLM 新聞室編輯 (生成講稿)
     # ---------------------------------------------------------
     print("\n[2/3] 將素材提交給 AI 總編輯撰寫廣播稿...")
-    script = generate_podcast_script(news_data, social_data)
+    script = generate_podcast_script(news_data, social_data, weather_data)
     
     if not script:
         print("\n生成中斷。請確認環境變數或連線後重試。")
