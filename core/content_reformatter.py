@@ -65,11 +65,15 @@ def reformat_for_threads(podcast_script):
     
     CRITICAL REQUIREMENTS:
     1. You MUST include 2 or 3 bullet points summarizing the actual news headlines from the script. Do NOT just write generic teasers. Give me the facts.
-    2. The entire output MUST be strictly UNDER 450 characters.
-    3. Use 1 or 2 relevant emojis.
-    4. Do NOT use HTML formatting. Use plain text and line breaks.
-    5. End the post with: "Listen to the full episode on our feed! 🎧".
-    6. Do not include any title like "Threads Post:". Just return the text.
+    2. STRICT FACTUALITY: Do NOT invent, hallucinate, or assume any numbers, dates, stock prices,
+       exchange rates (like NTD/USD or NTD/EUR) or weather figures.
+       ONLY use facts and figures EXPLICITLY stated word-for-word in the script.
+       If the script does not mention a number, you MUST NOT include that number. Period.
+    3. The entire output MUST be strictly UNDER 450 characters.
+    4. Use 1 or 2 relevant emojis.
+    5. Do NOT use HTML formatting. Use plain text and line breaks.
+    6. End the post with: "Listen to the full episode on our feed! 🎧".
+    7. Do not include any title like "Threads Post:". Just return the text.
     
     Here is the podcast script:
     {podcast_script}

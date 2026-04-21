@@ -77,7 +77,7 @@ def score_and_sort_articles(client, news_data):
     return sorted_articles[:10]
 
 
-def generate_podcast_script(news_data, social_data):
+def generate_podcast_script(news_data, social_data, weather_data=None):
     """
     將資料送給 Gemini 進行綜合編譯，寫成英文廣播稿
     """
@@ -102,7 +102,19 @@ def generate_podcast_script(news_data, social_data):
         for a in top_articles:
             sources_text += f"\n[Score: {a.get('score', 0)}/10] Source: {a.get('source_name')} | Title: {a.get('title')}\nSummary: {a.get('summary')}\n"
             
-    sources_text += "\n\n【Taiwan Social Media Trending (PTT / Dcard)】\n"
+    sources_text += "\n\n[🌤️ Today's Taipei Weather Forecast]\n"
+    if weather_data and weather_data.get('condition') != 'Data unavailable':
+        sources_text += (
+            f"Condition: {weather_data.get('condition')}\n"
+            f"High: {weather_data.get('temp_max_c')}°C / {weather_data.get('temp_max_f')}°F\n"
+            f"Low: {weather_data.get('temp_min_c')}°C / {weather_data.get('temp_min_f')}°F\n"
+            f"Wind: up to {weather_data.get('wind_kmh')} km/h\n"
+            f"Precipitation: {weather_data.get('precip_mm')} mm\n"
+        )
+    else:
+        sources_text += "Weather data unavailable today.\n"
+
+    sources_text += "\n\n[💬 Taiwan Social Media Trending (PTT / Dcard)]\n"
     for post in social_data:
         title = post.get('title', 'Unknown Topic')
         topics = post.get('topics', [])
@@ -119,6 +131,15 @@ def generate_podcast_script(news_data, social_data):
     Your strict target audience is foreign professionals, expats, and foreign Gold Card holders living/working in Taiwan.
     
     IMPORTANT: You MUST start the broadcast by welcoming the listener and explicitly reading today's date ({today_str}).
+
+    ### MANDATORY SECTION — WEATHER BRIEFING ###
+    Immediately after the Currency Corner, include a short "Taipei Weather Briefing" segment.
+    - Use the weather data provided in the source materials.
+    - Report the high and low temperatures in BOTH Celsius and Fahrenheit (for the diverse expat audience).
+    - Mention wind and precipitation if notable.
+    - Give a brief lifestyle tip (e.g., "grab an umbrella", "perfect day for a walk along the river").
+    - This segment should be about 80–120 words.
+    - If weather data is unavailable, say so and advise listeners to check locally.
 
     ### MANDATORY SECTION — TWD/NTD CURRENCY CORNER ###
     You MUST include a dedicated "Currency Corner" segment in EVERY single broadcast, regardless of
