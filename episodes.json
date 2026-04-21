@@ -70,5 +70,13 @@
     "mp3_url": "https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-04-21/TaiwanDaily_Podcast_Final.mp3",
     "duration": "00:13:26",
     "file_size": "19360540"
+  },
+  {
+    "title": "Taiwan Daily Insider - 2026-04-22",
+    "summary": "Todays latest news and tech updates from Taiwan.",
+    "date": "2026-04-22T07:12:58+08:00",
+    "mp3_url": "https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-04-22/TaiwanDaily_Podcast_Final.mp3",
+    "duration": "00:12:06",
+    "file_size": "17448377"
   }
 ]
