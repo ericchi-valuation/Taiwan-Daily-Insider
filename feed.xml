@@ -8,10 +8,10 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Tue, 21 Apr 2026 23:13:01 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 22 Apr 2026 23:31:21 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Wed, 22 Apr 2026 07:12:58 +0800</pubDate>
+    <pubDate>Thu, 23 Apr 2026 07:31:17 +0800</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -99,6 +99,14 @@
       <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-04-22/TaiwanDaily_Podcast_Final.mp3" length="17448377" type="audio/mpeg"/>
       <itunes:duration>12:06</itunes:duration>
       <pubDate>Wed, 22 Apr 2026 07:12:58 +0800</pubDate>
+    </item>
+    <item>
+      <title>Taiwan Daily Insider - 2026-04-23</title>
+      <description><![CDATA[Today on Taiwan Daily Insider, we covered the international concerns surrounding President-elect Lai Ching-tes blocked visit to Eswatini due to Chinese pressure, and the US condemnation of Beijings actions. We also delved deep into TSMCs groundbreaking 1-nanometer technology roadmap, its positive ripple effect across the entire semiconductor supply chain, and its strong stock performance following an analyst upgrade, highlighting Taiwans continued tech dominance. We wrapped up with a look at trending social media topics, from military procurement debates to financial certification study guides, offering a glimpse into local online discussions.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-04-23/TaiwanDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-04-23/TaiwanDaily_Podcast_Final.mp3" length="19016351" type="audio/mpeg"/>
+      <itunes:duration>13:12</itunes:duration>
+      <pubDate>Thu, 23 Apr 2026 07:31:17 +0800</pubDate>
     </item>
   </channel>
 </rss>
