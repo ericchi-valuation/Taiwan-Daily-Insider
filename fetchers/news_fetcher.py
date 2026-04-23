@@ -1,4 +1,5 @@
 import feedparser
+import time
 
 # 排除八卦花邊新聞的基礎黑名單 (後續 LLM 會再做第二層把關)
 GOSSIP_KEYWORDS = ['偷吃', '摩鐵', '小王', '小三', '出軌', '不倫', '抓姦', '綠帽', '激戰', '走光', '露點', '豔片', '私密片', '小胖']
@@ -7,15 +8,20 @@ def is_trash_news(title, summary):
     text = title + summary
     return any(kw in text for kw in GOSSIP_KEYWORDS)
 
-def fetch_rss_news(feed_url, limit=3):
-    """抓取單一 RSS 來源的新聞"""
-    feed = feedparser.parse(feed_url)
+def fetch_rss_news(feed_url, limit=3, max_retries=3):
+    """抓取單一 RSS 來源的新聞，包含重試機制"""
     entries = []
     
-    if not feed.entries:
-        return entries
-        
-    for entry in feed.entries:
+    for attempt in range(max_retries):
+        try:
+            feed = feedparser.parse(feed_url)
+            if not feed.entries:
+                if attempt < max_retries - 1:
+                    time.sleep(2)
+                    continue
+                return entries
+                
+            for entry in feed.entries:
         if len(entries) >= limit:
             break
             
@@ -29,12 +35,20 @@ def fetch_rss_news(feed_url, limit=3):
         if is_trash_news(title, summary):
             continue
             
-        entries.append({
-            'title': title,
-            'summary': summary,
-            'link': entry.get('link', '')
-        })
-    return entries
+            entries.append({
+                'title': title,
+                'summary': summary,
+                'link': entry.get('link', '')
+            })
+            
+        return entries
+        
+    except Exception as e:
+        if attempt < max_retries - 1:
+            time.sleep(2)
+        else:
+            print(f"Error parsing feed {feed_url}: {e}")
+            return entries
 
 def get_daily_news(items_per_source=2):
     """
