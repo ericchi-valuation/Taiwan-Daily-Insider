@@ -17,7 +17,8 @@ AUTHOR_NAME = "Eric Chi"
 AUTHOR_EMAIL = "eric.chi1988@gmail.com"  
 
 def generate_rss(new_title, new_summary, str_date, mp3_url, duration, file_size):
-    tz = pytz.timezone('Asia/Taipei')
+    tz_str = os.environ.get("TZ", "Asia/Taipei")
+    tz = pytz.timezone(tz_str)
     
     # 1. 讀取歷史集數清單
     episodes_data = []
@@ -41,6 +42,11 @@ def generate_rss(new_title, new_summary, str_date, mp3_url, duration, file_size)
     # 檢查是否重複上架同一天
     episodes_data = [ep for ep in episodes_data if ep['title'] != new_title]
     episodes_data.append(new_ep)
+    
+    # 限制集數 (保留最新 366 集，約一年份)，避免 RSS 無限膨脹
+    MAX_EPISODES = 366
+    if len(episodes_data) > MAX_EPISODES:
+        episodes_data = episodes_data[-MAX_EPISODES:]
     
     # 寫回 json 備份
     with open(EPISODES_FILE, 'w', encoding='utf-8') as f:
