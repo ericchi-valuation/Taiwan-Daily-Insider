@@ -5,6 +5,16 @@ import feedparser
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
+# Basic blacklist to filter NSFW/inappropriate social media posts
+TRASH_KEYWORDS = [
+    '乳', '奶', '胸', '性愛', '做愛', '約炮', '外流', '綠帽', '西斯', '色情', '🔞', 
+    '正妹', '裸', '包養', '打手槍', '自慰', '走光'
+]
+
+def is_trash_social(title):
+    text = title.lower()
+    return any(kw in text for kw in TRASH_KEYWORDS)
+
 def get_ptt_trending(limit=3):
     url = "https://www.ptt.cc/bbs/Gossiping/index.html"
     cookies = {'over18': '1'}
@@ -19,7 +29,7 @@ def get_ptt_trending(limit=3):
             title_tag = div.find('div', class_='title').find('a')
             if title_tag:
                 title = title_tag.text.strip()
-                if '公告' not in title:
+                if '公告' not in title and not is_trash_social(title):
                     posts.append({
                         'title': title,
                         'url': 'https://www.ptt.cc' + title_tag['href'],
@@ -41,9 +51,12 @@ def get_dcard_trending_bypassed(limit=3):
     try:
         feed = feedparser.parse(url)
         posts = []
-        for entry in feed.entries[:limit]:
+        for entry in feed.entries[:limit * 2]: # fetch more to account for filtered items
             # Google RSS 會把來源加在後面，例如 "租屋奇葩事 - 閒聊板 - Dcard"
             title = entry.get('title', '').replace(' - Dcard', '')
+            if is_trash_social(title):
+                continue
+                
             posts.append({
                 'title': title,
                 'url': entry.get('link', ''),
