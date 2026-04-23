@@ -70,7 +70,9 @@ def main():
         from publishers.email_sender import send_newsletter
         import pytz
         import datetime
-        tz_tw = pytz.timezone('Asia/Taipei')
+        import os
+        tz_str = os.environ.get("TZ", "Asia/Taipei")
+        tz_tw = pytz.timezone(tz_str)
         today_date = datetime.datetime.now(tz_tw).strftime("%Y-%m-%d")
         send_newsletter(f"Taiwan Daily Insider - {today_date}", newsletter_html)
     except Exception as e:
