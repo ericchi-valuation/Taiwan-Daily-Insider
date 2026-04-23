@@ -77,7 +77,7 @@ def score_and_sort_articles(client, news_data):
     return sorted_articles[:10]
 
 
-def generate_podcast_script(news_data, social_data, weather_data=None):
+def generate_podcast_script(news_data, social_data, weather_data=None, exchange_data=None):
     """
     將資料送給 Gemini 進行綜合編譯，寫成英文廣播稿
     """
@@ -114,6 +114,10 @@ def generate_podcast_script(news_data, social_data, weather_data=None):
     else:
         sources_text += "Weather data unavailable today.\n"
 
+    if exchange_data and exchange_data.get('usd_twd'):
+        sources_text += "\n\n[💱 Today's Exchange Rates]\n"
+        sources_text += exchange_data.get('summary', '') + "\n"
+
     sources_text += "\n\n[💬 Taiwan Social Media Trending (PTT / Dcard)]\n"
     for post in social_data:
         title = post.get('title', 'Unknown Topic')
@@ -144,8 +148,8 @@ def generate_podcast_script(news_data, social_data, weather_data=None):
     ### MANDATORY SECTION — TWD/NTD CURRENCY CORNER ###
     You MUST include a dedicated "Currency Corner" segment in EVERY single broadcast, regardless of
     whether NTD news appears in today's headlines. This section is non-negotiable.
-    - Report today's approximate NTD/USD and NTD/EUR exchange rates (use data from the source materials,
-      or state a plausible current figure if not explicitly provided).
+    - Report the exact NTD/USD and NTD/EUR exchange rates provided in the source materials.
+    - If the rates are not provided, simply mention that the data is unavailable today. DO NOT invent or hallucinate numbers.
     - Comment briefly on the trend (strengthening, weakening, stable) and what it means practically for
       expats: e.g., remitting salary abroad, importing goods, cost of living.
     - This segment should be approximately 150-200 words long.
@@ -155,7 +159,7 @@ def generate_podcast_script(news_data, social_data, weather_data=None):
     2. DEPTH BY IMPORTANCE: Devote significantly more time to higher-scoring stories (minimum 150 words per major story).
     3. EXPAT FOCUS: Focus heavily on business updates, tech (TSMC/semiconductor), macro-economics, and policies affecting foreigners (Gold Card, visa, labor law).
     4. FILTER TRASH: Ignore tabloid gossip and sports news unless it is a major international event.
-    5. SOCIAL MEDIA: Always end the show with 1-2 fun trending topics from PTT/Dcard. Explain local memes simply in English.
+    5. SOCIAL MEDIA: End the show with 1-2 fun, lighthearted trending topics from PTT/Dcard. Focus on cultural observations, tech discussions, or expat-friendly topics. YOU MUST STRICTLY FILTER OUT AND IGNORE any posts related to NSFW content, sexuality, vulgarity, or toxic political gossip.
     6. PRONUNCIATION: Write out difficult Taiwanese names phonetically (e.g., "Tainan" -> "Tie-nan").
     7. TONE: Think "NPR Up First". Fast-paced, insightful, and end with a smile.
     8. LENGTH: The full script MUST be between 1800 and 2400 words — this produces an 8-12 minute episode
@@ -163,6 +167,7 @@ def generate_podcast_script(news_data, social_data, weather_data=None):
        add more depth, context, and analysis to top stories. Do NOT add filler or repeat yourself.
 
     ### STRICT PROHIBITIONS ###
+    - DO NOT hallucinate or invent any news stories, quotes, or events. You must ONLY discuss what is explicitly present in the provided source materials.
     - DO NOT mention the "score" or "ranking" of news items.
     - DO NOT include sports news unless it is a globally significant event (e.g., Olympics, World Cup).
     - DO NOT use rhetorical sentence fragments as transitions. Fragments like "The key question?",
@@ -189,7 +194,11 @@ def generate_podcast_script(news_data, social_data, weather_data=None):
     prompt_content = f"Here are today's materials. Please write a detailed, expansive script and a summary:\n\n{sources_text}"
     
     # ✅ 鎖定使用付費帳戶支援的最新系列模型
-    models_to_try = ['gemini-2.5-flash', 'gemini-2.5-pro']
+    models_to_try = [
+        'gemini-2.5-flash', 
+        'gemini-2.5-pro', 
+        'gemini-3.1-flash-lite-preview'
+    ]
     response = None
     
     for model_name in models_to_try:
