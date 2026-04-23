@@ -3,6 +3,7 @@ import time
 from fetchers.news_fetcher import get_daily_news
 from fetchers.social_fetcher import get_social_trending
 from fetchers.weather_fetcher import get_taipei_weather
+from fetchers.exchange_rate_fetcher import get_exchange_rates
 from core.script_generator import generate_podcast_script
 
 def main():
@@ -22,6 +23,9 @@ def main():
     print("\n🌤️  Fetching today's Taipei weather...")
     weather_data = get_taipei_weather()
     
+    print("\n💱  Fetching Exchange Rates...")
+    exchange_data = get_exchange_rates()
+    
     # 簡單印出我們收集到了幾條資料
     total_news = sum(len(articles) for articles in news_data.values())
     total_social = len(social_data)
@@ -31,7 +35,7 @@ def main():
     # 階段 2：LLM 新聞室編輯 (生成講稿)
     # ---------------------------------------------------------
     print("\n[2/3] 將素材提交給 AI 總編輯撰寫廣播稿...")
-    script = generate_podcast_script(news_data, social_data, weather_data)
+    script = generate_podcast_script(news_data, social_data, weather_data, exchange_data)
     
     if not script:
         print("\n生成中斷。請確認環境變數或連線後重試。")
@@ -60,25 +64,26 @@ def main():
     print("\n[4/4] 正在將內容分發至電子報與 Threads...")
     from core.content_reformatter import reformat_for_newsletter, reformat_for_threads
     
-    # 1. 改寫內容
-    newsletter_html = reformat_for_newsletter(script)
-    threads_text = reformat_for_threads(script)
+    # 1. 改寫內容與發送電子報
+    try:
+        newsletter_html = reformat_for_newsletter(script)
+        from publishers.email_sender import send_newsletter
+        import pytz
+        import datetime
+        tz_tw = pytz.timezone('Asia/Taipei')
+        today_date = datetime.datetime.now(tz_tw).strftime("%Y-%m-%d")
+        send_newsletter(f"Taiwan Daily Insider - {today_date}", newsletter_html)
+    except Exception as e:
+        print(f"  ⚠️ Newsletter step failed: {e}")
     
-    # 2. 發送電子報
-    from publishers.email_sender import send_newsletter
-    import pytz
-    import datetime
-    tz_tw = pytz.timezone('Asia/Taipei')
-    today_date = datetime.datetime.now(tz_tw).strftime("%Y-%m-%d")
-    send_newsletter(f"Taiwan Daily Insider - {today_date}", newsletter_html)
-    
-    # 3. 發布 Threads
-    from publishers.threads_poster import post_to_threads
-    
-    # 🌟 新增這一行：讓 GitHub Log 印出 Threads 到底拿到了什麼文字
-    print(f"\n👀 [Debug] 準備交給 Threads 發布的內容如下：\n{threads_text}\n" + "-"*30)
-    
-    post_to_threads(threads_text)
+    # 2. 改寫內容與發布 Threads
+    try:
+        threads_text = reformat_for_threads(script)
+        from publishers.threads_poster import post_to_threads
+        print(f"\n👀 [Debug] 準備交給 Threads 發布的內容如下：\n{threads_text}\n" + "-"*30)
+        post_to_threads(threads_text)
+    except Exception as e:
+        print(f"  ⚠️ Threads step failed: {e}")
     
     print("\n🎉 今日所有自動化任務完成！")
 
