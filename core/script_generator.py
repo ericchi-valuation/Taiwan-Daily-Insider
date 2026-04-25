@@ -50,16 +50,39 @@ def score_and_sort_articles(client, news_data):
     {articles_list_text}
     """
 
+    # 優先使用 2.5-flash，若失敗則嘗試其他模型
+    models_to_try = ['gemini-2.5-flash', 'gemini-2.0-flash', 'gemini-3.1-flash-lite-preview']
+    response = None
+    
+    for model_name in models_to_try:
+        try:
+            print(f"正在使用 {model_name} 為 {len(all_articles)} 則新聞進行重要性評分...")
+            response = client.models.generate_content(
+                model=model_name,
+                contents=scoring_prompt
+            )
+            if response:
+                break
+        except Exception as e:
+            print(f"⚠️ {model_name} 評分失敗: {e}")
+            continue
+
+    if not response:
+        print("❌ 所有模型皆無法進行評分，將使用預設排序。")
+        for a in all_articles:
+            a['score'] = 1
+        return all_articles[:10]
+
     try:
-        print(f"正在為 {len(all_articles)} 則新聞進行重要性評分 (熱度加權中)...")
-        # ✅ 已升級為 2.5-flash，解決 404 找不到模型的問題
-        response = client.models.generate_content(
-            model='gemini-2.5-flash',
-            contents=scoring_prompt
-        )
-        
-        # 清理可能殘留的 Markdown 標籤
+        # 1. 移除 Markdown 標籤
         clean_text = response.text.replace("```json", "").replace("```", "").strip()
+        
+        # 2. 更加強健的 JSON 萃取
+        import re
+        json_match = re.search(r'\[.*\]', clean_text, re.DOTALL)
+        if json_match:
+            clean_text = json_match.group(0)
+            
         scores = json.loads(clean_text)
         
         score_map = {item['id']: item['score'] for item in scores}
@@ -67,8 +90,7 @@ def score_and_sort_articles(client, news_data):
             a['score'] = score_map.get(i, 1) 
             
     except Exception as e:
-        print(f"⚠️ 評分階段發生錯誤 (跳過排序): {e}")
-        # 防禦機制：評分失敗時全部給 1 分，維持後續運行
+        print(f"⚠️ 評分結果解析失敗: {e}")
         for a in all_articles:
             a['score'] = 1
 
@@ -126,7 +148,8 @@ def generate_podcast_script(news_data, social_data, weather_data=None, exchange_
         sources_text += f"Topic: {title} (From {topics_str})\n"
 
     import pytz
-    tz = pytz.timezone('Asia/Taipei')
+    tz_str = os.environ.get("TZ", "Asia/Taipei")
+    tz = pytz.timezone(tz_str)
     today_str = datetime.datetime.now(tz).strftime("%A, %B %d, %Y")
 
     # Step 2: AI 總編輯的 System Prompt
@@ -236,7 +259,18 @@ def generate_podcast_script(news_data, social_data, weather_data=None, exchange_
         return None
         
     try:
-        clean_text = response.text.replace("```json", "").replace("```", "").strip()
+        # 更加強健的 JSON 萃取邏輯
+        raw_text = response.text.strip()
+        
+        # 1. 移除 Markdown 標籤
+        clean_text = raw_text.replace("```json", "").replace("```", "").strip()
+        
+        # 2. 嘗試尋找第一個 { 與最後一個 } 之間的內容 (防止 AI 前後加上廢話)
+        import re
+        json_match = re.search(r'\{.*\}', clean_text, re.DOTALL)
+        if json_match:
+            clean_text = json_match.group(0)
+            
         result_json = json.loads(clean_text)
         
         script = result_json.get('script', '')
@@ -252,5 +286,9 @@ def generate_podcast_script(news_data, social_data, weather_data=None, exchange_
         return script
         
     except Exception as e:
-        print(f"❌ JSON 解析失敗: {e}\n模型回傳內容:\n{response.text[:200]}...")
+        print(f"❌ JSON 解析失敗: {e}")
+        print("-" * 30)
+        print("模型原始回傳內容 (前 500 字元):")
+        print(response.text[:500])
+        print("-" * 30)
         return None
