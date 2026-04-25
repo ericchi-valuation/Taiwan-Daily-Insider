@@ -35,7 +35,7 @@ def reformat_for_newsletter(podcast_script):
     """
 
     try:
-         # Use the modern gemini-2.5-flash as default
+        # Use the modern gemini-2.5-flash as default
         response = client.models.generate_content(
             model='gemini-2.5-flash',
             contents=prompt,
@@ -79,6 +79,7 @@ def reformat_for_threads(podcast_script):
     {podcast_script}
     """
 
+    try:
         # 使用 2.5-pro 與低溫設定確保精準
         response = client.models.generate_content(
             model='gemini-2.5-pro',
