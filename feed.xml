@@ -8,10 +8,10 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Wed, 22 Apr 2026 23:31:21 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 25 Apr 2026 15:07:37 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Thu, 23 Apr 2026 07:31:17 +0800</pubDate>
+    <pubDate>Sat, 25 Apr 2026 23:07:34 +0800</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -107,6 +107,14 @@
       <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-04-23/TaiwanDaily_Podcast_Final.mp3" length="19016351" type="audio/mpeg"/>
       <itunes:duration>13:12</itunes:duration>
       <pubDate>Thu, 23 Apr 2026 07:31:17 +0800</pubDate>
+    </item>
+    <item>
+      <title>Taiwan Daily Insider - 2026-04-25</title>
+      <description><![CDATA[Today, Saturday, April 25, 2026, the U.S. House passed a bill for US$500 million in military aid to Taiwan, while institutional investors showed strong confidence in the local stock market, pushing the Taiex towards a potential 40,000-point milestone with TSMC leading the charge. The Central Bank indicated stable interest rates despite imported inflation, actively managed the NTDs value, and labor groups advocated for increased employer pension contributions, all impacting foreign professionals and the economy.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-04-25/TaiwanDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-04-25/TaiwanDaily_Podcast_Final.mp3" length="18933594" type="audio/mpeg"/>
+      <itunes:duration>13:08</itunes:duration>
+      <pubDate>Sat, 25 Apr 2026 23:07:34 +0800</pubDate>
     </item>
   </channel>
 </rss>
