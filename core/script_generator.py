@@ -196,6 +196,8 @@ def generate_podcast_script(news_data, social_data, weather_data=None, exchange_
     - DO NOT use rhetorical sentence fragments as transitions. Fragments like "The key question?",
       "The result?" or "The bottom line?" followed by an answer are lazy writing that sounds odd when
       read aloud by TTS. Always write in complete, flowing sentences instead.
+    - DO NOT use any Markdown formatting in the script (e.g., no #, ##, ### for headers, and no ** for bold). 
+      The script is for a Text-to-Speech engine; it should be written in plain, flowing text with natural transitions.
     - DO NOT state the wrong day of the week. Today is {today_str}. Use this exact date and weekday.
     
     ### SCRIPT FORMAT ###

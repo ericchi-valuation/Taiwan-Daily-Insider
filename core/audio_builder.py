@@ -66,6 +66,9 @@ def build_podcast_audio(script_file="script.txt", output_file="podcast.mp3"):
     script_text = re.sub(r'\[.*?\]', '', script_text)   # 移除 [Intro Music] 等方括號指示
     script_text = re.sub(r'\(.*?\)', '', script_text)   # 移除 (Upbeat music fades in) 等圓括號指示
     script_text = script_text.replace('*', '')           # 移除粗體星號
+    script_text = script_text.replace('#', '')           # 移除標題符號
+    script_text = script_text.replace('_', '')           # 移除底線 (斜體)
+    script_text = script_text.replace('---', ' ')        # 移除分隔線
     script_text = re.sub(r'\n{3,}', '\n\n', script_text) # 清除多餘空行
 
     # 1. 嘗試用 ElevenLabs
