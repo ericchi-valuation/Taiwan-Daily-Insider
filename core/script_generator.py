@@ -50,6 +50,19 @@ def score_and_sort_articles(client, news_data):
     {articles_list_text}
     """
 
+    # 定義 JSON Schema
+    scoring_schema = {
+        "type": "ARRAY",
+        "items": {
+            "type": "OBJECT",
+            "properties": {
+                "id": {"type": "INTEGER"},
+                "score": {"type": "INTEGER"}
+            },
+            "required": ["id", "score"]
+        }
+    }
+
     # 優先使用 2.5-flash，若失敗則嘗試其他模型
     models_to_try = ['gemini-2.5-flash', 'gemini-2.0-flash', 'gemini-3.1-flash-lite-preview']
     response = None
@@ -59,7 +72,11 @@ def score_and_sort_articles(client, news_data):
             print(f"正在使用 {model_name} 為 {len(all_articles)} 則新聞進行重要性評分...")
             response = client.models.generate_content(
                 model=model_name,
-                contents=scoring_prompt
+                contents=scoring_prompt,
+                config=types.GenerateContentConfig(
+                    response_mime_type='application/json',
+                    response_schema=scoring_schema
+                )
             )
             if response:
                 break
@@ -74,16 +91,16 @@ def score_and_sort_articles(client, news_data):
         return all_articles[:10]
 
     try:
-        # 1. 移除 Markdown 標籤
-        clean_text = response.text.replace("```json", "").replace("```", "").strip()
-        
-        # 2. 更加強健的 JSON 萃取
-        import re
-        json_match = re.search(r'\[.*\]', clean_text, re.DOTALL)
-        if json_match:
-            clean_text = json_match.group(0)
-            
-        scores = json.loads(clean_text)
+        if response.parsed:
+            scores = response.parsed
+        else:
+            # 備用方案：若 parsed 為空，則嘗試手動解析
+            clean_text = response.text.replace("```json", "").replace("```", "").strip()
+            import re
+            json_match = re.search(r'\[.*\]', clean_text, re.DOTALL)
+            if json_match:
+                clean_text = json_match.group(0)
+            scores = json.loads(clean_text)
         
         score_map = {item['id']: item['score'] for item in scores}
         for i, a in enumerate(all_articles):
@@ -91,8 +108,10 @@ def score_and_sort_articles(client, news_data):
             
     except Exception as e:
         print(f"⚠️ 評分結果解析失敗: {e}")
+        # 如果解析完全失敗，至少保證 score 欄位存在
         for a in all_articles:
-            a['score'] = 1
+            if 'score' not in a:
+                a['score'] = 1
 
     # 按分數排序並取前 10 名
     sorted_articles = sorted(all_articles, key=lambda x: x.get('score', 0), reverse=True)
@@ -186,8 +205,7 @@ def generate_podcast_script(news_data, social_data, weather_data=None, exchange_
     6. PRONUNCIATION: Write out difficult Taiwanese names phonetically (e.g., "Tainan" -> "Tie-nan").
     7. TONE: Think "NPR Up First". Fast-paced, insightful, and end with a smile.
     8. LENGTH: The full script MUST be between 1800 and 2400 words — this produces an 8-12 minute episode
-       at natural speaking pace. Do NOT submit a script shorter than 1800 words. If you are running short,
-       add more depth, context, and analysis to top stories. Do NOT add filler or repeat yourself.
+    9. ESCAPING: Since your output is JSON, you MUST properly escape all special characters, especially double quotes (") inside the script text. Use \" for quotes.
 
     ### STRICT PROHIBITIONS ###
     - DO NOT hallucinate or invent any news stories, quotes, or events. You must ONLY discuss what is explicitly present in the provided source materials.
@@ -201,7 +219,7 @@ def generate_podcast_script(news_data, social_data, weather_data=None, exchange_
     - DO NOT state the wrong day of the week. Today is {today_str}. Use this exact date and weekday.
     
     ### SCRIPT FORMAT ###
-    Output ONLY a JSON object. DO NOT wrap it in ```json blocks. 
+    Output ONLY a JSON object.
     Format:
     {{
       "script": "The full spoken broadcast script here...",
@@ -209,11 +227,23 @@ def generate_podcast_script(news_data, social_data, weather_data=None, exchange_
     }}
     """
     
+    # 定義 JSON Schema
+    podcast_schema = {
+        "type": "OBJECT",
+        "properties": {
+            "script": {"type": "STRING"},
+            "summary": {"type": "STRING"}
+        },
+        "required": ["script", "summary"]
+    }
+
     print("\n[AI 運作中] 正在編寫講稿與摘要 (約需 20~40 秒)...")
     
     config = types.GenerateContentConfig(
         system_instruction=system_prompt,
         temperature=0.6,
+        response_mime_type='application/json',
+        response_schema=podcast_schema
     )
     
     prompt_content = f"Here are today's materials. Please write a detailed, expansive script and a summary:\n\n{sources_text}"
@@ -261,19 +291,18 @@ def generate_podcast_script(news_data, social_data, weather_data=None, exchange_
         return None
         
     try:
-        # 更加強健的 JSON 萃取邏輯
-        raw_text = response.text.strip()
-        
-        # 1. 移除 Markdown 標籤
-        clean_text = raw_text.replace("```json", "").replace("```", "").strip()
-        
-        # 2. 嘗試尋找第一個 { 與最後一個 } 之間的內容 (防止 AI 前後加上廢話)
-        import re
-        json_match = re.search(r'\{.*\}', clean_text, re.DOTALL)
-        if json_match:
-            clean_text = json_match.group(0)
-            
-        result_json = json.loads(clean_text)
+        # 優先嘗試從 response.parsed 獲取 (如果使用了 schema)
+        # 或是從 response.text 手動解析
+        if getattr(response, 'parsed', None):
+            result_json = response.parsed
+        else:
+            raw_text = response.text.strip()
+            clean_text = raw_text.replace("```json", "").replace("```", "").strip()
+            import re
+            json_match = re.search(r'\{.*\}', clean_text, re.DOTALL)
+            if json_match:
+                clean_text = json_match.group(0)
+            result_json = json.loads(clean_text)
         
         script = result_json.get('script', '')
         summary = result_json.get('summary', "Today's latest news and tech updates from Taiwan.")
@@ -290,7 +319,9 @@ def generate_podcast_script(news_data, social_data, weather_data=None, exchange_
     except Exception as e:
         print(f"❌ JSON 解析失敗: {e}")
         print("-" * 30)
-        print("模型原始回傳內容 (前 500 字元):")
-        print(response.text[:500])
+        print(f"模型原始回傳內容 (長度: {len(response.text)}):")
+        print(response.text[:1000])
+        print("...")
+        print(response.text[-500:] if len(response.text) > 500 else "")
         print("-" * 30)
         return None
