@@ -94,4 +94,5 @@ jobs:
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           git add feed.xml episodes.json
           git commit -m "Auto-update podcast feed for ${TODAY}" || exit 0
+          git pull --rebase origin main --autostash
           git push
