@@ -8,10 +8,10 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Sun, 26 Apr 2026 06:24:25 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 26 Apr 2026 23:09:58 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Sun, 26 Apr 2026 14:24:24 +0800</pubDate>
+    <pubDate>Mon, 27 Apr 2026 07:09:55 +0800</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -123,6 +123,14 @@
       <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-04-26/TaiwanDaily_Podcast_Final.mp3" length="7358423" type="audio/mpeg"/>
       <itunes:duration>05:06</itunes:duration>
       <pubDate>Sun, 26 Apr 2026 14:24:24 +0800</pubDate>
+    </item>
+    <item>
+      <title>Taiwan Daily Insider - 2026-04-27</title>
+      <description><![CDATA[Todays broadcast covers TSMCs impressive Q1 gross margin and its supply chain, institutional investments in the Taiwan stock market as it eyes 40,000 points, Warren Buffetts past TSMC divestment, and TSMCs strategic decision to forgo ASMLs High-NA EUV equipment. We also discuss the potential for TSMC to surpass Nvidias market cap, BofAs analysis of TSMCs budgeting, and Huntleigh Advisors increased stake in TSM, alongside a currency corner, weather briefing, and expat-friendly social media trends.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-04-27/TaiwanDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-04-27/TaiwanDaily_Podcast_Final.mp3" length="4720265" type="audio/mpeg"/>
+      <itunes:duration>03:16</itunes:duration>
+      <pubDate>Mon, 27 Apr 2026 07:09:55 +0800</pubDate>
     </item>
   </channel>
 </rss>
