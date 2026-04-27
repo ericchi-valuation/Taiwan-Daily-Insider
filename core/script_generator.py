@@ -2,6 +2,7 @@ import os
 import json
 import time
 import datetime
+import re
 from google import genai
 from google.genai import types
 from dotenv import load_dotenv
@@ -64,7 +65,7 @@ def score_and_sort_articles(client, news_data):
     }
 
     # 優先使用 2.5-flash，若失敗則嘗試其他模型
-    models_to_try = ['gemini-2.5-flash', 'gemini-2.0-flash', 'gemini-3.1-flash-lite-preview']
+    models_to_try = ['gemini-2.5-flash', 'gemini-2.0-flash', 'gemini-2.5-pro']
     response = None
     
     for model_name in models_to_try:
@@ -79,9 +80,14 @@ def score_and_sort_articles(client, news_data):
                 )
             )
             if response:
+                print(f"  ✔️ 評分完成 (使用 {model_name})")
                 break
         except Exception as e:
-            print(f"⚠️ {model_name} 評分失敗: {e}")
+            error_msg = str(e)
+            print(f"⚠️ {model_name} 評分失敗: {error_msg}")
+            if "503" in error_msg or "UNAVAILABLE" in error_msg:
+                print("  ⏳ API 暫時過載 (503)，等待 15 秒後換用備援模型...")
+                time.sleep(15)
             continue
 
     if not response:
@@ -251,18 +257,20 @@ def generate_podcast_script(news_data, social_data, weather_data=None, exchange_
     # ✅ 鎖定使用付費帳戶支援的最新系列模型
     models_to_try = [
         'gemini-2.5-flash', 
-        'gemini-2.5-pro', 
+        'gemini-2.5-pro',
+        'gemini-2.0-flash',
+        'gemini-2.0-flash-lite',
         'gemini-3.1-flash-lite-preview'
     ]
     response = None
     
     for model_name in models_to_try:
-        retry_count = 0
-        max_retries = 2
+        max_retries = 3
+        base_wait = 20  # 秒，503 時的等待基數
         
-        while retry_count < max_retries:
+        for attempt in range(max_retries):
             try:
-                print(f"嘗試載入 {model_name} 模型...")
+                print(f"嘗試載入 {model_name} 模型 (attempt {attempt + 1}/{max_retries})...")
                 response = client.models.generate_content(
                     model=model_name,
                     contents=prompt_content,
@@ -275,16 +283,18 @@ def generate_podcast_script(news_data, social_data, weather_data=None, exchange_
                 error_msg = str(e)
                 print(f"⚠️ {model_name} 失敗: {error_msg}")
                 
-                # 雖然綁卡了，但仍保留防禦機制以防萬一
-                if "429" in error_msg or "Quota exceeded" in error_msg:
+                if "503" in error_msg or "UNAVAILABLE" in error_msg:
+                    wait_sec = base_wait * (2 ** attempt)  # 指數退避: 20s, 40s, 80s
+                    print(f"  ⏳ API 暫時過載 (503)。等待 {wait_sec} 秒後重試...")
+                    time.sleep(wait_sec)
+                elif "429" in error_msg or "Quota exceeded" in error_msg:
                     print(f"⏳ 偵測到 API 額度耗盡 (429)，暫停 60 秒後重試...")
                     time.sleep(60)
-                    retry_count += 1
                 else:
-                    break 
+                    break  # 非暫時性錯誤，直接換下一個模型
                     
         if response:
-            break 
+            break
             
     if getattr(response, 'text', None) is None:
         print("❌ 所有模型皆無回應或 API 額度受限，無法生成內容。")
@@ -325,3 +335,100 @@ def generate_podcast_script(news_data, social_data, weather_data=None, exchange_
         print(response.text[-500:] if len(response.text) > 500 else "")
         print("-" * 30)
         return None
+
+def review_and_improve_script(script: str, client=None) -> str:
+    """
+    AI 編輯審稿：在 TTS 之前檢查稿件品質。
+    - 確認字數在 1800–2400 字之間（對應 8–12 分鐘）
+    - 移除 Markdown 格式符號（#, **, *, ---）
+    - 若字數不足，要求 AI 補寫至 1800 字
+    - 回傳審閱後的稿件（若無問題，回傳原稿）
+    """
+    api_key = os.environ.get("GEMINI_API_KEY")
+    if not client:
+        if not api_key:
+            print("⚠️ [AI Editor] 無 GEMINI_API_KEY，跳過 AI 審稿，僅做格式清理。")
+            return _clean_script_formatting(script)
+        client = genai.Client(api_key=api_key)
+
+    word_count = len(script.split())
+    print(f"\n📝 [AI Editor] 審稿中... 目前字數: {word_count} 字")
+
+    # ── 先做格式清理（無論 AI 是否介入）──
+    script = _clean_script_formatting(script)
+
+    needs_expansion = word_count < 1800
+    needs_trim = word_count > 2600
+
+    if not needs_expansion and not needs_trim:
+        print(f"  ✔️ [AI Editor] 字數 ({word_count}) 在合理範圍內，稿件通過審閱。")
+        return script
+
+    if needs_expansion:
+        action = "EXPAND"
+        instruction = (
+            f"The current script is only {word_count} words, which is far too short for an 8–12 minute podcast. "
+            "You MUST expand it to at least 1800 words. Add deeper analysis, expat context, and historical "
+            "background to each major story. Do NOT add filler, repetition, or new topics not in the original."
+        )
+    else:
+        action = "TRIM"
+        instruction = (
+            f"The current script is {word_count} words, which is slightly long. "
+            "Trim it to under 2400 words by cutting redundant sentences, but keep all main stories intact."
+        )
+
+    print(f"  🤖 [AI Editor] 正在 {action} 稿件...")
+
+    editor_prompt = f"""
+    You are a senior podcast editor for "Taiwan Daily Insider", an English-language daily news podcast.
+
+    {instruction}
+
+    STRICT RULES:
+    1. Output ONLY the revised script text. No JSON, no markdown, no explanation.
+    2. Do NOT add any Markdown formatting (no #, ##, **, *, ---).
+    3. Do NOT add vocabulary lessons or "word of the day" segments.
+    4. Do NOT invent new facts, numbers, or events.
+    5. Maintain the same host voice and NPR-style tone.
+    6. Keep the opening greeting intact.
+
+    HERE IS THE CURRENT SCRIPT:
+    ---
+    {script}
+    ---
+    """
+
+    editor_models = ['gemini-2.5-flash', 'gemini-2.0-flash', 'gemini-2.5-pro']
+    for model_name in editor_models:
+        try:
+            response = client.models.generate_content(
+                model=model_name,
+                contents=editor_prompt,
+                config=types.GenerateContentConfig(temperature=0.4)
+            )
+            revised = _clean_script_formatting(response.text.strip())
+            new_word_count = len(revised.split())
+            print(f"  ✔️ [AI Editor] 審稿完成 (使用 {model_name})，修訂後字數: {new_word_count} 字")
+            return revised
+        except Exception as e:
+            print(f"  ⚠️ [AI Editor] {model_name} 失敗: {e}")
+            time.sleep(15)
+
+    print("  ⚠️ [AI Editor] 所有模型均失敗，回傳格式清理後的原稿。")
+    return script
+
+
+def _clean_script_formatting(script: str) -> str:
+    """
+    移除 TTS 不友好的格式符號：Markdown 標題、粗體、分隔線等。
+    """
+    # 移除 Markdown 標題 (# / ## / ###)
+    script = re.sub(r'^#{1,6}\s+', '', script, flags=re.MULTILINE)
+    # 移除粗體/斜體 (**text** 或 *text*)
+    script = re.sub(r'\*{1,2}([^*]+)\*{1,2}', r'\1', script)
+    # 移除水平分隔線 (--- / *** / ___)
+    script = re.sub(r'^[\-\*_]{3,}\s*$', '', script, flags=re.MULTILINE)
+    # 清理多餘的空行
+    script = re.sub(r'\n{3,}', '\n\n', script)
+    return script.strip()
