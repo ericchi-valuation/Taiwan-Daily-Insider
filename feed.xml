@@ -8,10 +8,10 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Sun, 26 Apr 2026 23:09:58 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 27 Apr 2026 23:26:07 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Mon, 27 Apr 2026 07:09:55 +0800</pubDate>
+    <pubDate>Tue, 28 Apr 2026 07:26:03 +0800</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -131,6 +131,14 @@
       <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-04-27/TaiwanDaily_Podcast_Final.mp3" length="4720265" type="audio/mpeg"/>
       <itunes:duration>03:16</itunes:duration>
       <pubDate>Mon, 27 Apr 2026 07:09:55 +0800</pubDate>
+    </item>
+    <item>
+      <title>Taiwan Daily Insider - 2026-04-28</title>
+      <description><![CDATA[Today, April 28, 2026, Taiwan saw a former TSMC engineer sentenced to 10 years for trade secret theft, underscoring the nations commitment to protecting its vital tech industry. The Taiex reached a historic 40,000 points, largely driven by TSMCs surge, though institutional investors warn of a concentrated market structure amid significant foreign capital outflow. The New Taiwan Dollars appreciation is narrowing due to foreign remittances, impacting expat finances, while Taipei enjoys an overcast yet warm day. Social media buzzes with career advice for tech jobs, including TSMC interview experiences, and shared language learning opportunities.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-04-28/TaiwanDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-04-28/TaiwanDaily_Podcast_Final.mp3" length="21837574" type="audio/mpeg"/>
+      <itunes:duration>15:09</itunes:duration>
+      <pubDate>Tue, 28 Apr 2026 07:26:03 +0800</pubDate>
     </item>
   </channel>
 </rss>
