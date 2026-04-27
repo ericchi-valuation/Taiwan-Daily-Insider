@@ -4,7 +4,7 @@ from fetchers.news_fetcher import get_daily_news
 from fetchers.social_fetcher import get_social_trending
 from fetchers.weather_fetcher import get_taipei_weather
 from fetchers.exchange_rate_fetcher import get_exchange_rates
-from core.script_generator import generate_podcast_script
+from core.script_generator import generate_podcast_script, review_and_improve_script
 
 def main():
     print("="*50)
@@ -40,6 +40,14 @@ def main():
     if not script:
         print("\n生成中斷。請確認環境變數或連線後重試。")
         sys.exit(1)
+        
+    print("\n📝 [2b/3] AI 總編輯正在審閱並擴寫講稿 (AI Editor Review)...")
+    script = review_and_improve_script(script)
+    
+    # 將審核後的稿件寫入檔案，準備給語音生成
+    with open("script.txt", "w", encoding="utf-8") as f:
+        f.write(script)
+    print(f"  ✔️ 最終講稿已儲存 ({len(script.split())} 字)。")
         
     # ---------------------------------------------------------
     # 階段 3：半自動安全閥 (等待人類審核) -> 語音生成
