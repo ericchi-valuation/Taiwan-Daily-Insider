@@ -8,10 +8,10 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Mon, 27 Apr 2026 23:26:07 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 28 Apr 2026 22:49:23 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Tue, 28 Apr 2026 07:26:03 +0800</pubDate>
+    <pubDate>Wed, 29 Apr 2026 06:49:19 +0800</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -139,6 +139,14 @@
       <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-04-28/TaiwanDaily_Podcast_Final.mp3" length="21837574" type="audio/mpeg"/>
       <itunes:duration>15:09</itunes:duration>
       <pubDate>Tue, 28 Apr 2026 07:26:03 +0800</pubDate>
+    </item>
+    <item>
+      <title>Taiwan Daily Insider - 2026-04-29</title>
+      <description><![CDATA[Today on Taiwan Daily Insider, we cover TSMCs projected 70% growth in 2nm technology, Chinese warship activity near Penghu, and the impact of the TSMC Clause on the Taiwan stock market, including TSMCs ADR performance. We also discuss Taiwans semiconductor prowess and regional geopolitical tensions, followed by a Taipei weather briefing, currency corner, and lighthearted social media trends from Taiwans expat community.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-04-29/TaiwanDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-04-29/TaiwanDaily_Podcast_Final.mp3" length="22686449" type="audio/mpeg"/>
+      <itunes:duration>15:45</itunes:duration>
+      <pubDate>Wed, 29 Apr 2026 06:49:19 +0800</pubDate>
     </item>
   </channel>
 </rss>
