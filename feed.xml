@@ -8,10 +8,10 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Wed, 29 Apr 2026 22:47:31 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 30 Apr 2026 22:45:10 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Thu, 30 Apr 2026 06:47:27 +0800</pubDate>
+    <pubDate>Fri, 01 May 2026 06:45:07 +0800</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -155,6 +155,14 @@
       <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-04-30/TaiwanDaily_Podcast_Final.mp3" length="17403863" type="audio/mpeg"/>
       <itunes:duration>12:05</itunes:duration>
       <pubDate>Thu, 30 Apr 2026 06:47:27 +0800</pubDate>
+    </item>
+    <item>
+      <title>Taiwan Daily Insider - 2026-05-01</title>
+      <description><![CDATA[Today on Taiwan Daily Insider, we covered the Taiwan Stock Exchanges new record of 48 thousand-dollar stocks, the Central Banks relaxation of second-home mortgage rules and its focus on price stability amid inflation concerns, and TSMCs strong performance in the US market despite a mysterious local sell-off, alongside its ramp-up in AI chip production. We also highlighted crucial tax-saving tips from the Ministry of Labor for all workers, including expats, and discussed trending social media topics on Gen Zs work attitudes and MediaTeks automotive division.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-05-01/TaiwanDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-05-01/TaiwanDaily_Podcast_Final.mp3" length="18262769" type="audio/mpeg"/>
+      <itunes:duration>12:40</itunes:duration>
+      <pubDate>Fri, 01 May 2026 06:45:07 +0800</pubDate>
     </item>
   </channel>
 </rss>
