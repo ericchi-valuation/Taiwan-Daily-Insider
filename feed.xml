@@ -8,10 +8,10 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Fri, 01 May 2026 22:42:59 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 02 May 2026 22:32:04 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Sat, 02 May 2026 06:42:55 +0800</pubDate>
+    <pubDate>Sun, 03 May 2026 06:32:00 +0800</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -171,6 +171,14 @@
       <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-05-02/TaiwanDaily_Podcast_Final.mp3" length="20618805" type="audio/mpeg"/>
       <itunes:duration>14:19</itunes:duration>
       <pubDate>Sat, 02 May 2026 06:42:55 +0800</pubDate>
+    </item>
+    <item>
+      <title>Taiwan Daily Insider - 2026-05-03</title>
+      <description><![CDATA[Today on Taiwan Daily Insider, we covered the soaring Taiwan stock market, driven by TSMCs leadership in advanced processes, and discussed crucial tax-saving tips from the Ministry of Labor directly impacting foreign professionals. We also explored the ongoing pension reform debate and President Lai Ching-tes diplomatic visit to Eswatini, alongside a look at trending social media topics on traffic and tax rates.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-05-03/TaiwanDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-05-03/TaiwanDaily_Podcast_Final.mp3" length="17797581" type="audio/mpeg"/>
+      <itunes:duration>12:21</itunes:duration>
+      <pubDate>Sun, 03 May 2026 06:32:00 +0800</pubDate>
     </item>
   </channel>
 </rss>
