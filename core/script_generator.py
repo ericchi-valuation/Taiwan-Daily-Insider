@@ -125,7 +125,7 @@ def score_and_sort_articles(client, news_data):
     return sorted_articles[:10]
 
 
-def generate_podcast_script(news_data, social_data, weather_data=None, exchange_data=None, sponsor_text=None):
+def generate_podcast_script(news_data, social_data, weather_data=None, exchange_data=None, events_data=None, sponsor_text=None):
     """
     將資料送給 Gemini 進行綜合編譯，寫成英文廣播稿
     """
@@ -174,6 +174,11 @@ def generate_podcast_script(news_data, social_data, weather_data=None, exchange_
         topics_str = ', '.join(topics) if topics else 'General'
         sources_text += f"Topic: {title} (From {topics_str})\n"
 
+    if events_data:
+        sources_text += "\n\n[🎭 Today's Taipei Events]\n"
+        for ev in events_data:
+            sources_text += f"Event: {ev.get('title')} (Source: {ev.get('source')})\nSummary: {ev.get('summary')}\n"
+
     tz_str = os.environ.get("TZ", "Asia/Taipei")
     tz = pytz.timezone(tz_str)
     today_str = datetime.datetime.now(tz).strftime("%A, %B %d, %Y")
@@ -220,13 +225,14 @@ def generate_podcast_script(news_data, social_data, weather_data=None, exchange_
     2. DEPTH BY IMPORTANCE: Devote significantly more time to higher-scoring stories (minimum 150 words per major story).
     3. EXPAT FOCUS: Focus heavily on business, tech (TSMC/semiconductor), macro-economics, and policies affecting foreigners.
     4. FACT-CHECKING: Do NOT say "tomorrow's announcement" if the event has already passed based on article dates.
-    5. FILTER TRASH: Ignore tabloid gossip and sports news unless a major international event.
-    6. SOCIAL MEDIA: End the show with 1-2 fun trending topics from PTT/Dcard. Filter out NSFW content strictly.
-    7. CALL TO ACTION (CTA): At the very end of the broadcast, before signing off, you MUST explicitly
+    5. EVENTS: After the news, feature 1-2 interesting Taipei/Taiwan events from the provided sources to add "lifestyle flavor".
+    6. FILTER TRASH: Ignore tabloid gossip and sports news unless a major international event.
+    7. SOCIAL MEDIA: End the show with 1-2 fun trending topics from PTT/Dcard. Filter out NSFW content strictly.
+    8. CALL TO ACTION (CTA): At the very end of the broadcast, before signing off, you MUST explicitly
        ask listeners to "subscribe to the podcast, share this episode with colleagues in Taiwan,
        and leave a review if you found it helpful."
-    8. TONE: Think "NPR Up First". Fast-paced, insightful, and end with a smile.
-    9. LENGTH: The full script MUST be between 1800 and 2400 words.
+    9. TONE: Think "NPR Up First". Fast-paced, insightful, and end with a smile.
+    10. LENGTH: The full script MUST be between 1800 and 2400 words.
 
     ### STRICT PROHIBITIONS ###
     - DO NOT hallucinate or invent any news stories, quotes, or events.
