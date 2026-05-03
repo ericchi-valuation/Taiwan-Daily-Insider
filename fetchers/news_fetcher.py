@@ -1,17 +1,47 @@
 import feedparser
 import time
+from datetime import datetime, timezone, timedelta
 
 # 排除八卦花邊新聞的基礎黑名單 (後續 LLM 會再做第二層把關)
-GOSSIP_KEYWORDS = ['偷吃', '摩鐵', '小王', '小三', '出軌', '不倫', '抓姦', '綠帽', '激戰', '走光', '露點', '豔片', '私密片', '小胖']
+GOSSIP_KEYWORDS = [
+    '偷吃', '摩鐵', '小王', '小三', '出軌', '不倫', '抓姦', '綠帽',
+    '激戰', '走光', '露點', '豔片', '私密片', '小胖'
+]
+
 
 def is_trash_news(title, summary):
     text = title + summary
     return any(kw in text for kw in GOSSIP_KEYWORDS)
 
-def fetch_rss_news(feed_url, limit=3, max_retries=3):
-    """抓取單一 RSS 來源的新聞，包含重試機制"""
+
+def _is_recent(entry, max_hours=36):
+    """
+    Return True if the feed entry was published within the last `max_hours`.
+    Uses published_parsed or updated_parsed from feedparser (UTC struct_time).
+    Falls back to True if no date is present (to avoid over-filtering).
+
+    36-hour window: captures today's news + yesterday evening (for early-morning runs).
+    Prevents stale articles from generating outdated commentary like
+    "tomorrow's vote" when the event has already passed.
+    """
+    for attr in ('published_parsed', 'updated_parsed'):
+        t = getattr(entry, attr, None)
+        if t is None:
+            continue
+        try:
+            pub_utc = datetime(*t[:6], tzinfo=timezone.utc)
+            cutoff  = datetime.now(timezone.utc) - timedelta(hours=max_hours)
+            return pub_utc >= cutoff
+        except Exception:
+            continue
+
+    return True  # no date info → include (don't silently drop undated feeds)
+
+
+def fetch_rss_news(feed_url, limit=3, max_retries=3, max_hours=36):
+    """抓取單一 RSS 來源的新聞，包含重試機制與時效過濾"""
     entries = []
-    
+
     for attempt in range(max_retries):
         try:
             feed = feedparser.parse(feed_url)
@@ -20,29 +50,33 @@ def fetch_rss_news(feed_url, limit=3, max_retries=3):
                     time.sleep(2)
                     continue
                 return entries
-                
+
             for entry in feed.entries:
                 if len(entries) >= limit:
                     break
-                    
-                title = entry.get('title', 'No Title').strip()
-                summary = entry.get('summary', '')
-                
+
+                # ── 時效過濾：跳過超過 max_hours 的舊文章 ──────────
+                if not _is_recent(entry, max_hours=max_hours):
+                    continue
+
+                title   = entry.get('title', 'No Title').strip()
+                summary = entry.get('summary', entry.get('description', ''))
+
                 if not title:
                     continue
-                    
+
                 # 爬蟲層的基礎過濾：看到花邊新聞關鍵字直接跳過
                 if is_trash_news(title, summary):
                     continue
-                    
+
                 entries.append({
-                    'title': title,
+                    'title':   title,
                     'summary': summary,
-                    'link': entry.get('link', '')
+                    'link':    entry.get('link', '')
                 })
-                
+
             return entries
-            
+
         except Exception as e:
             if attempt < max_retries - 1:
                 time.sleep(2)
@@ -50,15 +84,18 @@ def fetch_rss_news(feed_url, limit=3, max_retries=3):
                 print(f"Error parsing feed {feed_url}: {e}")
                 return entries
 
+    return entries
+
+
 def get_daily_news(items_per_source=2):
     """
     獲取台灣主要新聞、商業、與財經來源。
     主要客群：外籍就業金卡持卡人、外商高階主管、在台外籍專業人士。
 
-    所有 Google News 查詢加上 when:1d 確保只抓當日新鮮內容。
+    所有文章限制在 36 小時內，防止過期新聞汙染播報稿。
     """
     sources = {
-        # --- 一般要聞 (帶 when:2d 確保抓到當日) ---
+        # --- 一般要聞 ---
         '中央社 CNA (英文國際版)': 'https://feedx.net/rss/focustaiwan.xml',
         'Taipei Times (英文時事)': 'https://www.taipeitimes.com/xml/index.rss',
         'Focus Taiwan (英文即時)': (
@@ -116,9 +153,10 @@ def get_daily_news(items_per_source=2):
 
     return all_news
 
+
 if __name__ == "__main__":
     news = get_daily_news(2)
     for source, articles in news.items():
         print(f"--- {source} ---")
         for a in articles:
-            print(f"[{a['title']}]")
+            print(f"  [{a['title']}]")
