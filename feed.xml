@@ -8,10 +8,10 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Sun, 03 May 2026 08:47:01 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 03 May 2026 22:33:23 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Sun, 03 May 2026 16:47:00 +0800</pubDate>
+    <pubDate>Mon, 04 May 2026 06:33:20 +0800</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -179,6 +179,14 @@
       <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-05-03/TaiwanDaily_Podcast_Final.mp3" length="18129231" type="audio/mpeg"/>
       <itunes:duration>12:35</itunes:duration>
       <pubDate>Sun, 03 May 2026 16:47:00 +0800</pubDate>
+    </item>
+    <item>
+      <title>Taiwan Daily Insider - 2026-05-04</title>
+      <description><![CDATA[Eric hosts ]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-05-04/TaiwanDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-05-04/TaiwanDaily_Podcast_Final.mp3" length="19530439" type="audio/mpeg"/>
+      <itunes:duration>13:33</itunes:duration>
+      <pubDate>Mon, 04 May 2026 06:33:20 +0800</pubDate>
     </item>
   </channel>
 </rss>
