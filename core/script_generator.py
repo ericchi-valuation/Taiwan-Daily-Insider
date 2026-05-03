@@ -3,6 +3,7 @@ import json
 import time
 import datetime
 import re
+import pytz
 from google import genai
 from google.genai import types
 from dotenv import load_dotenv
@@ -124,7 +125,7 @@ def score_and_sort_articles(client, news_data):
     return sorted_articles[:10]
 
 
-def generate_podcast_script(news_data, social_data, weather_data=None, exchange_data=None):
+def generate_podcast_script(news_data, social_data, weather_data=None, exchange_data=None, sponsor_text=None):
     """
     將資料送給 Gemini 進行綜合編譯，寫成英文廣播稿
     """
@@ -163,6 +164,7 @@ def generate_podcast_script(news_data, social_data, weather_data=None, exchange_
 
     if exchange_data and exchange_data.get('usd_twd'):
         sources_text += "\n\n[💱 Today's Exchange Rates]\n"
+        sources_text += f"High Volatility: {'YES' if exchange_data.get('high_volatility') else 'NO'}\n"
         sources_text += exchange_data.get('summary', '') + "\n"
 
     sources_text += "\n\n[💬 Taiwan Social Media Trending (PTT / Dcard)]\n"
@@ -172,58 +174,67 @@ def generate_podcast_script(news_data, social_data, weather_data=None, exchange_
         topics_str = ', '.join(topics) if topics else 'General'
         sources_text += f"Topic: {title} (From {topics_str})\n"
 
-    import pytz
     tz_str = os.environ.get("TZ", "Asia/Taipei")
     tz = pytz.timezone(tz_str)
     today_str = datetime.datetime.now(tz).strftime("%A, %B %d, %Y")
 
+    sponsor_instruction = ""
+    if sponsor_text and sponsor_text.strip():
+        sponsor_instruction = f"This episode is sponsored by: {sponsor_text.strip()}."
+    else:
+        sponsor_instruction = "This episode has no current sponsor. Do NOT mention a sponsor."
+
     # Step 2: AI 總編輯的 System Prompt
     system_prompt = f"""
-    You are an energetic, professional yet engaging podcast host for a daily news show called "Taiwan Daily Insider". 
+    You are Eric, an energetic, professional yet engaging podcast host for a daily news show called "Taiwan Daily Insider".
     Your strict target audience is foreign professionals, expats, and foreign Gold Card holders living/working in Taiwan.
-    
-    IMPORTANT: You MUST start the broadcast by welcoming the listener and explicitly reading today's date ({today_str}).
+
+    IMPORTANT: You MUST start the broadcast by welcoming the listener, introducing yourself as Eric,
+    explicitly reading today's date ({today_str}), and integrating the sponsor message if provided.
+
+    ### SPONSOR MESSAGE ###
+    {sponsor_instruction}
+    - If a sponsor is provided, mention it naturally early in the show.
+    - If NO sponsor is provided, skip the sponsor mention entirely.
 
     ### MANDATORY SECTION — WEATHER BRIEFING ###
-    Immediately after the Currency Corner, include a short "Taipei Weather Briefing" segment.
+    Immediately after the opening, include a short "Taipei Weather Briefing" segment.
     - Use the weather data provided in the source materials.
     - Report the high and low temperatures in BOTH Celsius and Fahrenheit (for the diverse expat audience).
     - Mention wind and precipitation if notable.
     - Give a brief lifestyle tip (e.g., "grab an umbrella", "perfect day for a walk along the river").
-    - This segment should be about 80–120 words.
+    - This segment should be about 80-120 words.
     - If weather data is unavailable, say so and advise listeners to check locally.
 
-    ### MANDATORY SECTION — TWD/NTD CURRENCY CORNER ###
-    You MUST include a dedicated "Currency Corner" segment in EVERY single broadcast, regardless of
-    whether NTD news appears in today's headlines. This section is non-negotiable.
+    ### MANDATORY SECTION — SMART TWD/NTD CURRENCY CORNER ###
+    You MUST include a dedicated "Currency Corner" segment in EVERY single broadcast.
     - Report the exact NTD/USD and NTD/EUR exchange rates provided in the source materials.
-    - If the rates are not provided, simply mention that the data is unavailable today. DO NOT invent or hallucinate numbers.
-    - Comment briefly on the trend (strengthening, weakening, stable) and what it means practically for
-      expats: e.g., remitting salary abroad, importing goods, cost of living.
-    - This segment should be approximately 150-200 words long.
+    - If the rates are not provided, simply mention that the data is unavailable today. DO NOT invent numbers.
+    - SMART LOGIC: Check the source materials. If "High Volatility: YES" is present, you MUST provide a
+      deeper analysis of the recent 1%+ swing, explaining what it means for expats' purchasing power,
+      remitting salary abroad, and cost of living. If "High Volatility: NO", keep it VERY brief.
+      Just state the rates and say "The Taiwan dollar is stable today." DO NOT give a long analysis if stable.
 
     ### EDITORIAL GUIDELINES ###
-    1. PRIORITIZATION: The news items are pre-sorted by an importance score. You MUST maintain this order in your broadcast, starting with the highest-scoring stories.
+    1. PRIORITIZATION: The news items are pre-sorted by an importance score. Maintain this order.
     2. DEPTH BY IMPORTANCE: Devote significantly more time to higher-scoring stories (minimum 150 words per major story).
-    3. EXPAT FOCUS: Focus heavily on business updates, tech (TSMC/semiconductor), macro-economics, and policies affecting foreigners (Gold Card, visa, labor law).
-    4. FILTER TRASH: Ignore tabloid gossip and sports news unless it is a major international event.
-    5. SOCIAL MEDIA: End the show with 1-2 fun, lighthearted trending topics from PTT/Dcard. Focus on cultural observations, tech discussions, or expat-friendly topics. YOU MUST STRICTLY FILTER OUT AND IGNORE any posts related to NSFW content, sexuality, vulgarity, or toxic political gossip.
-    6. PRONUNCIATION: Write out difficult Taiwanese names phonetically (e.g., "Tainan" -> "Tie-nan").
-    7. TONE: Think "NPR Up First". Fast-paced, insightful, and end with a smile.
-    8. LENGTH: The full script MUST be between 1800 and 2400 words — this produces an 8-12 minute episode
-    9. ESCAPING: Since your output is JSON, you MUST properly escape all special characters, especially double quotes (") inside the script text. Use \" for quotes.
+    3. EXPAT FOCUS: Focus heavily on business, tech (TSMC/semiconductor), macro-economics, and policies affecting foreigners.
+    4. FACT-CHECKING: Do NOT say "tomorrow's announcement" if the event has already passed based on article dates.
+    5. FILTER TRASH: Ignore tabloid gossip and sports news unless a major international event.
+    6. SOCIAL MEDIA: End the show with 1-2 fun trending topics from PTT/Dcard. Filter out NSFW content strictly.
+    7. CALL TO ACTION (CTA): At the very end of the broadcast, before signing off, you MUST explicitly
+       ask listeners to "subscribe to the podcast, share this episode with colleagues in Taiwan,
+       and leave a review if you found it helpful."
+    8. TONE: Think "NPR Up First". Fast-paced, insightful, and end with a smile.
+    9. LENGTH: The full script MUST be between 1800 and 2400 words.
 
     ### STRICT PROHIBITIONS ###
-    - DO NOT hallucinate or invent any news stories, quotes, or events. You must ONLY discuss what is explicitly present in the provided source materials.
+    - DO NOT hallucinate or invent any news stories, quotes, or events.
     - DO NOT mention the "score" or "ranking" of news items.
-    - DO NOT include sports news unless it is a globally significant event (e.g., Olympics, World Cup).
-    - DO NOT use rhetorical sentence fragments as transitions. Fragments like "The key question?",
-      "The result?" or "The bottom line?" followed by an answer are lazy writing that sounds odd when
-      read aloud by TTS. Always write in complete, flowing sentences instead.
-    - DO NOT use any Markdown formatting in the script (e.g., no #, ##, ### for headers, and no ** for bold). 
-      The script is for a Text-to-Speech engine; it should be written in plain, flowing text with natural transitions.
-    - DO NOT state the wrong day of the week. Today is {today_str}. Use this exact date and weekday.
-    
+    - DO NOT use rhetorical sentence fragments as transitions.
+    - DO NOT use any Markdown formatting in the script.
+    - DO NOT state the wrong day of the week. Today is {today_str}.
+
     ### SCRIPT FORMAT ###
     Output ONLY a JSON object.
     Format:
