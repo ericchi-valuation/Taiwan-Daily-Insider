@@ -69,20 +69,20 @@ def get_taipei_events(limit=3):
     print("🎭 Fetching Taipei daily events...")
     all_events = []
 
-    # ── Source 1: Google News (Taipei Events) ───────────────────────────────
+    # ── Source 1: Google News (Taipei Events - Chinese) ─────────────────────
     google_url = (
         "https://news.google.com/rss/search"
-        "?q=Taipei+event+OR+concert+OR+exhibition+OR+festival+today"
-        "&hl=en-TW&gl=TW&ceid=TW:en"
+        "?q=(台北+OR+新北)+AND+(活動+OR+展覽+OR+演唱會+OR+市集)+when:2d"
+        "&hl=zh-TW&gl=TW&ceid=TW:zh-Hant"
     )
-    all_events.extend(_parse_feed(google_url, limit=4, label="Google News (Taipei)"))
+    all_events.extend(_parse_feed(google_url, limit=4, label="Taipei Local Events"))
     time.sleep(0.5)
 
-    # ── Source 2: Google News (Taiwan Arts & Culture) ────────────────────────
+    # ── Source 2: Google News (Taiwan Arts & Culture - Chinese) ──────────────
     culture_url = (
         "https://news.google.com/rss/search"
-        "?q=Taiwan+arts+culture+exhibition+when:2d"
-        "&hl=en-TW&gl=TW&ceid=TW:en"
+        "?q=(台灣+OR+台北)+AND+(藝文+OR+音樂祭+OR+快閃店)+when:2d"
+        "&hl=zh-TW&gl=TW&ceid=TW:zh-Hant"
     )
     all_events.extend(_parse_feed(culture_url, limit=3, label="Arts & Culture"))
     time.sleep(0.5)
