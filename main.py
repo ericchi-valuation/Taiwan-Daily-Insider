@@ -35,6 +35,7 @@ def main():
     from fetchers.social_fetcher import get_social_trending
     from fetchers.weather_fetcher import get_taipei_weather
     from fetchers.exchange_rate_fetcher import get_exchange_rates
+    from fetchers.events_fetcher import get_taipei_events
     from core.script_generator import generate_podcast_script, review_and_improve_script
 
     verify_environment()
@@ -63,7 +64,10 @@ def main():
     social_data = get_social_trending(limit_per_source=3)
     print(f"  ✔️ Collected {len(social_data)} social trending posts.")
 
-    # ── Step 1e: Read Sponsor Text ──────────────────────────────────────────
+    print("\n🎭 Step 1e: Fetching Taipei events...")
+    events_data = get_taipei_events(limit=2)
+
+    # ── Step 1f: Read Sponsor Text ──────────────────────────────────────────
     sponsor_text = None
     if os.path.exists("sponsor.txt"):
         try:
@@ -81,6 +85,7 @@ def main():
         social_data,
         weather_data,
         exchange_data,
+        events_data=events_data,
         sponsor_text=sponsor_text
     )
 
