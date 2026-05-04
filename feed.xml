@@ -8,10 +8,10 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Sun, 03 May 2026 22:33:23 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 04 May 2026 22:50:25 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Mon, 04 May 2026 06:33:20 +0800</pubDate>
+    <pubDate>Tue, 05 May 2026 06:50:23 +0800</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -187,6 +187,14 @@
       <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-05-04/TaiwanDaily_Podcast_Final.mp3" length="19530439" type="audio/mpeg"/>
       <itunes:duration>13:33</itunes:duration>
       <pubDate>Mon, 04 May 2026 06:33:20 +0800</pubDate>
+    </item>
+    <item>
+      <title>Taiwan Daily Insider - 2026-05-05</title>
+      <description><![CDATA[Todays Taiwan Daily Insider reports on the Taiexs historic surge past 40,000 points, driven by the AI boom and semiconductor titans like TSMC, leading to a stronger NTD and sparking debates on market balance. We also cover Taipeis weather, stable currency rates, exciting local events, and expat-relevant social media discussions.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-05-05/TaiwanDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-05-05/TaiwanDaily_Podcast_Final.mp3" length="23712121" type="audio/mpeg"/>
+      <itunes:duration>16:27</itunes:duration>
+      <pubDate>Tue, 05 May 2026 06:50:23 +0800</pubDate>
     </item>
   </channel>
 </rss>
