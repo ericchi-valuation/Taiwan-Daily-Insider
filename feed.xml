@@ -8,10 +8,10 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Mon, 04 May 2026 22:50:25 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 05 May 2026 22:48:25 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Tue, 05 May 2026 06:50:23 +0800</pubDate>
+    <pubDate>Wed, 06 May 2026 06:48:22 +0800</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -195,6 +195,14 @@
       <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-05-05/TaiwanDaily_Podcast_Final.mp3" length="23712121" type="audio/mpeg"/>
       <itunes:duration>16:27</itunes:duration>
       <pubDate>Tue, 05 May 2026 06:50:23 +0800</pubDate>
+    </item>
+    <item>
+      <title>Taiwan Daily Insider - 2026-05-06</title>
+      <description><![CDATA[Today, Taiwan Daily Insider reports on the semiconductor sectors mixed signals, with TSMC ADRs seeing a slight dip despite an AI boom, contrasting with soaring TSMC ETFs and smart money interest in UMC. We also cover the Taiexs bullish trajectory towards 40,000-50,000 points, President Lais firm stance on Taiwans international engagement, and share upcoming lifestyle events alongside a trending social media topic on career respect in Taiwan.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-05-06/TaiwanDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-05-06/TaiwanDaily_Podcast_Final.mp3" length="18261515" type="audio/mpeg"/>
+      <itunes:duration>12:40</itunes:duration>
+      <pubDate>Wed, 06 May 2026 06:48:22 +0800</pubDate>
     </item>
   </channel>
 </rss>
