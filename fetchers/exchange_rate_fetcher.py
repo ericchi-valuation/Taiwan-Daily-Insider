@@ -5,12 +5,15 @@ import pytz
 TAIPEI_TZ = pytz.timezone("Asia/Taipei")
 
 
-def _get_prev_business_day_str():
+def _get_prev_business_day_from(date_str: str) -> str:
     """
-    Return the most recent past business day (Mon-Fri) in YYYY-MM-DD format
-    (Taipei time). Needed because the ExchangeRate-API may not update on weekends.
+    Given a date string (YYYY-MM-DD), return the closest prior business day
+    (Mon-Fri) in the same format.  Used to find the trading day *before*
+    whatever date the /latest endpoint actually represents, so we never
+    compare a date against itself and get a 0% change.
     """
-    day = datetime.now(TAIPEI_TZ) - timedelta(days=1)
+    anchor = datetime.strptime(date_str, "%Y-%m-%d").replace(tzinfo=TAIPEI_TZ)
+    day = anchor - timedelta(days=1)
     while day.weekday() >= 5:   # 5=Saturday, 6=Sunday
         day -= timedelta(days=1)
     return day.strftime("%Y-%m-%d")
@@ -42,9 +45,10 @@ def get_exchange_rates():
 
     VOLATILITY_THRESHOLD = 1.0   # percent
 
-    prev_day_str = _get_prev_business_day_str()
-
-    # ── Fetch today ───────────────────────────────────────────────────────────
+    # ── Fetch today (latest settled rate) ────────────────────────────────────
+    # We read the actual date from the API response so we can correctly derive
+    # the *prior* business day for comparison (avoids 0% change bug).
+    latest_date = None
     try:
         print("💱 Fetching today's USD→TWD rate from ExchangeRate-API...")
         resp_usd = requests.get("https://open.er-api.com/v6/latest/USD", timeout=10)
@@ -53,6 +57,13 @@ def get_exchange_rates():
         usd_twd = data_usd.get("rates", {}).get("TWD")
         if usd_twd:
             result["usd_twd"] = round(usd_twd, 2)
+        # e.g. "Wed, 06 May 2026 00:02:02 +0000"  →  parse just the date part
+        raw_ts = data_usd.get("time_last_update_utc", "")
+        if raw_ts:
+            try:
+                latest_date = datetime.strptime(raw_ts, "%a, %d %b %Y %H:%M:%S %z").strftime("%Y-%m-%d")
+            except ValueError:
+                pass  # will fall back below
 
         resp_eur = requests.get("https://open.er-api.com/v6/latest/EUR", timeout=10)
         resp_eur.raise_for_status()
@@ -62,10 +73,20 @@ def get_exchange_rates():
             result["eur_twd"] = round(eur_twd, 2)
 
         if result["usd_twd"] and result["eur_twd"]:
-            print(f"  ✔️  Today: 1 USD = {result['usd_twd']} TWD | 1 EUR = {result['eur_twd']} TWD")
+            print(f"  ✔️  Latest ({latest_date}): 1 USD = {result['usd_twd']} TWD | 1 EUR = {result['eur_twd']} TWD")
 
     except Exception as e:
         print(f"  ⚠️  Could not fetch today's exchange rates: {e}")
+
+    # ── Determine previous business day relative to what /latest actually returned ─
+    if latest_date:
+        prev_day_str = _get_prev_business_day_from(latest_date)
+    else:
+        # Fallback: 2 calendar days back from now, skip weekends
+        fallback = datetime.now(TAIPEI_TZ) - timedelta(days=2)
+        while fallback.weekday() >= 5:
+            fallback -= timedelta(days=1)
+        prev_day_str = fallback.strftime("%Y-%m-%d")
 
     # ── Fetch previous business day via Frankfurter (covers TWD via cross rate) ──
     # open.er-api.com free tier does NOT support historical queries,
