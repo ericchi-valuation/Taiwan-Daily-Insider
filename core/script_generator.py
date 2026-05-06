@@ -236,7 +236,7 @@ def generate_podcast_script(news_data, social_data, weather_data=None, exchange_
 
     ### STRICT PROHIBITIONS ###
     - DO NOT hallucinate or invent any news stories, quotes, or events.
-    - DO NOT mention the "score" or "ranking" of news items.
+    - DO NOT mention any editorial score or rating in the spoken script (e.g. "scoring 9 out of 10", "a score of 8", "rated 7/10"). Scores are internal editorial tools only and must never appear in the broadcast.
     - DO NOT use rhetorical sentence fragments as transitions.
     - DO NOT use any Markdown formatting in the script.
     - DO NOT state the wrong day of the week. Today is {today_str}.
@@ -439,6 +439,7 @@ def review_and_improve_script(script: str, client=None) -> str:
 def _clean_script_formatting(script: str) -> str:
     """
     移除 TTS 不友好的格式符號：Markdown 標題、粗體、分隔線等。
+    同時移除任何意外流入播報稿的編輯評分語句。
     """
     # 移除 Markdown 標題 (# / ## / ###)
     script = re.sub(r'^#{1,6}\s+', '', script, flags=re.MULTILINE)
@@ -446,6 +447,16 @@ def _clean_script_formatting(script: str) -> str:
     script = re.sub(r'\*{1,2}([^*]+)\*{1,2}', r'\1', script)
     # 移除水平分隔線 (--- / *** / ___)
     script = re.sub(r'^[\-\*_]{3,}\s*$', '', script, flags=re.MULTILINE)
+    # 移除評分語句（內部評分絕不應出現在播報稿中）
+    # 匹配形式如："scoring a perfect 10 out of 10", "with a score of 8 out of 10",
+    #             "both scoring 6 out of 10", "rated 9/10", "a 9 out of 10 story" 等
+    script = re.sub(
+        r'(?i)(,?\s*)'
+        r'((?:both|also|each)?\s*(?:scoring|rated?|with\s+a\s+score\s+of|a\s+perfect)'
+        r'\s+[a-z\s]*?\d{1,2}(?:\s*out\s*of\s*10|/10))',
+        '',
+        script
+    )
     # 清理多餘的空行
     script = re.sub(r'\n{3,}', '\n\n', script)
     return script.strip()
