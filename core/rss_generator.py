@@ -9,10 +9,10 @@ FEED_FILE = "feed.xml"
 
 # Podcast Metadata (您可以自己修改這裡的設定)
 PODCAST_NAME = "Taiwan Daily Insider"
-PODCAST_DESC = "Your go-to podcast for staying on top of the news that truly matters to foreign professionals, expats, and Gold Card holders right here in Taiwan. Fully automated utilizing AI."
+PODCAST_DESC = "Your go-to podcast for staying on top of the news that truly matters to foreign professionals, expats, and Gold Card holders right here in Taiwan."
 PODCAST_WEBSITE = "https://github.com/ericchi-valuation/Taiwan-Daily-Insider"
 PODCAST_EXPLICIT = False
-PODCAST_IMAGE_URL = "https://raw.githubusercontent.com/ericchi-valuation/Taiwan-Daily-Insider/main/cover.png" # 之後我們會教您上傳真正的封面
+PODCAST_IMAGE_URL = "https://raw.githubusercontent.com/ericchi-valuation/Taiwan-Daily-Insider/main/cover.jpg" # 之後我們會教您上傳真正的封面
 AUTHOR_NAME = "Eric Chi"
 AUTHOR_EMAIL = "eric.chi1988@gmail.com"  
 
