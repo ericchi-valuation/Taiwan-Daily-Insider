@@ -8,10 +8,10 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Sat, 09 May 2026 22:35:16 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 10 May 2026 22:38:55 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Sun, 10 May 2026 06:35:13 +0800</pubDate>
+    <pubDate>Mon, 11 May 2026 06:38:52 +0800</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -235,6 +235,14 @@
       <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-05-10/TaiwanDaily_Podcast_Final.mp3" length="20336056" type="audio/mpeg"/>
       <itunes:duration>14:07</itunes:duration>
       <pubDate>Sun, 10 May 2026 06:35:13 +0800</pubDate>
+    </item>
+    <item>
+      <title>Taiwan Daily Insider - 2026-05-11</title>
+      <description><![CDATA[Todays Taiwan Daily Insider focused heavily on TSMC, with experts affirming its continued dominance as Apples primary chipmaker despite rumors of diversification to Intel, while also exploring the stocks bull and bear investment cases. We also covered the Taiexs strong opening and analyst predictions for Q2 consolidation, alongside the New Taiwan Dollars recent appreciation due to hot money inflows and its implications for expats. The show concluded with a look at a major K-Pop concert event and trending social media topics.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-05-11/TaiwanDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-05-11/TaiwanDaily_Podcast_Final.mp3" length="21284614" type="audio/mpeg"/>
+      <itunes:duration>14:46</itunes:duration>
+      <pubDate>Mon, 11 May 2026 06:38:52 +0800</pubDate>
     </item>
   </channel>
 </rss>
