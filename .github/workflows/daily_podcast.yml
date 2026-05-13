@@ -77,12 +77,12 @@ jobs:
           
           echo "==== 更新 RSS Feed ===="
           URL="https://github.com/${{ github.repository }}/releases/download/ep-${TODAY}/TaiwanDaily_Podcast_Final.mp3"
-          SUMMARY=$(cat summary.txt | tr -d '"' | tr -d "'")
-          if [ -z "$SUMMARY" ]; then SUMMARY="Today's latest news and tech updates from Taiwan."; fi
-          
+
+          # summary.txt is written by script_generator.py during the pipeline run.
+          # We pass it as a file path to avoid shell quoting / length issues with long descriptions.
           python core/rss_generator.py \
             --title "Taiwan Daily Insider - ${TODAY}" \
-            --summary "$SUMMARY" \
+            --summary-file summary.txt \
             --date "$ISO_DATE" \
             --url "$URL" \
             --duration "$FORMATTED_DURATION" \
