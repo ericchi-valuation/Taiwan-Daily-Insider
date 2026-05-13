@@ -9,7 +9,7 @@ FEED_FILE = "feed.xml"
 
 # Podcast Metadata (您可以自己修改這裡的設定)
 PODCAST_NAME = "Taiwan Daily Insider"
-PODCAST_DESC = "Your go-to podcast for staying on top of the news that truly matters to foreign professionals, expats, and Gold Card holders right here in Taiwan."
+PODCAST_DESC = "Your go-to podcast for staying on top of the news that truly matters to foreign professionals, expats, and Gold Card holders right here in Taiwan. Fully automated utilizing AI."
 PODCAST_WEBSITE = "https://github.com/ericchi-valuation/Taiwan-Daily-Insider"
 PODCAST_EXPLICIT = False
 PODCAST_IMAGE_URL = "https://raw.githubusercontent.com/ericchi-valuation/Taiwan-Daily-Insider/main/cover.jpg" # 之後我們會教您上傳真正的封面
@@ -89,12 +89,25 @@ def generate_rss(new_title, new_summary, str_date, mp3_url, duration, file_size)
 if __name__ == "__main__":
     import argparse
     parser = argparse.ArgumentParser()
-    parser.add_argument("--title", required=True)
-    parser.add_argument("--summary", required=True)
-    parser.add_argument("--date", required=True)
-    parser.add_argument("--url", required=True)
-    parser.add_argument("--duration", required=True)
-    parser.add_argument("--size", required=True)
+    parser.add_argument("--title",        required=True)
+    parser.add_argument("--summary-file", required=False, default="summary.txt",
+                        help="Path to a text file containing the episode description (default: summary.txt)")
+    parser.add_argument("--date",         required=True)
+    parser.add_argument("--url",          required=True)
+    parser.add_argument("--duration",     required=True)
+    parser.add_argument("--size",         required=True)
     args = parser.parse_args()
 
-    generate_rss(args.title, args.summary, args.date, args.url, args.duration, args.size)
+    # Read summary from file to avoid shell quoting / length issues
+    summary_text = "Today's latest news and tech updates from Taiwan."
+    summary_path = args.summary_file
+    if os.path.exists(summary_path):
+        with open(summary_path, "r", encoding="utf-8") as _f:
+            _content = _f.read().strip()
+            if _content:
+                summary_text = _content
+        print(f"  ✔️  Loaded episode summary from '{summary_path}' ({len(summary_text)} chars).")
+    else:
+        print(f"  ⚠️  '{summary_path}' not found. Using default summary.")
+
+    generate_rss(args.title, summary_text, args.date, args.url, args.duration, args.size)
