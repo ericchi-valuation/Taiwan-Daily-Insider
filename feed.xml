@@ -3,15 +3,15 @@
   <channel>
     <title>Taiwan Daily Insider</title>
     <link>https://github.com/ericchi-valuation/Taiwan-Daily-Insider</link>
-    <description>Your go-to podcast for staying on top of the news that truly matters to foreign professionals, expats, and Gold Card holders right here in Taiwan.</description>
+    <description>Your go-to podcast for staying on top of the news that truly matters to foreign professionals, expats, and Gold Card holders right here in Taiwan. Fully automated utilizing AI.</description>
     <itunes:explicit>no</itunes:explicit>
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Tue, 12 May 2026 22:56:30 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 13 May 2026 22:58:34 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Wed, 13 May 2026 06:56:27 +0800</pubDate>
+    <pubDate>Thu, 14 May 2026 06:58:31 +0800</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -259,6 +259,14 @@
       <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-05-13/TaiwanDaily_Podcast_Final.mp3" length="18379380" type="audio/mpeg"/>
       <itunes:duration>12:45</itunes:duration>
       <pubDate>Wed, 13 May 2026 06:56:27 +0800</pubDate>
+    </item>
+    <item>
+      <title>Taiwan Daily Insider - 2026-05-14</title>
+      <description><![CDATA[Today on Taiwan Daily Insider, we analyze the significant 523-point drop in the Taiwan stock market and TSMC's nuanced performance, with experts remaining bullish despite a local dip. We also cover critical updates on foreign labor policies, including hefty fines for illegal employment and new Ministry of Labor initiatives to address workforce shortages. For your lifestyle, we've got details on the EXO Kaohsiung concert ticket sales and a fun giant SpongeBob and Patrick event in New Taipei City with a one-day food market. Tune in for all the essential updates for foreign professionals in Taiwan.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-05-14/TaiwanDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-05-14/TaiwanDaily_Podcast_Final.mp3" length="17541163" type="audio/mpeg"/>
+      <itunes:duration>12:10</itunes:duration>
+      <pubDate>Thu, 14 May 2026 06:58:31 +0800</pubDate>
     </item>
   </channel>
 </rss>
