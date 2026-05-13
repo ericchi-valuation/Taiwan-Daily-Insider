@@ -135,11 +135,11 @@ def main():
     # ── Step 5: Publish ─────────────────────────────────────────────────────
     print("\n📢 Step 5/5: Publishing content...")
 
-    # 5a. Newsletter
+    # 5a. Newsletter (pass events_data so the email includes a Taiwan events section)
     try:
         with open("script.txt", "r", encoding="utf-8") as f:
             script_text = f.read()
-        html_content = reformat_for_newsletter(script_text)
+        html_content = reformat_for_newsletter(script_text, events_data=events_data)
         from publishers.email_sender import send_newsletter
         send_newsletter(f"Taiwan Daily Insider — {today_str}", html_content)
     except Exception as e:
