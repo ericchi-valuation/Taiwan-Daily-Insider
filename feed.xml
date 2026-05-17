@@ -8,14 +8,14 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Sat, 16 May 2026 22:37:41 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 17 May 2026 22:45:20 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Sun, 17 May 2026 06:37:38 +0800</pubDate>
+    <pubDate>Mon, 18 May 2026 06:45:17 +0800</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
-    <itunes:image href="https://raw.githubusercontent.com/ericchi-valuation/Taiwan-Daily-Insider/main/cover.jpg"/>
+    <itunes:image href="https://ericchi-valuation.github.io/Taiwan-Daily-Insider/cover.jpg"/>
     <itunes:owner>
       <itunes:name>Eric Chi</itunes:name>
       <itunes:email>eric.chi1988@gmail.com</itunes:email>
@@ -291,6 +291,14 @@
       <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-05-17/TaiwanDaily_Podcast_Final.mp3" length="20725385" type="audio/mpeg"/>
       <itunes:duration>14:23</itunes:duration>
       <pubDate>Sun, 17 May 2026 06:37:38 +0800</pubDate>
+    </item>
+    <item>
+      <title>Taiwan Daily Insider - 2026-05-18</title>
+      <description><![CDATA[Today's Taiwan Daily Insider reports TSMC's Kumamoto fab turning profitable in Q1, signaling successful global expansion and strong demand in the semiconductor sector. We also cover the Taiwan stock market's critical defense of the 40,000-point mark, with TSMC's influence and foreign investor sentiment playing key roles, alongside a massive expansion plan for TSMC to address the AI chip shortage. We also touch on recent NTD depreciation trends. Tune in for details on the upcoming aespa concert at the Taipei Dome and trending social media topics. I'm Eric, and I'll see you tomorrow. Zai Jian!]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-05-18/TaiwanDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-05-18/TaiwanDaily_Podcast_Final.mp3" length="17787550" type="audio/mpeg"/>
+      <itunes:duration>12:21</itunes:duration>
+      <pubDate>Mon, 18 May 2026 06:45:17 +0800</pubDate>
     </item>
   </channel>
 </rss>
