@@ -8,10 +8,10 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Sun, 17 May 2026 22:45:20 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 18 May 2026 22:49:27 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Mon, 18 May 2026 06:45:17 +0800</pubDate>
+    <pubDate>Tue, 19 May 2026 06:49:23 +0800</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -299,6 +299,14 @@
       <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-05-18/TaiwanDaily_Podcast_Final.mp3" length="17787550" type="audio/mpeg"/>
       <itunes:duration>12:21</itunes:duration>
       <pubDate>Mon, 18 May 2026 06:45:17 +0800</pubDate>
+    </item>
+    <item>
+      <title>Taiwan Daily Insider - 2026-05-19</title>
+      <description><![CDATA[Today on Taiwan Daily Insider, President Lai Ching-te firmly stated that Taiwan will not be 'sacrificed or traded away,' reaffirming the island's sovereignty amidst geopolitical discussions. We also delved into the recent dramatic volatility of the Taiex, which saw a thousand-point drop followed by a strong rebound fueled by domestic capital, with foreign investors showing optimism for the post-520 market. In tech news, TSMC's ADRs saw a decline, and the company divested a significant stake in Vanguard International Semiconductor. For local flavor, the Malaysian Fo Guang Chorus is vying for a performance slot at the Taipei Dome, and the New Taipei City Good Market Festival featuring the Tamsui Haidu Festival is set to bring vibrant local culture. Tune in for these top stories and more insights.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-05-19/TaiwanDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-05-19/TaiwanDaily_Podcast_Final.mp3" length="18988137" type="audio/mpeg"/>
+      <itunes:duration>13:11</itunes:duration>
+      <pubDate>Tue, 19 May 2026 06:49:23 +0800</pubDate>
     </item>
   </channel>
 </rss>
