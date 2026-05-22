@@ -8,10 +8,10 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Wed, 20 May 2026 23:07:23 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 22 May 2026 06:02:18 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Thu, 21 May 2026 07:07:20 +0800</pubDate>
+    <pubDate>Fri, 22 May 2026 14:02:13 +0800</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -323,6 +323,14 @@
       <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-05-21/TaiwanDaily_Podcast_Final.mp3" length="21004372" type="audio/mpeg"/>
       <itunes:duration>14:35</itunes:duration>
       <pubDate>Thu, 21 May 2026 07:07:20 +0800</pubDate>
+    </item>
+    <item>
+      <title>Taiwan Daily Insider - 2026-05-22</title>
+      <description><![CDATA[Today on Taiwan Daily Insider, Eric covers a historic surge in the Taiex, which soared over 1,300 points past 42,000, driven by MediaTek and other tech giants. We also dive into TSMC's steady climb and AMD's massive US$10 billion AI investment in Taiwan, focusing on 2nm chip production. Plus, updates on enhanced labor pension protections for workers and a look at rising CPI impacting renters. For local flavor, we highlight the hito Pop Music Awards and Taipei's Summer Cultural Activities. Tune in for all the essential news and insights affecting foreign professionals in Taiwan.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-05-22/TaiwanDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-05-22/TaiwanDaily_Podcast_Final.mp3" length="17540536" type="audio/mpeg"/>
+      <itunes:duration>12:10</itunes:duration>
+      <pubDate>Fri, 22 May 2026 14:02:13 +0800</pubDate>
     </item>
   </channel>
 </rss>
