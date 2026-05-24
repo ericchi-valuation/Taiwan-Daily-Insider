@@ -2,7 +2,6 @@ import os
 import re
 import requests
 import asyncio
-import numpy as np
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -115,6 +114,7 @@ def generate_audio_voxcpm(script_text, output_file):
         from voxcpm import VoxCPM
         import soundfile as sf
         import torch
+        import numpy as np
     except ImportError as e:
         print(f"\n[Audio] ⚠️  VoxCPM2 not installed ({e}).")
         print("       Run: pip install voxcpm soundfile torch")
@@ -192,6 +192,7 @@ def generate_audio_kokoro(script_text, output_file):
     try:
         from kokoro import KPipeline
         import soundfile as sf
+        import numpy as np
     except ImportError:
         # Silently skip if not installed — Edge TTS will handle it
         return False
