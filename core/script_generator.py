@@ -10,9 +10,34 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+
+def diagnostic_list_models(client):
+    """
+    [自動診斷工具] 查詢這把 API Key 到底可以使用哪些模型
+    """
+    print("\n🔍 [系統診斷] 正在向 Google 查詢此 API Key 可用的模型清單...")
+    try:
+        models = client.models.list()
+        available_models = []
+        for m in models:
+            if 'generateContent' in m.supported_actions:
+                clean_name = m.name.replace('models/', '')
+                available_models.append(clean_name)
+        
+        if available_models:
+            print(f"✅ 您的 API Key 支援以下 {len(available_models)} 個模型：")
+            print(", ".join(available_models))
+        else:
+            print("❌ 警告：您的 API Key 無法存取任何文字生成模型！這通常是因為帳號權限或地區限制 (歐盟區)。")
+            
+    except Exception as e:
+        print(f"❌ 查詢模型清單失敗，您的金鑰或連線被阻擋: {e}")
+    print("-" * 50 + "\n")
+
+
 def score_and_sort_articles(client, news_data):
     """
-    使用 Gemini 2.0 Flash 快速為所有新聞評分 (1-10)，並依重要性排序。
+    使用 Gemini 評分模型快速為所有新聞評分 (1-10)，並依重要性排序。
     """
     all_articles = []
     for source, articles in news_data.items():
@@ -65,8 +90,8 @@ def score_and_sort_articles(client, news_data):
         }
     }
 
-    # 優先使用 2.5-flash，若失敗則嘗試其他模型
-    models_to_try = ['gemini-2.5-flash', 'gemini-2.0-flash', 'gemini-2.5-pro']
+    # 評分用的備援模型清單
+    models_to_try = ['gemini-2.5-flash', 'gemini-3.5-flash', 'gemini-2.5-flash-lite']
     response = None
     
     for model_name in models_to_try:
@@ -101,9 +126,7 @@ def score_and_sort_articles(client, news_data):
         if response.parsed:
             scores = response.parsed
         else:
-            # 備用方案：若 parsed 為空，則嘗試手動解析
             clean_text = response.text.replace("```json", "").replace("```", "").strip()
-            import re
             json_match = re.search(r'\[.*\]', clean_text, re.DOTALL)
             if json_match:
                 clean_text = json_match.group(0)
@@ -115,12 +138,10 @@ def score_and_sort_articles(client, news_data):
             
     except Exception as e:
         print(f"⚠️ 評分結果解析失敗: {e}")
-        # 如果解析完全失敗，至少保證 score 欄位存在
         for a in all_articles:
             if 'score' not in a:
                 a['score'] = 1
 
-    # 按分數排序並取前 10 名
     sorted_articles = sorted(all_articles, key=lambda x: x.get('score', 0), reverse=True)
     return sorted_articles[:10]
 
@@ -135,12 +156,13 @@ def generate_podcast_script(news_data, social_data, weather_data=None, exchange_
         return None
 
     client = genai.Client(api_key=api_key)
+    
+    diagnostic_list_models(client)
 
     if not news_data and not social_data:
         print("⚠️ 警告：沒有收集到任何新聞或社群資料，跳過 AI 生成。")
         return None
 
-    # Step 1: 重要性評分與排序 (強制取前 10 名)
     top_articles = score_and_sort_articles(client, news_data)
     
     sources_text = "【Today's Prioritized Taiwan News Headlines】\n"
@@ -212,12 +234,17 @@ def generate_podcast_script(news_data, social_data, weather_data=None, exchange_
 
     ### MANDATORY SECTION — SMART TWD/NTD CURRENCY CORNER ###
     You MUST include a dedicated "Currency Corner" segment in EVERY single broadcast.
-    - Report the exact NTD/USD and NTD/EUR exchange rates provided in the source materials.
-    - If the rates are not provided, simply mention that the data is unavailable today. DO NOT invent numbers.
+    - CRITICAL TIMING CONTEXT: The exchange rates provided come from the API's 'latest' endpoint,
+      which reflects the MOST RECENTLY SETTLED trading day's closing rates (typically yesterday).
+      Therefore, NEVER say "Today's exchange rate is" or "Today, the Taiwan dollar...".
+      Instead, you MUST frame it accurately, for example: "Yesterday, the Taiwan dollar was...", or
+      "As of yesterday's close, the exchange rate held steady at...", or "As of the last market close...".
+    - Report the exact TWD/USD and TWD/EUR exchange rates provided in the source materials.
+    - If the rates are not provided, simply mention that the data is unavailable. DO NOT invent numbers.
     - SMART LOGIC: Check the source materials. If "High Volatility: YES" is present, you MUST provide a
       deeper analysis of the recent 1%+ swing, explaining what it means for expats' purchasing power,
       remitting salary abroad, and cost of living. If "High Volatility: NO", keep it VERY brief.
-      Just state the rates and say "The Taiwan dollar is stable today." DO NOT give a long analysis if stable.
+      Just state the rates and say "The Taiwan dollar is stable." DO NOT give a long analysis if stable.
 
     ### EDITORIAL GUIDELINES ###
     1. PRIORITIZATION: The news items are pre-sorted by an importance score. Maintain this order.
@@ -230,10 +257,13 @@ def generate_podcast_script(news_data, social_data, weather_data=None, exchange_
     8. CALL TO ACTION (CTA): MANDATORY. After the social media segment, you MUST say: "That's all for today's Taiwan Daily Insider. If you found this episode helpful, please subscribe, share it with colleagues and friends here in Taiwan, and drop us a review wherever you listen — it truly helps us grow. I'm Eric, and I'll see you tomorrow. Zai Jian!" This closing MUST be the very last thing in the script. The script is NOT complete without it.
     9. TONE: Think "NPR Up First". Fast-paced, insightful, and end with a smile.
     10. LENGTH: The full script MUST be between 1800 and 2400 words. ALWAYS finish the full closing before hitting the word limit — never truncate the CTA or sign-off.
+    11. POLITICAL TITLES — CRITICAL FACT-CHECK RULE: NEVER assume or repeat a person's political title
+        from your training data or memory. ONLY use titles (e.g. "President", "Minister")
+        that are EXPLICITLY stated in TODAY's provided source materials.
 
     ### STRICT PROHIBITIONS ###
     - DO NOT hallucinate or invent any news stories, quotes, or events.
-    - DO NOT mention any editorial score or rating in the spoken script (e.g. "scoring 9 out of 10", "a score of 8", "rated 7/10"). Scores are internal editorial tools only and must never appear in the broadcast.
+    - DO NOT mention any editorial score or rating in the spoken script.
     - DO NOT use rhetorical sentence fragments as transitions.
     - DO NOT use any Markdown formatting in the script.
     - DO NOT state the wrong day of the week. Today is {today_str}.
@@ -248,7 +278,6 @@ def generate_podcast_script(news_data, social_data, weather_data=None, exchange_
     }}
     """
     
-    # 定義 JSON Schema
     podcast_schema = {
         "type": "OBJECT",
         "properties": {
@@ -269,19 +298,17 @@ def generate_podcast_script(news_data, social_data, weather_data=None, exchange_
     
     prompt_content = f"Here are today's materials. Please write a detailed, expansive script and a summary:\n\n{sources_text}"
     
-    # ✅ 鎖定使用付費帳戶支援的最新系列模型
     models_to_try = [
         'gemini-2.5-flash', 
+        'gemini-3.5-flash',
         'gemini-2.5-pro',
-        'gemini-2.0-flash',
-        'gemini-2.0-flash-lite',
-        'gemini-3.1-flash-lite-preview'
+        'gemini-2.5-flash-lite'
     ]
     response = None
     
     for model_name in models_to_try:
         max_retries = 3
-        base_wait = 20  # 秒，503 時的等待基數
+        base_wait = 20  
         
         for attempt in range(max_retries):
             try:
@@ -299,14 +326,14 @@ def generate_podcast_script(news_data, social_data, weather_data=None, exchange_
                 print(f"⚠️ {model_name} 失敗: {error_msg}")
                 
                 if "503" in error_msg or "UNAVAILABLE" in error_msg:
-                    wait_sec = base_wait * (2 ** attempt)  # 指數退避: 20s, 40s, 80s
+                    wait_sec = base_wait * (2 ** attempt) 
                     print(f"  ⏳ API 暫時過載 (503)。等待 {wait_sec} 秒後重試...")
                     time.sleep(wait_sec)
                 elif "429" in error_msg or "Quota exceeded" in error_msg:
                     print(f"⏳ 偵測到 API 額度耗盡 (429)，暫停 60 秒後重試...")
                     time.sleep(60)
                 else:
-                    break  # 非暫時性錯誤，直接換下一個模型
+                    break 
                     
         if response:
             break
@@ -316,14 +343,11 @@ def generate_podcast_script(news_data, social_data, weather_data=None, exchange_
         return None
         
     try:
-        # 優先嘗試從 response.parsed 獲取 (如果使用了 schema)
-        # 或是從 response.text 手動解析
         if getattr(response, 'parsed', None):
             result_json = response.parsed
         else:
             raw_text = response.text.strip()
             clean_text = raw_text.replace("```json", "").replace("```", "").strip()
-            import re
             json_match = re.search(r'\{.*\}', clean_text, re.DOTALL)
             if json_match:
                 clean_text = json_match.group(0)
@@ -369,7 +393,6 @@ def review_and_improve_script(script: str, client=None) -> str:
     word_count = len(script.split())
     print(f"\n📝 [AI Editor] 審稿中... 目前字數: {word_count} 字")
 
-    # ── 先做格式清理（無論 AI 是否介入）──
     script = _clean_script_formatting(script)
 
     needs_expansion = word_count < 1800
@@ -383,14 +406,15 @@ def review_and_improve_script(script: str, client=None) -> str:
         action = "EXPAND"
         instruction = (
             f"The current script is only {word_count} words, which is far too short for an 8–12 minute podcast. "
-            "You MUST expand it to at least 1800 words. Add deeper analysis, expat context, and historical "
-            "background to each major story. Do NOT add filler, repetition, or new topics not in the original."
+            "You MUST expand it to between 1800 and 2200 words. Add deeper analysis, expat context, and historical "
+            "background to each major story. Do NOT add filler, repetition, or new topics not in the original. "
+            "CRITICAL: Do NOT exceed 2200 words under any circumstances."
         )
     else:
         action = "TRIM"
         instruction = (
             f"The current script is {word_count} words, which is slightly long. "
-            "Trim it to under 2400 words by cutting redundant sentences, but keep all main stories intact."
+            "Trim it to under 2400 words by cutting redundant sentences, but keep all main stories and the closing intact."
         )
 
     print(f"  🤖 [AI Editor] 正在 {action} 稿件...")
@@ -417,7 +441,9 @@ def review_and_improve_script(script: str, client=None) -> str:
     ---
     """
 
-    editor_models = ['gemini-2.5-flash', 'gemini-2.0-flash', 'gemini-2.5-pro']
+    editor_models = ['gemini-2.5-flash', 'gemini-3.5-flash', 'gemini-2.5-pro']
+    revised = None
+    used_model = None
     for model_name in editor_models:
         try:
             response = client.models.generate_content(
@@ -426,15 +452,60 @@ def review_and_improve_script(script: str, client=None) -> str:
                 config=types.GenerateContentConfig(temperature=0.4)
             )
             revised = _clean_script_formatting(response.text.strip())
+            used_model = model_name
             new_word_count = len(revised.split())
             print(f"  ✔️ [AI Editor] 審稿完成 (使用 {model_name})，修訂後字數: {new_word_count} 字")
-            return revised
+            break
         except Exception as e:
             print(f"  ⚠️ [AI Editor] {model_name} 失敗: {e}")
             time.sleep(15)
 
-    print("  ⚠️ [AI Editor] 所有模型均失敗，回傳格式清理後的原稿。")
-    return script
+    if revised is None:
+        print("  ⚠️ [AI Editor] 所有模型均失敗，回傳格式清理後的原稿。")
+        return script
+
+    # ── Second-pass trim: if expansion overshot the 2400-word target, trim it ─
+    post_edit_count = len(revised.split())
+    if needs_expansion and post_edit_count > 2600:
+        print(f"  ⚠️ [AI Editor] 展開後字數 ({post_edit_count}) 超過上限 2600，啟動第二輪自動裁剪...")
+        trim_instruction = (
+            f"The current script is {post_edit_count} words, which is too long for a 10-minute podcast. "
+            "Trim it to under 2400 words by removing redundant sentences and over-explained passages, "
+            "but keep ALL main stories, the weather briefing, currency corner, events, and the full closing CTA intact."
+        )
+        trim_prompt = f"""
+    You are a senior podcast editor for "Taiwan Daily Insider", an English-language daily news podcast.
+
+    {trim_instruction}
+
+    STRICT RULES:
+    1. Output ONLY the revised script text. No JSON, no markdown, no explanation.
+    2. Do NOT add any Markdown formatting (no #, ##, **, *, ---).
+    3. NEVER cut the closing CTA or "Zai Jian!" sign-off — trim from the middle of news stories instead.
+    4. Maintain the same host voice and NPR-style tone.
+
+    HERE IS THE CURRENT SCRIPT:
+    ---
+    {revised}
+    ---
+    """
+        for model_name in editor_models:
+            try:
+                resp2 = client.models.generate_content(
+                    model=model_name,
+                    contents=trim_prompt,
+                    config=types.GenerateContentConfig(temperature=0.3)
+                )
+                trimmed = _clean_script_formatting(resp2.text.strip())
+                final_count = len(trimmed.split())
+                print(f"  ✔️ [AI Editor] 第二輪裁剪完成 (使用 {model_name})，最終字數: {final_count} 字")
+                return trimmed
+            except Exception as e:
+                print(f"  ⚠️ [AI Editor] 第二輪裁剪失敗 ({model_name}): {e}")
+                time.sleep(10)
+        print("  ⚠️ [AI Editor] 第二輪裁剪所有模型均失敗，使用第一輪結果。")
+
+    return revised
 
 
 def _clean_script_formatting(script: str) -> str:
@@ -442,15 +513,9 @@ def _clean_script_formatting(script: str) -> str:
     移除 TTS 不友好的格式符號：Markdown 標題、粗體、分隔線等。
     同時移除任何意外流入播報稿的編輯評分語句。
     """
-    # 移除 Markdown 標題 (# / ## / ###)
     script = re.sub(r'^#{1,6}\s+', '', script, flags=re.MULTILINE)
-    # 移除粗體/斜體 (**text** 或 *text*)
     script = re.sub(r'\*{1,2}([^*]+)\*{1,2}', r'\1', script)
-    # 移除水平分隔線 (--- / *** / ___)
     script = re.sub(r'^[\-\*_]{3,}\s*$', '', script, flags=re.MULTILINE)
-    # 移除評分語句（內部評分絕不應出現在播報稿中）
-    # 匹配形式如："scoring a perfect 10 out of 10", "with a score of 8 out of 10",
-    #             "both scoring 6 out of 10", "rated 9/10", "a 9 out of 10 story" 等
     script = re.sub(
         r'(?i)(,?\s*)'
         r'((?:both|also|each)?\s*(?:scoring|rated?|with\s+a\s+score\s+of|a\s+perfect)'
@@ -458,6 +523,5 @@ def _clean_script_formatting(script: str) -> str:
         '',
         script
     )
-    # 清理多餘的空行
     script = re.sub(r'\n{3,}', '\n\n', script)
     return script.strip()
