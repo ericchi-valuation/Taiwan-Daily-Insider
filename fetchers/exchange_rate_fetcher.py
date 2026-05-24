@@ -1,16 +1,17 @@
+import os
+import json
 import requests
 from datetime import datetime, timedelta
 import pytz
 
 TAIPEI_TZ = pytz.timezone("Asia/Taipei")
+CACHE_FILE = os.path.join(os.path.dirname(__file__), "exchange_rate_cache.json")
 
 
 def _get_prev_business_day_from(date_str: str) -> str:
     """
     Given a date string (YYYY-MM-DD), return the closest prior business day
-    (Mon-Fri) in the same format.  Used to find the trading day *before*
-    whatever date the /latest endpoint actually represents, so we never
-    compare a date against itself and get a 0% change.
+    (Mon-Fri) in the same format.
     """
     anchor = datetime.strptime(date_str, "%Y-%m-%d").replace(tzinfo=TAIPEI_TZ)
     day = anchor - timedelta(days=1)
@@ -19,18 +20,45 @@ def _get_prev_business_day_from(date_str: str) -> str:
     return day.strftime("%Y-%m-%d")
 
 
+def load_cache() -> dict:
+    if os.path.exists(CACHE_FILE):
+        try:
+            with open(CACHE_FILE, "r", encoding="utf-8") as f:
+                return json.load(f)
+        except Exception:
+            pass
+    return {}
+
+
+def save_to_cache(date_str: str, usd_twd: float, eur_twd: float):
+    cache = load_cache()
+    cache[date_str] = {"usd_twd": usd_twd, "eur_twd": eur_twd}
+    # Keep only the last 10 entries to avoid bloat
+    sorted_keys = sorted(cache.keys())
+    if len(sorted_keys) > 10:
+        for k in sorted_keys[:-10]:
+            del cache[k]
+    try:
+        with open(CACHE_FILE, "w", encoding="utf-8") as f:
+            json.dump(cache, f, indent=4)
+    except Exception as e:
+        print(f"  [!] Failed to save cache: {e}")
+
+
+def get_prev_rates_from_cache(latest_date: str) -> tuple:
+    cache = load_cache()
+    # Find the largest date in cache that is smaller than latest_date
+    earlier_dates = [d for d in cache.keys() if d < latest_date]
+    if earlier_dates:
+        prev_date = max(earlier_dates)
+        return prev_date, cache[prev_date].get("usd_twd"), cache[prev_date].get("eur_twd")
+    return None, None, None
+
+
 def get_exchange_rates():
     """
-    Fetch the latest USD→TWD and EUR→TWD exchange rates via open.er-api.com.
-    Also captures yesterday's rates to calculate daily % change and flag
-    high volatility (>= 1%), enabling smart commentary in the script generator.
-
-    Returns a dict with:
-      - usd_twd, eur_twd          : today's rates
-      - usd_twd_prev, eur_twd_prev: previous business day's rates (may be None)
-      - usd_change_pct, eur_change_pct: % change vs. prev day
-      - high_volatility           : True if either pair moved >= 1%
-      - summary                   : one-line summary for the script
+    Fetch the latest USD->TWD and EUR->TWD exchange rates via the free
+    fawazahmed0/currency-api.
     """
     result = {
         "usd_twd":        None,
@@ -40,92 +68,114 @@ def get_exchange_rates():
         "usd_change_pct": None,
         "eur_change_pct": None,
         "high_volatility": False,
+        "rate_date":      None,
+        "prev_date":      None,
         "summary": "Exchange rate data is currently unavailable."
     }
 
-    VOLATILITY_THRESHOLD = 1.0   # percent
+    VOLATILITY_THRESHOLD = 1.0
 
-    # ── Fetch today (latest settled rate) ────────────────────────────────────
-    # We read the actual date from the API response so we can correctly derive
-    # the *prior* business day for comparison (avoids 0% change bug).
+    base_url = "https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api"
+    latest_usd_url = f"{base_url}@latest/v1/currencies/usd.json"
+    latest_eur_url = f"{base_url}@latest/v1/currencies/eur.json"
+
     latest_date = None
+
+    # -- Fetch today (latest settled rate) --
+    latest_success = False
     try:
-        print("💱 Fetching today's USD→TWD rate from ExchangeRate-API...")
-        resp_usd = requests.get("https://open.er-api.com/v6/latest/USD", timeout=10)
+        print("[*] Fetching latest exchange rates from fawazahmed0 API...")
+        
+        # USD to TWD
+        resp_usd = requests.get(latest_usd_url, timeout=10)
         resp_usd.raise_for_status()
         data_usd = resp_usd.json()
-        usd_twd = data_usd.get("rates", {}).get("TWD")
-        if usd_twd:
-            result["usd_twd"] = round(usd_twd, 2)
-        # e.g. "Wed, 06 May 2026 00:02:02 +0000"  →  parse just the date part
-        raw_ts = data_usd.get("time_last_update_utc", "")
-        if raw_ts:
-            try:
-                latest_date = datetime.strptime(raw_ts, "%a, %d %b %Y %H:%M:%S %z").strftime("%Y-%m-%d")
-            except ValueError:
-                pass  # will fall back below
-
-        resp_eur = requests.get("https://open.er-api.com/v6/latest/EUR", timeout=10)
+        latest_date = data_usd.get("date")
+        usd_twd = data_usd.get("usd", {}).get("twd")
+        
+        # EUR to TWD
+        resp_eur = requests.get(latest_eur_url, timeout=10)
         resp_eur.raise_for_status()
         data_eur = resp_eur.json()
-        eur_twd = data_eur.get("rates", {}).get("TWD")
-        if eur_twd:
+        eur_twd = data_eur.get("eur", {}).get("twd")
+        
+        if usd_twd and eur_twd:
+            result["usd_twd"] = round(usd_twd, 2)
             result["eur_twd"] = round(eur_twd, 2)
-
-        if result["usd_twd"] and result["eur_twd"]:
-            print(f"  ✔️  Latest ({latest_date}): 1 USD = {result['usd_twd']} TWD | 1 EUR = {result['eur_twd']} TWD")
-
+            result["rate_date"] = latest_date
+            print(f"  [OK] Latest ({latest_date}): 1 USD = {result['usd_twd']} TWD | 1 EUR = {result['eur_twd']} TWD")
+            save_to_cache(latest_date, result["usd_twd"], result["eur_twd"])
+            latest_success = True
+            
     except Exception as e:
-        print(f"  ⚠️  Could not fetch today's exchange rates: {e}")
+        print(f"  [!] Primary source failed ({e}). Attempting fallback open.er-api.com...")
 
-    # ── Determine previous business day relative to what /latest actually returned ─
-    if latest_date:
-        prev_day_str = _get_prev_business_day_from(latest_date)
-    else:
-        # Fallback: 2 calendar days back from now, skip weekends
-        fallback = datetime.now(TAIPEI_TZ) - timedelta(days=2)
-        while fallback.weekday() >= 5:
-            fallback -= timedelta(days=1)
-        prev_day_str = fallback.strftime("%Y-%m-%d")
+    if not latest_success:
+        try:
+            resp_fallback = requests.get("https://open.er-api.com/v6/latest/USD", timeout=10)
+            resp_fallback.raise_for_status()
+            data_fallback = resp_fallback.json()
+            rates = data_fallback.get("rates", {})
+            usd_twd = rates.get("TWD")
+            usd_eur = rates.get("EUR")
+            
+            if usd_twd and usd_eur:
+                eur_twd = usd_twd / usd_eur
+                
+                # Parse date from unix timestamp or fallback to today
+                unix_time = data_fallback.get("time_last_update_unix")
+                if unix_time:
+                    latest_date = datetime.fromtimestamp(unix_time, pytz.utc).astimezone(TAIPEI_TZ).strftime("%Y-%m-%d")
+                else:
+                    latest_date = datetime.now(TAIPEI_TZ).strftime("%Y-%m-%d")
+                
+                result["usd_twd"] = round(usd_twd, 2)
+                result["eur_twd"] = round(eur_twd, 2)
+                result["rate_date"] = latest_date
+                print(f"  [OK] Latest (Fallback {latest_date}): 1 USD = {result['usd_twd']} TWD | 1 EUR = {result['eur_twd']} TWD")
+                save_to_cache(latest_date, result["usd_twd"], result["eur_twd"])
+        except Exception as e2:
+            print(f"  [!] Fallback also failed: {e2}")
 
-    # ── Fetch previous business day via Frankfurter (covers TWD via cross rate) ──
-    # open.er-api.com free tier does NOT support historical queries,
-    # so we use Frankfurter (EUR base) and derive TWD via USD cross.
-    # Frankfurter does NOT have TWD, so we fall back to a lightweight approach:
-    # store previous USD/TWD from the "time_last_update_utc" field and compare
-    # against today, OR simply re-query the same endpoint which returns a
-    # "time_next_update_unix" that we can compare.
-    # Simplest reliable method: use the `data_usd["time_last_update_utc"]` date
-    # to detect if rates are actually from today; we always get the "latest" so
-    # prev-day comparison is done via the exchangerate.host historical endpoint.
-    try:
-        print(f"💱 Fetching previous business day's rates ({prev_day_str}) for volatility check...")
-        hist_usd = requests.get(
-            f"https://api.exchangerate.host/historical?date={prev_day_str}&base=USD&symbols=TWD",
-            timeout=10
-        )
-        hist_eur = requests.get(
-            f"https://api.exchangerate.host/historical?date={prev_day_str}&base=EUR&symbols=TWD",
-            timeout=10
-        )
+    # -- Determine previous business day and fetch --
+    if result["rate_date"]:
+        prev_day_str = _get_prev_business_day_from(result["rate_date"])
+        prev_usd_url = f"{base_url}@{prev_day_str}/v1/currencies/usd.json"
+        prev_eur_url = f"{base_url}@{prev_day_str}/v1/currencies/eur.json"
+        
+        historical_success = False
+        try:
+            print(f"[*] Fetching previous day rates ({prev_day_str})...")
+            resp_prev_usd = requests.get(prev_usd_url, timeout=10)
+            resp_prev_usd.raise_for_status()
+            usd_twd_prev = resp_prev_usd.json().get("usd", {}).get("twd")
+            
+            resp_prev_eur = requests.get(prev_eur_url, timeout=10)
+            resp_prev_eur.raise_for_status()
+            eur_twd_prev = resp_prev_eur.json().get("eur", {}).get("twd")
+            
+            if usd_twd_prev and eur_twd_prev:
+                result["usd_twd_prev"] = round(usd_twd_prev, 2)
+                result["eur_twd_prev"] = round(eur_twd_prev, 2)
+                result["prev_date"] = prev_day_str
+                historical_success = True
+                print(f"  [OK] Prev day (API): 1 USD = {result['usd_twd_prev']} TWD | 1 EUR = {result['eur_twd_prev']} TWD")
+                save_to_cache(prev_day_str, result["usd_twd_prev"], result["eur_twd_prev"])
+        except Exception as e:
+            print(f"  [!] Historical fetch failed ({e}). Attempting cache fallback...")
 
-        if hist_usd.status_code == 200:
-            usd_prev = hist_usd.json().get("rates", {}).get("TWD")
-            if usd_prev:
-                result["usd_twd_prev"] = round(float(usd_prev), 2)
+        # Cache fallback
+        if not historical_success:
+            c_date, c_usd, c_eur = get_prev_rates_from_cache(result["rate_date"])
+            if c_date and c_usd and c_eur:
+                result["usd_twd_prev"] = c_usd
+                result["eur_twd_prev"] = c_eur
+                result["prev_date"] = c_date
+                print(f"  [OK] Prev day (Cache {c_date}): 1 USD = {result['usd_twd_prev']} TWD | 1 EUR = {result['eur_twd_prev']} TWD")
+            else:
+                print("  [!] No previous rates available in cache.")
 
-        if hist_eur.status_code == 200:
-            eur_prev = hist_eur.json().get("rates", {}).get("TWD")
-            if eur_prev:
-                result["eur_twd_prev"] = round(float(eur_prev), 2)
-
-        if result["usd_twd_prev"] and result["eur_twd_prev"]:
-            print(f"  ✔️  Prev day: 1 USD = {result['usd_twd_prev']} TWD | 1 EUR = {result['eur_twd_prev']} TWD")
-
-    except Exception as e:
-        print(f"  ⚠️  Could not fetch previous day's exchange rates: {e}")
-
-    # ── Calculate % change & volatility ──────────────────────────────────────
+    # -- Calculate % change & volatility --
     if result["usd_twd"] and result["usd_twd_prev"]:
         result["usd_change_pct"] = round(
             (result["usd_twd"] - result["usd_twd_prev"]) / result["usd_twd_prev"] * 100, 3
@@ -139,7 +189,7 @@ def get_exchange_rates():
     eur_vol = abs(result["eur_change_pct"]) if result["eur_change_pct"] is not None else 0
     result["high_volatility"] = (usd_vol >= VOLATILITY_THRESHOLD or eur_vol >= VOLATILITY_THRESHOLD)
 
-    # ── Build summary string ──────────────────────────────────────────────────
+    # -- Build summary string --
     if result["usd_twd"] and result["eur_twd"]:
         trend_usd = ""
         if result["usd_change_pct"] is not None:
@@ -151,12 +201,14 @@ def get_exchange_rates():
             sign = "+" if result["eur_change_pct"] >= 0 else ""
             trend_eur = f" ({sign}{result['eur_change_pct']}% vs prev day)"
 
+        date_label = f" [as of {result['rate_date']}'s close]" if result["rate_date"] else ""
+        prev_label = f" [prev: {result['prev_date']}]" if result["prev_date"] else ""
         result["summary"] = (
-            f"1 USD = {result['usd_twd']} TWD{trend_usd} | "
-            f"1 EUR = {result['eur_twd']} TWD{trend_eur}"
+            f"1 USD = {result['usd_twd']} TWD{trend_usd}{date_label} | "
+            f"1 EUR = {result['eur_twd']} TWD{trend_eur}{prev_label}"
         )
-        vol_label = "⚠️  HIGH VOLATILITY" if result["high_volatility"] else "✅ Low volatility"
-        print(f"  {vol_label} — {result['summary']}")
+        vol_label = "[!] HIGH VOLATILITY" if result["high_volatility"] else "[+] Low volatility"
+        print(f"  {vol_label} -- {result['summary']}")
     elif result["usd_twd"]:
         result["summary"] = f"1 USD = {result['usd_twd']} TWD"
 
