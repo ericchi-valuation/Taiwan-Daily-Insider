@@ -8,10 +8,10 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Sun, 24 May 2026 07:30:55 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 24 May 2026 22:49:00 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Sun, 24 May 2026 15:30:55 +0800</pubDate>
+    <pubDate>Mon, 25 May 2026 06:48:57 +0800</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -347,6 +347,14 @@
       <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-05-24/TaiwanDaily_Podcast_Final.mp3" length="20858296" type="audio/mpeg"/>
       <itunes:duration>14:29</itunes:duration>
       <pubDate>Sun, 24 May 2026 15:30:55 +0800</pubDate>
+    </item>
+    <item>
+      <title>Taiwan Daily Insider - 2026-05-25</title>
+      <description><![CDATA[Today's Taiwan Daily Insider dives into the Taiex's impressive surge, with foreign investment pushing the market towards a projected 48,000 points. We also cover the latest rumors regarding TSMC's first-quarter bonus cuts and the contrasting foreign investment activities in the semiconductor giant. Additionally, a new 30-day cooling-off period for labor pension withdrawals offers expats greater flexibility in retirement planning. For local flavor, check out the "台北 斜槓禮物節市集" (Slashie Gift Festival Market) featuring graphic artists. Tune in for these stories and more insights into life in Taiwan.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-05-25/TaiwanDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-05-25/TaiwanDaily_Podcast_Final.mp3" length="20806260" type="audio/mpeg"/>
+      <itunes:duration>14:26</itunes:duration>
+      <pubDate>Mon, 25 May 2026 06:48:57 +0800</pubDate>
     </item>
   </channel>
 </rss>
