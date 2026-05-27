@@ -8,10 +8,10 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Tue, 26 May 2026 23:04:11 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 27 May 2026 23:12:22 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Wed, 27 May 2026 07:04:07 +0800</pubDate>
+    <pubDate>Thu, 28 May 2026 07:12:18 +0800</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -371,6 +371,14 @@
       <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-05-27/TaiwanDaily_Podcast_Final.mp3" length="19077163" type="audio/mpeg"/>
       <itunes:duration>13:14</itunes:duration>
       <pubDate>Wed, 27 May 2026 07:04:07 +0800</pubDate>
+    </item>
+    <item>
+      <title>Taiwan Daily Insider - 2026-05-28</title>
+      <description><![CDATA[Today on Taiwan Daily Insider, Nvidia CEO Jensen Huang declared Taiwan the 'epicenter of the AI revolution,' signaling massive investment and opportunities. We also covered TSMC and ASE's long-term strategic bets and the Taiwan stock market's surge to become the world's 5th largest, driven by institutional buying into tech giants like TSMC and MediaTek. TSMC's CEO also hinted at over 30% bonus increases for employees this year. For local events, grab tickets for the 2026 Mayday Concert at Taipei Arena and look forward to the '500 Bowls 2026' food market in Taipei and Kaohsiung. Tune in for deep dives into Taiwan's booming tech economy and what it means for you.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-05-28/TaiwanDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-05-28/TaiwanDaily_Podcast_Final.mp3" length="21056408" type="audio/mpeg"/>
+      <itunes:duration>14:37</itunes:duration>
+      <pubDate>Thu, 28 May 2026 07:12:18 +0800</pubDate>
     </item>
   </channel>
 </rss>
