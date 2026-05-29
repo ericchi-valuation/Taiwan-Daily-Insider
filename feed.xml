@@ -8,10 +8,10 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Thu, 28 May 2026 23:09:36 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 29 May 2026 23:05:26 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Fri, 29 May 2026 07:09:33 +0800</pubDate>
+    <pubDate>Sat, 30 May 2026 07:05:22 +0800</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -387,6 +387,14 @@
       <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-05-29/TaiwanDaily_Podcast_Final.mp3" length="18222018" type="audio/mpeg"/>
       <itunes:duration>12:39</itunes:duration>
       <pubDate>Fri, 29 May 2026 07:09:33 +0800</pubDate>
+    </item>
+    <item>
+      <title>Taiwan Daily Insider - 2026-05-30</title>
+      <description><![CDATA[Today's Taiwan Daily Insider dives into the Central Bank's warning about five major financial risks, including the potential overvaluation of the AI industry, and the Taiwan Stock Exchange's record-breaking performance, driven by TSMC's surge and the MSCI rebalancing. We also cover TSMC's strategic move to achieve 30% power savings amidst the AI energy crisis and the Ministry of Labor's discussions on introducing Swaziland migrant workers. For your evening, catch the '2026 Concert Lineup' featuring aespa and MAMAMOO, or the 'Fubon Guardians G!POP Music Festival' with CNBLUE and QWER at the Big Egg. Tune in for insightful analysis and local lifestyle updates.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-05-30/TaiwanDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-05-30/TaiwanDaily_Podcast_Final.mp3" length="19645169" type="audio/mpeg"/>
+      <itunes:duration>13:38</itunes:duration>
+      <pubDate>Sat, 30 May 2026 07:05:22 +0800</pubDate>
     </item>
   </channel>
 </rss>
