@@ -8,10 +8,10 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Sat, 30 May 2026 22:48:49 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 31 May 2026 22:50:01 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Sun, 31 May 2026 06:48:46 +0800</pubDate>
+    <pubDate>Mon, 01 Jun 2026 06:49:58 +0800</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -403,6 +403,14 @@
       <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-05-31/TaiwanDaily_Podcast_Final.mp3" length="18469659" type="audio/mpeg"/>
       <itunes:duration>12:49</itunes:duration>
       <pubDate>Sun, 31 May 2026 06:48:46 +0800</pubDate>
+    </item>
+    <item>
+      <title>Taiwan Daily Insider - 2026-06-01</title>
+      <description><![CDATA[Today on Taiwan Daily Insider, we dive into the booming Taiwan stock market, with the 0050 ETF surging over 100% in under a year and foreign investors increasingly targeting Taiwan's broader AI supply chain, not just TSMC. Economists predict the Central Bank will hold interest rates steady for the ninth consecutive time, focusing on inflation. We also cover new labor pension regulations strengthening employer compliance and the Labor Ministry's efforts to incentivize voluntary contributions. For Taipei events, don't miss the 2026 COMPUTEX × InnoVEX Taipei Tech City Drone Performance and the Taipei Philharmonic's 4th Children's and Youth Festival Chorus registration. Tune in for more insights on Taiwan's economy and lifestyle.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-06-01/TaiwanDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-06-01/TaiwanDaily_Podcast_Final.mp3" length="20420065" type="audio/mpeg"/>
+      <itunes:duration>14:10</itunes:duration>
+      <pubDate>Mon, 01 Jun 2026 06:49:58 +0800</pubDate>
     </item>
   </channel>
 </rss>
