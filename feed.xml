@@ -8,10 +8,10 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Sun, 31 May 2026 22:50:01 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 01 Jun 2026 23:23:58 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Mon, 01 Jun 2026 06:49:58 +0800</pubDate>
+    <pubDate>Tue, 02 Jun 2026 07:23:55 +0800</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -411,6 +411,14 @@
       <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-06-01/TaiwanDaily_Podcast_Final.mp3" length="20420065" type="audio/mpeg"/>
       <itunes:duration>14:10</itunes:duration>
       <pubDate>Mon, 01 Jun 2026 06:49:58 +0800</pubDate>
+    </item>
+    <item>
+      <title>Taiwan Daily Insider - 2026-06-02</title>
+      <description><![CDATA[Today's Taiwan Daily Insider reports on the TAIEX's incredible 107 trillion TWD value increase over three and a half years, driven by foreign capital, with experts cautioning against overheating. We also cover the global tech rally, led by Nvidia's surge, which propelled TSMC's ADRs to new highs, reflecting strong international confidence in Taiwan's semiconductor industry. Additionally, the Czech Senate president's visit aims to strengthen bilateral ties, potentially opening new economic and political avenues for Taiwan. For local events, don't miss the Malaysian Fo Guang Chorus vying for a performance at the Taipei Dome, and the Taipei Water Dance Festival's spectacular 'Water and Fire Dance' at Rainbow Bridge in June. Tune in for more insights on Taiwan's dynamic economy and lifestyle.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-06-02/TaiwanDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-06-02/TaiwanDaily_Podcast_Final.mp3" length="16474113" type="audio/mpeg"/>
+      <itunes:duration>11:26</itunes:duration>
+      <pubDate>Tue, 02 Jun 2026 07:23:55 +0800</pubDate>
     </item>
   </channel>
 </rss>
