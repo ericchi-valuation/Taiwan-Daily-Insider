@@ -13,8 +13,12 @@ load_dotenv()
 
 def diagnostic_list_models(client):
     """
-    [自動診斷工具] 查詢這把 API Key 到底可以使用哪些模型
+    [自動診斷工具] 查詢這把 API Key 到底可以使用哪些模型。
+    預設靜默 — 僅在 .env 設定 DEBUG_MODELS=true 時才輸出。
     """
+    if os.environ.get("DEBUG_MODELS", "").strip().lower() not in ("1", "true", "yes"):
+        return  # 靜默模式：正常 pipeline 不印出模型清單
+
     print("\n🔍 [系統診斷] 正在向 Google 查詢此 API Key 可用的模型清單...")
     try:
         models = client.models.list()
@@ -241,23 +245,38 @@ def generate_podcast_script(news_data, social_data, weather_data=None, exchange_
       "As of yesterday's close, the exchange rate held steady at...", or "As of the last market close...".
     - Report the exact TWD/USD and TWD/EUR exchange rates provided in the source materials.
     - If the rates are not provided, simply mention that the data is unavailable. DO NOT invent numbers.
-    - SMART LOGIC: Check the source materials. If "High Volatility: YES" is present, you MUST provide a
-      deeper analysis of the recent 1%+ swing, explaining what it means for expats' purchasing power,
-      remitting salary abroad, and cost of living. If "High Volatility: NO", keep it VERY brief.
-      Just state the rates and say "The Taiwan dollar is stable." DO NOT give a long analysis if stable.
+    - SMART LOGIC — STRICT WORD LIMITS:
+      * If "High Volatility: YES" is present: provide deeper analysis (100–150 words) explaining what
+        the 1%+ swing means for expats — purchasing power, remitting salary abroad, cost of living.
+      * If "High Volatility: NO": the ENTIRE Currency Corner segment MUST be 40 words or fewer.
+        HARD LIMIT — do NOT exceed 40 words. Do NOT explain "why stability matters", do NOT add
+        historical context, do NOT discuss purchasing power. Simply state the two rates and close.
+        Example of correct low-volatility output (≈35 words):
+        "As of yesterday's close, the Taiwan dollar was stable. One US dollar bought 31.36 TWD,
+        and one Euro fetched 36.52 TWD. No significant moves to report — good news for your wallet."
 
     ### EDITORIAL GUIDELINES ###
     1. PRIORITIZATION: The news items are pre-sorted by an importance score. Maintain this order.
-    2. DEPTH BY IMPORTANCE: Devote significantly more time to higher-scoring stories (minimum 150 words per major story).
-    3. EXPAT FOCUS: Focus heavily on business, tech (TSMC/semiconductor), macro-economics, and policies affecting foreigners.
-    4. FACT-CHECKING: Do NOT say "tomorrow's announcement" if the event has already passed based on article dates.
-    5. EVENTS: After the news, feature 1-2 interesting Taipei/Taiwan events from the provided sources to add "lifestyle flavor".
-    6. FILTER TRASH: Ignore tabloid gossip and sports news unless a major international event.
-    7. SOCIAL MEDIA: End the news section with 1-2 fun trending topics from PTT/Dcard. Filter out NSFW content strictly.
-    8. CALL TO ACTION (CTA): MANDATORY. After the social media segment, you MUST say: "That's all for today's Taiwan Daily Insider. If you found this episode helpful, please subscribe, share it with colleagues and friends here in Taiwan, and drop us a review wherever you listen — it truly helps us grow. I'm Eric, and I'll see you tomorrow. Zai Jian!" This closing MUST be the very last thing in the script. The script is NOT complete without it.
-    9. TONE: Think "NPR Up First". Fast-paced, insightful, and end with a smile.
-    10. LENGTH: The full script MUST be between 1800 and 2400 words. ALWAYS finish the full closing before hitting the word limit — never truncate the CTA or sign-off.
-    11. POLITICAL TITLES — CRITICAL FACT-CHECK RULE: NEVER assume or repeat a person's political title
+    2. DEPTH BY IMPORTANCE: Devote more time to higher-scoring stories, but cap any single story at
+       ~300 words maximum so that multiple topics always get covered.
+    3. TOPIC DIVERSITY — CRITICAL: This is a DAILY NEWS show, not a company analysis report.
+       Aim to cover at least 3-4 distinct topics per episode.
+       - TSMC / semiconductor news: NO MORE THAN 25% of the total script word count, even if
+         TSMC-related articles dominate today's headlines. Once you hit the cap, move on.
+       - If TSMC news is the only major story available, summarize it concisely and pivot to macro
+         economy, labor policy, social trends, or lifestyle to fill the remaining time.
+       - DO NOT expand a single company's story with historical background, deep-dive analysis,
+         or multi-paragraph technical explanations just to fill word count.
+    4. EXPAT FOCUS: Cover a balanced mix — business, macro-economics, labor/visa policy, lifestyle,
+       and tech. Tech (TSMC/semiconductor) is one pillar, not the whole show.
+    5. FACT-CHECKING: Do NOT say "tomorrow's announcement" if the event has already passed based on article dates.
+    6. EVENTS: After the news, feature 1-2 interesting Taipei/Taiwan events from the provided sources to add "lifestyle flavor".
+    7. FILTER TRASH: Ignore tabloid gossip and sports news unless a major international event.
+    8. SOCIAL MEDIA: End the news section with 1-2 fun trending topics from PTT/Dcard. Filter out NSFW content strictly.
+    9. CALL TO ACTION (CTA): MANDATORY. After the social media segment, you MUST say: "That's all for today's Taiwan Daily Insider. If you found this episode helpful, please subscribe, share it with colleagues and friends here in Taiwan, and drop us a review wherever you listen — it truly helps us grow. I'm Eric, and I'll see you tomorrow. Zai Jian!" This closing MUST be the very last thing in the script. The script is NOT complete without it.
+    10. TONE: Think "NPR Up First". Fast-paced, insightful, and end with a smile.
+    11. LENGTH: The full script MUST be between 1800 and 2400 words. ALWAYS finish the full closing before hitting the word limit — never truncate the CTA or sign-off.
+    12. POLITICAL TITLES — CRITICAL FACT-CHECK RULE: NEVER assume or repeat a person's political title
         from your training data or memory. ONLY use titles (e.g. "President", "Minister")
         that are EXPLICITLY stated in TODAY's provided source materials.
 
@@ -268,6 +287,10 @@ def generate_podcast_script(news_data, social_data, weather_data=None, exchange_
     - DO NOT use any Markdown formatting in the script.
     - DO NOT state the wrong day of the week. Today is {today_str}.
     - DO NOT list or enumerate the target audience by name in the script. Phrases like "foreign professionals, expats, and Gold Card holders making Taiwan their home" or any similar enumeration of listener types are BANNED. Speak directly to the listener as "you" instead.
+    - DO NOT let any single company (e.g. TSMC, Nvidia, Hon Hai) or single topic exceed 25% of the
+      total script. If you have already devoted ~500 words to TSMC, STOP and move to the next story.
+    - DO NOT pad a story with historical background or technical deep-dives to reach the word count.
+      Instead, use that space to cover more distinct news topics.
 
     ### SCRIPT FORMAT ###
     Output ONLY a JSON object.
@@ -434,6 +457,10 @@ def review_and_improve_script(script: str, client=None) -> str:
     7. When trimming, NEVER cut the closing CTA or sign-off — trim from the middle of news stories instead.
     8. DO NOT list or enumerate the target audience by name anywhere in the script. Remove any phrases like "foreign professionals, expats, and Gold Card holders making Taiwan their home" — replace them with direct address to the listener ("you").
     9. For weather tips: keep only ONE brief practical tip (e.g. "grab an umbrella"). Remove any suggestions of specific venues, parks, or leisure activities.
+    10. CURRENCY CORNER HARD LIMIT: If the exchange rate data shows Low Volatility (change < 1%), the
+        Currency Corner segment MUST be 40 words or fewer. If it is longer, trim it down ruthlessly.
+        Keep only the two rates and one closing sentence. Remove ALL analysis, historical context,
+        purchasing-power explanations, and economic commentary from it.
 
     HERE IS THE CURRENT SCRIPT:
     ---
@@ -445,20 +472,33 @@ def review_and_improve_script(script: str, client=None) -> str:
     revised = None
     used_model = None
     for model_name in editor_models:
-        try:
-            response = client.models.generate_content(
-                model=model_name,
-                contents=editor_prompt,
-                config=types.GenerateContentConfig(temperature=0.4)
-            )
-            revised = _clean_script_formatting(response.text.strip())
-            used_model = model_name
-            new_word_count = len(revised.split())
-            print(f"  ✔️ [AI Editor] 審稿完成 (使用 {model_name})，修訂後字數: {new_word_count} 字")
-            break
-        except Exception as e:
-            print(f"  ⚠️ [AI Editor] {model_name} 失敗: {e}")
-            time.sleep(15)
+        max_editor_retries = 2  # 同一個模型最多重試 2 次 (針對 503)
+        for editor_attempt in range(1, max_editor_retries + 1):
+            try:
+                response = client.models.generate_content(
+                    model=model_name,
+                    contents=editor_prompt,
+                    config=types.GenerateContentConfig(temperature=0.4)
+                )
+                revised = _clean_script_formatting(response.text.strip())
+                used_model = model_name
+                new_word_count = len(revised.split())
+                print(f"  ✔️ [AI Editor] 審稿完成 (使用 {model_name})，修訂後字數: {new_word_count} 字")
+                break  # 成功，跳出 retry loop
+            except Exception as e:
+                error_msg = str(e)
+                is_overload = "503" in error_msg or "UNAVAILABLE" in error_msg
+                if is_overload and editor_attempt < max_editor_retries:
+                    wait_sec = 15 * editor_attempt  # 第1次等15s, 第2次等30s
+                    print(f"  ⚠️ [AI Editor] {model_name} 503 過載 (attempt {editor_attempt}/{max_editor_retries})，等待 {wait_sec} 秒後重試...")
+                    time.sleep(wait_sec)
+                else:
+                    print(f"  ⚠️ [AI Editor] {model_name} 失敗: {e}")
+                    if not is_overload:
+                        break  # 非 503 錯誤 (如 400) 不重試，直接跳下一個模型
+                    time.sleep(10)
+        if revised:
+            break  # 已有結果，跳出模型循璴
 
     if revised is None:
         print("  ⚠️ [AI Editor] 所有模型均失敗，回傳格式清理後的原稿。")

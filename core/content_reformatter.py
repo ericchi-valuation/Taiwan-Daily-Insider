@@ -84,14 +84,18 @@ def reformat_for_newsletter(podcast_script, events_data=None):
 def reformat_for_threads(podcast_script):
     """
     將原版廣播口語稿，改寫成精簡的社群貼文短語 (Threads 版)，必須嚴格少於 500 字元。
+    Spotify 連結後置追加 (由程式碼确保，不依賴 AI)。
     """
+    SPOTIFY_LINK = "https://open.spotify.com/show/7GiuGUjOaVJYZFbbYWPfyk?si=83b17d135562440e"
+    SPOTIFY_SUFFIX = f"\n\n🎧 Listen on Spotify:\n{SPOTIFY_LINK}"
+
     client = _get_gemini_client()
     if not client:
-        return "新一集的 Taiwan Daily Insider 上架啦！點擊主頁連結收聽最新節目🎧"
+        return f"新一集的 Taiwan Daily Insider 上架囉！點擊主頁連結收聽最新節目🎧{SPOTIFY_SUFFIX}"
 
-    print("🤖 正在使用 AI 萃取 Threads 貼文精華短語...")
-    
-    # 強化版 Prompt：強制 AI 抓出具體新聞事件
+    print("🤖 正在使用 AI 萃取 Threads 貼文精蕸短語...")
+
+    # AI 對話空間限制在 350 字元，剩餘的留給 Spotify suffix (~100 字元)
     prompt = f"""
     You are a witty, professional social media manager for a Tech and Business podcast in Taiwan.
     Read the following podcast script and create a single post for Threads.
@@ -102,10 +106,10 @@ def reformat_for_threads(podcast_script):
        exchange rates (like NTD/USD or NTD/EUR) or weather figures.
        ONLY use facts and figures EXPLICITLY stated word-for-word in the script.
        If the script does not mention a number, you MUST NOT include that number. Period.
-    3. The entire output MUST be strictly UNDER 450 characters.
+    3. The entire output MUST be strictly UNDER 350 characters (NOT 500 — leave room for the link).
     4. Use 1 or 2 relevant emojis.
     5. Do NOT use HTML formatting. Use plain text and line breaks.
-    6. End the post with: "Listen to the full episode on our feed! 🎧".
+    6. Do NOT add any closing line like "Listen on Spotify" or "Check the link" — that will be added automatically.
     7. Do not include any title like "Threads Post:". Just return the text.
     
     Here is the podcast script:
@@ -113,25 +117,34 @@ def reformat_for_threads(podcast_script):
     """
 
     try:
-        # 使用 2.5-pro 與低溫設定確保精準
         response = client.models.generate_content(
             model='gemini-2.5-pro',
             contents=prompt,
             config=types.GenerateContentConfig(
-                temperature=0.2, 
+                temperature=0.2,
             )
         )
-        result_text = response.text.strip()
-        
+        body_text = response.text.strip()
+
         # [Debug] 直接在 GitHub Log 印出來，方便我們抓蟲
         print("\n👀 [Debug] Gemini 生成的 Threads 貼文結果如下：")
         print("-" * 30)
-        print(result_text)
+        print(body_text)
         print("-" * 30 + "\n")
-        
-        return result_text
-        
+
+        # 拼接 Spotify 連結 (程式碼确保永遠存在)
+        final_post = body_text + SPOTIFY_SUFFIX
+
+        # 安全檢查：若總長度超過 500 字元，裁剪正文部分保留 suffix
+        max_total = 500
+        if len(final_post) > max_total:
+            allowed_body = max_total - len(SPOTIFY_SUFFIX) - 4  # 4 for "...\n"
+            body_text = body_text[:allowed_body].rstrip() + "..."
+            final_post = body_text + SPOTIFY_SUFFIX
+            print(f"⚠️ 貼文正文超限，已自動裁剪至 {len(final_post)} 字元")
+
+        return final_post
+
     except Exception as e:
         print(f"❌ 生成 Threads 貼文失敗: {e}")
-        # 將備用字串加上標籤，方便我們辨識是不是出錯了
-        return "[自動生成失敗] 新一集的 Taiwan Daily Insider 上線囉！點擊連結收聽最新節目🎧"
+        return f"[自動生成失敗] 新一集的 Taiwan Daily Insider 上線囉！{SPOTIFY_SUFFIX}"

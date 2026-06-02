@@ -9,7 +9,34 @@ FEED_FILE = "feed.xml"
 
 # Podcast Metadata (您可以自己修改這裡的設定)
 PODCAST_NAME = "Taiwan Daily Insider"
-PODCAST_DESC = "Your go-to podcast for staying on top of the news that truly matters to foreign professionals, expats, and Gold Card holders right here in Taiwan. Fully automated utilizing AI."
+PODCAST_DESC = (
+    "Living in Taiwan but drowning in Chinese-language headlines? "
+    "Taiwan Daily Insider is your daily 10-minute English briefing — "
+    "sharp, structured, and built for the people actually working and living here.\n\n"
+
+    "Every weekday morning, host Eric breaks down what's really moving the needle in Taiwan:\n\n"
+
+    "📈 Markets & Finance — TAIEX movements, NTD/USD & NTD/EUR exchange rates, "
+    "foreign capital flows, and what it all means for your wallet and career.\n\n"
+
+    "💻 Tech & Semiconductors — TSMC, AI supply chains, and Taiwan's role at the center "
+    "of the global chip war — without the jargon overload.\n\n"
+
+    "🏛️ Policy & Expat Life — Gold Card updates, labor law changes, visa news, "
+    "and anything the government is doing that actually affects you.\n\n"
+
+    "🌏 Cross-Strait & Geopolitics — The headlines that shape Taiwan's place "
+    "on the world stage, explained in plain English.\n\n"
+
+    "☀️ Daily Taipei Briefing — Weather, what's trending on PTT and Dcard, "
+    "and a local event worth knowing about.\n\n"
+
+    "What makes us different: every episode is powered by a multi-source AI curation engine "
+    "that scores dozens of articles for relevance to expats before a single word is written — "
+    "so you get the stories that matter, not just the ones that trended.\n\n"
+
+    "New episode every weekday. No fluff, no filler. Just Taiwan, decoded."
+)
 PODCAST_WEBSITE = "https://github.com/ericchi-valuation/Taiwan-Daily-Insider"
 PODCAST_EXPLICIT = False
 PODCAST_IMAGE_URL = "https://ericchi-valuation.github.io/Taiwan-Daily-Insider/cover.jpg"
