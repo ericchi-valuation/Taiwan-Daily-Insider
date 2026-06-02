@@ -18,29 +18,48 @@ def is_trash_social(title):
 def get_ptt_trending(limit=3):
     url = "https://www.ptt.cc/bbs/Gossiping/index.html"
     cookies = {'over18': '1'}
-    headers = {'User-Agent': 'Mozilla/5.0'}
-    
-    try:
-        response = requests.get(url, headers=headers, cookies=cookies, verify=False)
-        response.raise_for_status()
-        soup = BeautifulSoup(response.text, 'html.parser')
-        posts = []
-        for div in soup.find_all('div', class_='r-ent')[:limit+2]:
-            title_tag = div.find('div', class_='title').find('a')
-            if title_tag:
-                title = title_tag.text.strip()
-                if '公告' not in title and not is_trash_social(title):
-                    posts.append({
-                        'title': title,
-                        'url': 'https://www.ptt.cc' + title_tag['href'],
-                        'topics': ['PTT Gossiping']
-                    })
-                    if len(posts) >= limit:
-                        break
-        return posts
-    except Exception as e:
-        print(f"Error fetching PTT: {e}")
-        return []
+    headers = {
+        'User-Agent': (
+            'Mozilla/5.0 (Windows NT 10.0; Win64; x64) '
+            'AppleWebKit/537.36 (KHTML, like Gecko) '
+            'Chrome/125.0.0.0 Safari/537.36'
+        ),
+        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+        'Accept-Language': 'zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+        'Referer': 'https://www.ptt.cc/',
+        'Connection': 'keep-alive',
+    }
+
+    import time as _time
+    max_attempts = 2
+    for attempt in range(1, max_attempts + 1):
+        try:
+            session = requests.Session()
+            session.cookies.update(cookies)
+            response = session.get(url, headers=headers, verify=False, timeout=15)
+            response.raise_for_status()
+            soup = BeautifulSoup(response.text, 'html.parser')
+            posts = []
+            for div in soup.find_all('div', class_='r-ent')[:limit+2]:
+                title_tag = div.find('div', class_='title').find('a')
+                if title_tag:
+                    title = title_tag.text.strip()
+                    if '公告' not in title and not is_trash_social(title):
+                        posts.append({
+                            'title': title,
+                            'url': 'https://www.ptt.cc' + title_tag['href'],
+                            'topics': ['PTT Gossiping']
+                        })
+                        if len(posts) >= limit:
+                            break
+            return posts
+        except Exception as e:
+            if attempt < max_attempts:
+                print(f"  ⚠️ PTT fetch attempt {attempt} failed ({e}). Retrying in 3 s...")
+                _time.sleep(3)
+            else:
+                print(f"Error fetching PTT: {e}")
+                return []
 
 def get_dcard_trending_bypassed(limit=3):
     """

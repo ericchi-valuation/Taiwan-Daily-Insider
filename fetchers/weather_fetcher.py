@@ -36,7 +36,10 @@ def get_taipei_weather():
     """
     Fetch today's Taipei weather from Open-Meteo (free, no API key needed).
     Returns a dict with weather data for use in the podcast script.
+    Retries once (after 5 s) if the first attempt times out or fails.
     """
+    import time as _time
+
     url = (
         "https://api.open-meteo.com/v1/forecast"
         f"?latitude={TAIPEI_LAT}&longitude={TAIPEI_LON}"
@@ -46,9 +49,11 @@ def get_taipei_weather():
         "&timezone=Asia%2FTaipei"
     )
 
-    try:
+    max_attempts = 2
+    for attempt in range(1, max_attempts + 1):
+      try:
         print("🌤️  Fetching Taipei weather from Open-Meteo...")
-        resp = requests.get(url, timeout=10)
+        resp = requests.get(url, timeout=20)
         resp.raise_for_status()
         data = resp.json()
 
@@ -88,20 +93,24 @@ def get_taipei_weather():
         print(f"  ✔️ Weather: {weather_info['summary']}")
         return weather_info
 
-    except Exception as e:
-        print(f"  ⚠️ Could not fetch weather data: {e}")
-        return {
-            "condition":  "Data unavailable",
-            "temp_max_c": None,
-            "temp_min_c": None,
-            "temp_max_f": None,
-            "temp_min_f": None,
-            "current_c":  None,
-            "current_f":  None,
-            "precip_mm":  None,
-            "wind_kmh":   None,
-            "summary":    "Weather data is currently unavailable. Please check a local forecast.",
-        }
+      except Exception as e:
+        if attempt < max_attempts:
+            print(f"  ⚠️ Weather fetch attempt {attempt} failed ({e}). Retrying in 5 s...")
+            _time.sleep(5)
+        else:
+            print(f"  ⚠️ Could not fetch weather data after {max_attempts} attempts: {e}")
+            return {
+                "condition":  "Data unavailable",
+                "temp_max_c": None,
+                "temp_min_c": None,
+                "temp_max_f": None,
+                "temp_min_f": None,
+                "current_c":  None,
+                "current_f":  None,
+                "precip_mm":  None,
+                "wind_kmh":   None,
+                "summary":    "Weather data is currently unavailable. Please check a local forecast.",
+            }
 
 
 if __name__ == "__main__":
