@@ -150,7 +150,6 @@ def main():
         with open("script.txt", "r", encoding="utf-8") as f:
             script_text = f.read()
         threads_post = reformat_for_threads(script_text)
-        print(f"\n👀 [Debug] Threads post:\n{threads_post}\n" + "-" * 30)
         from publishers.threads_poster import post_to_threads
         post_to_threads(threads_post)
     except Exception as e:
