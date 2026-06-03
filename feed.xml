@@ -24,10 +24,10 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Wed, 03 Jun 2026 20:56:09 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 03 Jun 2026 23:29:12 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Thu, 04 Jun 2026 04:56:05 +0800</pubDate>
+    <pubDate>Thu, 04 Jun 2026 07:29:12 +0800</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -438,11 +438,11 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
     </item>
     <item>
       <title>Taiwan Daily Insider - 2026-06-04</title>
-      <description><![CDATA[Today's Taiwan Daily Insider dives into the historic Taiex surge past 46,000, fueled by COMPUTEX and Jensen Huang's 'AI needs power' comments, alongside TSMC's record highs and central bank intervention to stabilize the TWD. We also explore UMC's AI gains, Nvidia's TSMC-backed CPO switches, and geopolitical impacts on local markets. For your leisure, check out the world-class art exhibitions across Taiwan featuring Spanish artists, Egyptian mummies, and works from Mucha to Rembrandt, and remember COMPUTEX 2026 is still ongoing. Tune in for more insights into Taiwan's dynamic economic and cultural landscape.]]></description>
+      <description><![CDATA[Today on Taiwan Daily Insider, the Taiex index surged to a new record of 46,000 points, fueled by COMPUTEX and AI innovation, even as the central bank intervened to stabilize the TWD. We also cover TSMC's upcoming shareholder meeting and Nvidia's new CPO switches tackling AI data center bottlenecks, alongside a new proposed policy on driver's license revocation for marijuana use abroad. For your lifestyle, check out the '2026 All-Taiwan June & July Exhibition Recommendations' for diverse art shows, and don't miss the final day of COMPUTEX 2026. Tune in for all these stories and more insights for your life in Taiwan.]]></description>
       <guid isPermaLink="false">https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-06-04/TaiwanDaily_Podcast_Final.mp3</guid>
-      <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-06-04/TaiwanDaily_Podcast_Final.mp3" length="17870933" type="audio/mpeg"/>
-      <itunes:duration>12:24</itunes:duration>
-      <pubDate>Thu, 04 Jun 2026 04:56:05 +0800</pubDate>
+      <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-06-04/TaiwanDaily_Podcast_Final.mp3" length="17120488" type="audio/mpeg"/>
+      <itunes:duration>11:53</itunes:duration>
+      <pubDate>Thu, 04 Jun 2026 07:29:12 +0800</pubDate>
     </item>
   </channel>
 </rss>
