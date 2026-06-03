@@ -3,15 +3,31 @@
   <channel>
     <title>Taiwan Daily Insider</title>
     <link>https://github.com/ericchi-valuation/Taiwan-Daily-Insider</link>
-    <description>Your go-to podcast for staying on top of the news that truly matters to foreign professionals, expats, and Gold Card holders right here in Taiwan. Fully automated utilizing AI.</description>
+    <description>Living in Taiwan but drowning in Chinese-language headlines? Taiwan Daily Insider is your daily 10-minute English briefing — sharp, structured, and built for the people actually working and living here.
+
+Every weekday morning, host Eric breaks down what's really moving the needle in Taiwan:
+
+📈 Markets &amp; Finance — TAIEX movements, NTD/USD &amp; NTD/EUR exchange rates, foreign capital flows, and what it all means for your wallet and career.
+
+💻 Tech &amp; Semiconductors — TSMC, AI supply chains, and Taiwan's role at the center of the global chip war — without the jargon overload.
+
+🏛️ Policy &amp; Expat Life — Gold Card updates, labor law changes, visa news, and anything the government is doing that actually affects you.
+
+🌏 Cross-Strait &amp; Geopolitics — The headlines that shape Taiwan's place on the world stage, explained in plain English.
+
+☀️ Daily Taipei Briefing — Weather, what's trending on PTT and Dcard, and a local event worth knowing about.
+
+What makes us different: every episode is powered by a multi-source AI curation engine that scores dozens of articles for relevance to expats before a single word is written — so you get the stories that matter, not just the ones that trended.
+
+New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</description>
     <itunes:explicit>no</itunes:explicit>
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Mon, 01 Jun 2026 23:23:58 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 03 Jun 2026 20:56:09 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Tue, 02 Jun 2026 07:23:55 +0800</pubDate>
+    <pubDate>Thu, 04 Jun 2026 04:56:05 +0800</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -419,6 +435,14 @@
       <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-06-02/TaiwanDaily_Podcast_Final.mp3" length="16474113" type="audio/mpeg"/>
       <itunes:duration>11:26</itunes:duration>
       <pubDate>Tue, 02 Jun 2026 07:23:55 +0800</pubDate>
+    </item>
+    <item>
+      <title>Taiwan Daily Insider - 2026-06-04</title>
+      <description><![CDATA[Today's Taiwan Daily Insider dives into the historic Taiex surge past 46,000, fueled by COMPUTEX and Jensen Huang's 'AI needs power' comments, alongside TSMC's record highs and central bank intervention to stabilize the TWD. We also explore UMC's AI gains, Nvidia's TSMC-backed CPO switches, and geopolitical impacts on local markets. For your leisure, check out the world-class art exhibitions across Taiwan featuring Spanish artists, Egyptian mummies, and works from Mucha to Rembrandt, and remember COMPUTEX 2026 is still ongoing. Tune in for more insights into Taiwan's dynamic economic and cultural landscape.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-06-04/TaiwanDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-06-04/TaiwanDaily_Podcast_Final.mp3" length="17870933" type="audio/mpeg"/>
+      <itunes:duration>12:24</itunes:duration>
+      <pubDate>Thu, 04 Jun 2026 04:56:05 +0800</pubDate>
     </item>
   </channel>
 </rss>
