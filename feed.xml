@@ -24,10 +24,10 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Fri, 05 Jun 2026 23:00:51 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 06 Jun 2026 23:01:47 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Sat, 06 Jun 2026 07:00:48 +0800</pubDate>
+    <pubDate>Sun, 07 Jun 2026 07:01:44 +0800</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -459,6 +459,14 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
       <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-06-06/TaiwanDaily_Podcast_Final.mp3" length="22087724" type="audio/mpeg"/>
       <itunes:duration>15:20</itunes:duration>
       <pubDate>Sat, 06 Jun 2026 07:00:48 +0800</pubDate>
+    </item>
+    <item>
+      <title>Taiwan Daily Insider - 2026-06-07</title>
+      <description><![CDATA[Today's episode covers the heavy pressure facing the Taiwan stock market after a massive overnight futures drop, the upcoming TSMC ex-dividend amid internal performance appraisal controversies, and the Ministry of Labor's proposed pension system reforms. We also highlight two exciting Taipei events: Sun Shu-mei's 'MAY-hao 30' concert featuring a brand-new interactive stage, and the Qingguang Commercial District 'Read and Treasure Hunt' walking tour. Tune in for these vital business updates and local lifestyle insights to stay ahead in Taiwan.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-06-07/TaiwanDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-06-07/TaiwanDaily_Podcast_Final.mp3" length="17438973" type="audio/mpeg"/>
+      <itunes:duration>12:06</itunes:duration>
+      <pubDate>Sun, 07 Jun 2026 07:01:44 +0800</pubDate>
     </item>
   </channel>
 </rss>
