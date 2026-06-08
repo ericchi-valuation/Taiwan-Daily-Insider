@@ -24,10 +24,10 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Sun, 07 Jun 2026 22:57:16 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 08 Jun 2026 23:14:04 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Mon, 08 Jun 2026 06:57:13 +0800</pubDate>
+    <pubDate>Tue, 09 Jun 2026 07:13:58 +0800</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -475,6 +475,14 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
       <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-06-08/TaiwanDaily_Podcast_Final.mp3" length="19248945" type="audio/mpeg"/>
       <itunes:duration>13:22</itunes:duration>
       <pubDate>Mon, 08 Jun 2026 06:57:13 +0800</pubDate>
+    </item>
+    <item>
+      <title>Taiwan Daily Insider - 2026-06-09</title>
+      <description><![CDATA[Today's episode covers the historic TAIEX drop of over ninety-three billion Taiwan dollars in foreign capital, the New Taiwan Dollar's resilient defense above thirty-one point five against the US dollar, and TSMC's massive ADR surge that propelled Taiwan to fourth place in global market capitalization. We also highlight upcoming Taipei events, including the 2026 Concert Roundup featuring MAMAMOO and aespa, and Diana Wang's live performance at SUB on June twelfth. Tune in to stay ahead of the latest business, tech, and lifestyle updates in Taiwan!]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-06-09/TaiwanDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-06-09/TaiwanDaily_Podcast_Final.mp3" length="17825794" type="audio/mpeg"/>
+      <itunes:duration>12:22</itunes:duration>
+      <pubDate>Tue, 09 Jun 2026 07:13:58 +0800</pubDate>
     </item>
   </channel>
 </rss>
