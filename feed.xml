@@ -24,10 +24,10 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Mon, 08 Jun 2026 23:14:04 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 09 Jun 2026 23:14:03 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Tue, 09 Jun 2026 07:13:58 +0800</pubDate>
+    <pubDate>Wed, 10 Jun 2026 07:13:59 +0800</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -483,6 +483,14 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
       <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-06-09/TaiwanDaily_Podcast_Final.mp3" length="17825794" type="audio/mpeg"/>
       <itunes:duration>12:22</itunes:duration>
       <pubDate>Tue, 09 Jun 2026 07:13:58 +0800</pubDate>
+    </item>
+    <item>
+      <title>Taiwan Daily Insider - 2026-06-10</title>
+      <description><![CDATA[Today on Taiwan Daily Insider, we analyze the complex financial landscape: a surging Taiex market contrasted with significant foreign investor outflows and a depreciating New Taiwan Dollar. We also delve into the Ministry of Labor's 'Industry New Elite' program, offering up to 100,000 TWD in training subsidies and 8,000 TWD monthly allowances for career development, a boon for foreign professionals. Additionally, Taiwan is reportedly considering aligning with US curbs on AI chip exports to China, a pivotal move in global tech geopolitics, and we cover recent military exercises in Taichung. For local events, New Taipei City is hosting 29 diverse summer activities. Tune in for these stories and more insights for living and working in Taiwan.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-06-10/TaiwanDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-06-10/TaiwanDaily_Podcast_Final.mp3" length="20424455" type="audio/mpeg"/>
+      <itunes:duration>14:10</itunes:duration>
+      <pubDate>Wed, 10 Jun 2026 07:13:59 +0800</pubDate>
     </item>
   </channel>
 </rss>
