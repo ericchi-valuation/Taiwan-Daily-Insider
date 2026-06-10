@@ -24,10 +24,10 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Tue, 09 Jun 2026 23:14:03 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 10 Jun 2026 23:25:38 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Wed, 10 Jun 2026 07:13:59 +0800</pubDate>
+    <pubDate>Thu, 11 Jun 2026 07:25:35 +0800</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -491,6 +491,14 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
       <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-06-10/TaiwanDaily_Podcast_Final.mp3" length="20424455" type="audio/mpeg"/>
       <itunes:duration>14:10</itunes:duration>
       <pubDate>Wed, 10 Jun 2026 07:13:59 +0800</pubDate>
+    </item>
+    <item>
+      <title>Taiwan Daily Insider - 2026-06-11</title>
+      <description><![CDATA[Today on Taiwan Daily Insider, we cover a dramatic market plunge as the Taiex fell nearly 1,500 points, failing to hold the 23,000-point mark, alongside sustained foreign institutional selling. The Central Bank signaled a potential easing of housing market controls, with Governor Yang Chin-long's comments sparking speculation among property developers. TSMC reported robust May revenue, up 30.1% year-on-year, solidifying its AI leadership, even as discussions around export curbs and foreign selling continue. For events, Taiwan's film and TV industry is heading to the Busan Content Market to foster international collaborations and showcase AI-generated IP. Tune in for more insights into Taiwan's economy and lifestyle.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-06-11/TaiwanDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-06-11/TaiwanDaily_Podcast_Final.mp3" length="18124844" type="audio/mpeg"/>
+      <itunes:duration>12:35</itunes:duration>
+      <pubDate>Thu, 11 Jun 2026 07:25:35 +0800</pubDate>
     </item>
   </channel>
 </rss>
