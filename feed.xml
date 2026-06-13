@@ -24,10 +24,10 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Fri, 12 Jun 2026 23:10:23 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 13 Jun 2026 22:57:07 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Sat, 13 Jun 2026 07:10:20 +0800</pubDate>
+    <pubDate>Sun, 14 Jun 2026 06:57:04 +0800</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -515,6 +515,14 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
       <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-06-13/TaiwanDaily_Podcast_Final.mp3" length="19307250" type="audio/mpeg"/>
       <itunes:duration>13:24</itunes:duration>
       <pubDate>Sat, 13 Jun 2026 07:10:20 +0800</pubDate>
+    </item>
+    <item>
+      <title>Taiwan Daily Insider - 2026-06-14</title>
+      <description><![CDATA[Today on Taiwan Daily Insider, we explored TSMC's unwavering dominance in AI chip manufacturing despite competitive pressures and potential export restrictions, alongside its strong May sales. We also delved into the intriguing 'two worlds' of the Taiwan stock market, where index highs mask struggles for many smaller firms, and examined the 'institutional interception' influencing the TWD's exchange rate. For your leisure, Taipei is hosting the KKBOX Music Awards Concert with free online access, and the major Pokémon 30th-anniversary event, 'PokéXciting!', is coming this October. Tune in for more essential insights into life and business in Taiwan.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-06-14/TaiwanDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-06-14/TaiwanDaily_Podcast_Final.mp3" length="21806855" type="audio/mpeg"/>
+      <itunes:duration>15:08</itunes:duration>
+      <pubDate>Sun, 14 Jun 2026 06:57:04 +0800</pubDate>
     </item>
   </channel>
 </rss>
