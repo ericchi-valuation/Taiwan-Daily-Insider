@@ -24,10 +24,10 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Sun, 14 Jun 2026 23:02:17 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 15 Jun 2026 23:32:23 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Mon, 15 Jun 2026 07:02:13 +0800</pubDate>
+    <pubDate>Tue, 16 Jun 2026 07:32:20 +0800</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -531,6 +531,14 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
       <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-06-15/TaiwanDaily_Podcast_Final.mp3" length="22186153" type="audio/mpeg"/>
       <itunes:duration>15:24</itunes:duration>
       <pubDate>Mon, 15 Jun 2026 07:02:13 +0800</pubDate>
+    </item>
+    <item>
+      <title>Taiwan Daily Insider - 2026-06-16</title>
+      <description><![CDATA[Today on Taiwan Daily Insider, Eric unpacks TSMC's recent stock surge, highlighting its market influence and strategic operational choices within Taiwan's science parks. We also explore the Central Bank's potential easing of housing loan rules for move-up buyers and a crucial new long-term care system offering equal benefits to foreign professionals starting June 30th. Public sentiment on cross-strait relations shows a continued rejection of the 'one China principle' and a declining interest in cross-strait talks. For local happenings, New Taipei City kicks off its 'Wish to Play Through' sightseeing factory campaign, and K-Pop group BIGBANG announces four concert dates across Taiwan. Tune in for essential updates and insights for life on the island.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-06-16/TaiwanDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-06-16/TaiwanDaily_Podcast_Final.mp3" length="19660844" type="audio/mpeg"/>
+      <itunes:duration>13:39</itunes:duration>
+      <pubDate>Tue, 16 Jun 2026 07:32:20 +0800</pubDate>
     </item>
   </channel>
 </rss>
