@@ -24,10 +24,10 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Sun, 21 Jun 2026 23:02:03 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 22 Jun 2026 23:16:00 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Mon, 22 Jun 2026 07:01:59 +0800</pubDate>
+    <pubDate>Tue, 23 Jun 2026 07:15:56 +0800</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -587,6 +587,14 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
       <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-06-22/TaiwanDaily_Podcast_Final.mp3" length="17897892" type="audio/mpeg"/>
       <itunes:duration>12:25</itunes:duration>
       <pubDate>Mon, 22 Jun 2026 07:01:59 +0800</pubDate>
+    </item>
+    <item>
+      <title>Taiwan Daily Insider - 2026-06-23</title>
+      <description><![CDATA[Today's Taiwan Daily Insider dives into the TAIEX's incredible new record high of 47,741, propelled by TSMC and the global AI craze, alongside robust foreign investment. We also cover the Ministry of Labor's critical new pension amendments taking effect June 30th, impacting foreign workers' benefits, and the recent depreciation trend of the New Taiwan Dollar. For your calendar, the Malaysian Fo Guang Chorus is competing for a Taipei Dome performance, and K-Pop sensation Stray Kids are set to light up the Taipei Dome in December. Tune in for these essential updates and more insights into life in Taiwan!]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-06-23/TaiwanDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-06-23/TaiwanDaily_Podcast_Final.mp3" length="14546277" type="audio/mpeg"/>
+      <itunes:duration>10:06</itunes:duration>
+      <pubDate>Tue, 23 Jun 2026 07:15:56 +0800</pubDate>
     </item>
   </channel>
 </rss>
