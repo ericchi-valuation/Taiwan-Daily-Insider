@@ -24,10 +24,10 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Mon, 22 Jun 2026 23:16:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 23 Jun 2026 23:02:06 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Tue, 23 Jun 2026 07:15:56 +0800</pubDate>
+    <pubDate>Wed, 24 Jun 2026 07:02:03 +0800</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -595,6 +595,14 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
       <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-06-23/TaiwanDaily_Podcast_Final.mp3" length="14546277" type="audio/mpeg"/>
       <itunes:duration>10:06</itunes:duration>
       <pubDate>Tue, 23 Jun 2026 07:15:56 +0800</pubDate>
+    </item>
+    <item>
+      <title>Taiwan Daily Insider - 2026-06-24</title>
+      <description><![CDATA[Today's Taiwan Daily Insider dives deep into yesterday's dramatic TAIEX market plunge, which saw the index drop significantly after hitting 48,000 points, driven by foreign investor sell-offs and cooling rate cut expectations. We also cover the Central Bank's intervention to stabilize the New Taiwan Dollar and TSMC's global semiconductor impact, including reported price hikes and its central role in the AI chip boom. For local activities, we feature New Taipei's 'Lin Yuan Xun Yi' craft event and the 'Plastic-Free Consumption' initiative in local markets. Tune in for these crucial updates and more to stay informed about life and business in Taiwan.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-06-24/TaiwanDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-06-24/TaiwanDaily_Podcast_Final.mp3" length="20459564" type="audio/mpeg"/>
+      <itunes:duration>14:12</itunes:duration>
+      <pubDate>Wed, 24 Jun 2026 07:02:03 +0800</pubDate>
     </item>
   </channel>
 </rss>
