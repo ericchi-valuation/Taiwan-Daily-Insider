@@ -24,10 +24,10 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Tue, 23 Jun 2026 23:02:06 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 24 Jun 2026 23:04:43 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Wed, 24 Jun 2026 07:02:03 +0800</pubDate>
+    <pubDate>Thu, 25 Jun 2026 07:04:40 +0800</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -603,6 +603,14 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
       <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-06-24/TaiwanDaily_Podcast_Final.mp3" length="20459564" type="audio/mpeg"/>
       <itunes:duration>14:12</itunes:duration>
       <pubDate>Wed, 24 Jun 2026 07:02:03 +0800</pubDate>
+    </item>
+    <item>
+      <title>Taiwan Daily Insider - 2026-06-25</title>
+      <description><![CDATA[This episode of Taiwan Daily Insider covers a dramatic day in the Taiwanese stock market, which saw a record foreign sell-off of 177.4 billion TWD and a 1,057-point plunge, prompting the Central Bank to defend the NTD at the 32 TWD to USD mark. We also explore TSMC's latest advancements in AI chip technology with CoWoS packaging and 2D transistors, and the Ministry of Labor's new guidelines on workplace bullying, including after-hours communication. Today's Taipei events feature the 2026 Taipei International Food Show, showcasing 1,800 manufacturers and Chiayi's premium produce. Tune in for insights on market shifts, tech innovations, labor policies, and local happenings.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-06-25/TaiwanDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-06-25/TaiwanDaily_Podcast_Final.mp3" length="19624481" type="audio/mpeg"/>
+      <itunes:duration>13:37</itunes:duration>
+      <pubDate>Thu, 25 Jun 2026 07:04:40 +0800</pubDate>
     </item>
   </channel>
 </rss>
