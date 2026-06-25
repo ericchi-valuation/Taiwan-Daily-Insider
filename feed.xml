@@ -24,10 +24,10 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Wed, 24 Jun 2026 23:04:43 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 25 Jun 2026 23:11:15 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Thu, 25 Jun 2026 07:04:40 +0800</pubDate>
+    <pubDate>Fri, 26 Jun 2026 07:11:11 +0800</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -611,6 +611,14 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
       <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-06-25/TaiwanDaily_Podcast_Final.mp3" length="19624481" type="audio/mpeg"/>
       <itunes:duration>13:37</itunes:duration>
       <pubDate>Thu, 25 Jun 2026 07:04:40 +0800</pubDate>
+    </item>
+    <item>
+      <title>Taiwan Daily Insider - 2026-06-26</title>
+      <description><![CDATA[Today on Taiwan Daily Insider, Eric covers the Taiwan stock market's resilience despite a massive NT$210 billion foreign capital outflow and the NTD's depreciation past 31.8 per US dollar. We also dive into TSMC's critical role in the AI-capex cycle, with its N2 process and CoWoS capacity ramping up, and discuss policy efforts to optimize Taiwan's labor pension system with TISA, directly impacting expat financial planning. Plus, US lawmakers reaffirm their support for Taiwan, enhancing regional stability. For local events, don't miss the 2026 Taipei International Food Show's immersive Chiayi City Pavilion and New Taipei's Gongliao marine life release and coral restoration efforts. Tune in for these stories and more, keeping you informed on life in Taiwan.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-06-26/TaiwanDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-06-26/TaiwanDaily_Podcast_Final.mp3" length="24262574" type="audio/mpeg"/>
+      <itunes:duration>16:50</itunes:duration>
+      <pubDate>Fri, 26 Jun 2026 07:11:11 +0800</pubDate>
     </item>
   </channel>
 </rss>
