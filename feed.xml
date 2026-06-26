@@ -24,10 +24,10 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Thu, 25 Jun 2026 23:11:15 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 26 Jun 2026 23:03:16 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Fri, 26 Jun 2026 07:11:11 +0800</pubDate>
+    <pubDate>Sat, 27 Jun 2026 07:03:13 +0800</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -619,6 +619,14 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
       <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-06-26/TaiwanDaily_Podcast_Final.mp3" length="24262574" type="audio/mpeg"/>
       <itunes:duration>16:50</itunes:duration>
       <pubDate>Fri, 26 Jun 2026 07:11:11 +0800</pubDate>
+    </item>
+    <item>
+      <title>Taiwan Daily Insider - 2026-06-27</title>
+      <description><![CDATA[Today on Taiwan Daily Insider, we cover the dramatic 'Black Friday' on the Taiex, which saw a 1,683-point drop and NT$143.2 billion in foreign capital outflow, impacting investor confidence and putting the New Taiwan Dollar in a '31-dollar defense battle.' We also discuss crucial labor updates from the Ministry of Labor, reminding employers of mandatory social insurance and pension contributions for summer part-time workers, with significant penalties for non-compliance. In tech news, industry giants Foxconn and TSMC are collaborating on cutting-edge silicon photonics technology. For events, don't miss JANNABI's '1st Asia Tour: Sweat & Stardust in Taipei' and the comprehensive '2026 Summer Fireworks Guide' for spectacular displays across Taiwan. Tune in for these essential updates and more!]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-06-27/TaiwanDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-06-27/TaiwanDaily_Podcast_Final.mp3" length="19764289" type="audio/mpeg"/>
+      <itunes:duration>13:43</itunes:duration>
+      <pubDate>Sat, 27 Jun 2026 07:03:13 +0800</pubDate>
     </item>
   </channel>
 </rss>
