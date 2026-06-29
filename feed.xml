@@ -24,10 +24,10 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Sun, 28 Jun 2026 22:56:45 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 29 Jun 2026 22:49:12 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Mon, 29 Jun 2026 06:56:42 +0800</pubDate>
+    <pubDate>Tue, 30 Jun 2026 06:49:08 +0800</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -643,6 +643,14 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
       <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-06-29/TaiwanDaily_Podcast_Final.mp3" length="18729213" type="audio/mpeg"/>
       <itunes:duration>13:00</itunes:duration>
       <pubDate>Mon, 29 Jun 2026 06:56:42 +0800</pubDate>
+    </item>
+    <item>
+      <title>Taiwan Daily Insider - 2026-06-30</title>
+      <description><![CDATA[Today on Taiwan Daily Insider, we dive into the Central Bank's swift intervention to stabilize the Taiwan dollar, bringing predictability to your finances. We also analyze TSMC's bullish Q3 revenue projections and strong investor confidence, alongside frustrations from real estate developers over continued housing market regulations. For your leisure, check out the '2026 Summer Fireworks Guide' for spectacular displays across Taiwan, and mark your calendars for Japanese singer ASCA's 'ASCA LIVE TOUR 2026 -Remedy-' concert in Taipei this November. Tune in for these insights and more to stay connected with Taiwan!]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-06-30/TaiwanDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-06-30/TaiwanDaily_Podcast_Final.mp3" length="19789366" type="audio/mpeg"/>
+      <itunes:duration>13:44</itunes:duration>
+      <pubDate>Tue, 30 Jun 2026 06:49:08 +0800</pubDate>
     </item>
   </channel>
 </rss>
