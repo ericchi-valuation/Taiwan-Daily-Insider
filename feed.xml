@@ -24,10 +24,10 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Thu, 02 Jul 2026 22:59:10 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 03 Jul 2026 22:57:03 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Fri, 03 Jul 2026 06:59:06 +0800</pubDate>
+    <pubDate>Sat, 04 Jul 2026 06:57:00 +0800</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -675,6 +675,14 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
       <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-07-03/TaiwanDaily_Podcast_Final.mp3" length="17898519" type="audio/mpeg"/>
       <itunes:duration>12:25</itunes:duration>
       <pubDate>Fri, 03 Jul 2026 06:59:06 +0800</pubDate>
+    </item>
+    <item>
+      <title>Taiwan Daily Insider - 2026-07-04</title>
+      <description><![CDATA[Today on Taiwan Daily Insider, Eric covers TSMC's significant investments and strong stock performance, highlighting Taiwan's economic resilience and attractive tech sector. We then delve into the Ministry of Labor's crucial updates on the old labor pension system, offering foreign professionals a pathway to increased retirement savings. Finally, we explore a Reuters report on Taiwan's geopolitical vulnerabilities and the latest TWD exchange rates. Don't miss the "muque LIVE TOUR 2026 'GLHF' IN TAIPEI" and the New Taipei Social Welfare Department's hair donation drive. Tune in for these stories and more!]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-07-04/TaiwanDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-07-04/TaiwanDaily_Podcast_Final.mp3" length="22249474" type="audio/mpeg"/>
+      <itunes:duration>15:27</itunes:duration>
+      <pubDate>Sat, 04 Jul 2026 06:57:00 +0800</pubDate>
     </item>
   </channel>
 </rss>
