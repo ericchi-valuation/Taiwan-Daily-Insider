@@ -24,10 +24,10 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Sat, 04 Jul 2026 22:49:09 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 05 Jul 2026 22:53:27 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Sun, 05 Jul 2026 06:49:06 +0800</pubDate>
+    <pubDate>Mon, 06 Jul 2026 06:53:24 +0800</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -691,6 +691,14 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
       <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-07-05/TaiwanDaily_Podcast_Final.mp3" length="17326751" type="audio/mpeg"/>
       <itunes:duration>12:01</itunes:duration>
       <pubDate>Sun, 05 Jul 2026 06:49:06 +0800</pubDate>
+    </item>
+    <item>
+      <title>Taiwan Daily Insider - 2026-07-06</title>
+      <description><![CDATA[Today's Taiwan Daily Insider dives into TSMC's anticipated second-time full-year revenue outlook revision, potentially challenging a 40% increase in U.S. dollar revenue, and the significant institutional investments flowing into the semiconductor giant. We also explore Taiwan's stock market eyeing 48,000 points and the Central Bank's trillion-dollar liquidity injection, alongside the NTD's recent 'violent appreciation' affecting corporate hedging. Plus, the Ministry of Labor is offering substantial subsidies up to TWD 69,000 for employment stabilization, with a July 31st deadline, and expanded unemployment benefits. For local events, don't miss the Taipei exhibition of Hong Kong public event T-shirts and the Sanying Line opening fireworks at the New Taipei Museum of Art. Tune in for all the details and more!]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-07-06/TaiwanDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-07-06/TaiwanDaily_Podcast_Final.mp3" length="19794382" type="audio/mpeg"/>
+      <itunes:duration>13:44</itunes:duration>
+      <pubDate>Mon, 06 Jul 2026 06:53:24 +0800</pubDate>
     </item>
   </channel>
 </rss>
