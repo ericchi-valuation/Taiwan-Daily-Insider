@@ -24,10 +24,10 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Tue, 07 Jul 2026 22:54:11 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 08 Jul 2026 22:59:16 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Wed, 08 Jul 2026 06:54:08 +0800</pubDate>
+    <pubDate>Thu, 09 Jul 2026 06:59:11 +0800</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -715,6 +715,14 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
       <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-07-08/TaiwanDaily_Podcast_Final.mp3" length="18690969" type="audio/mpeg"/>
       <itunes:duration>12:58</itunes:duration>
       <pubDate>Wed, 08 Jul 2026 06:54:08 +0800</pubDate>
+    </item>
+    <item>
+      <title>Taiwan Daily Insider - 2026-07-09</title>
+      <description><![CDATA[Today's Taiwan Daily Insider delves into the Central Bank's concerns over stock market credit expansion and surging foreign investment, while TSMC shows strong AI-driven momentum despite new competition from a Japanese firm and an industry-wide labor shortage. We also cover recent cross-strait tensions as Taiwan advises ships to ignore boarding demands. For local happenings, Super Junior's Donghae is set to appear at a FENDI event at Taipei 101, and Typhoon Bawei has unfortunately led to concert cancellations for artists like Crowd Lu and Mayday. Tune in for these vital updates and more to navigate your life in Taiwan.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-07-09/TaiwanDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-07-09/TaiwanDaily_Podcast_Final.mp3" length="19573072" type="audio/mpeg"/>
+      <itunes:duration>13:35</itunes:duration>
+      <pubDate>Thu, 09 Jul 2026 06:59:11 +0800</pubDate>
     </item>
   </channel>
 </rss>
