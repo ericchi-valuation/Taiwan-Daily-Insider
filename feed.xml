@@ -24,10 +24,10 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Fri, 10 Jul 2026 22:52:48 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 11 Jul 2026 22:40:34 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Sat, 11 Jul 2026 06:52:45 +0800</pubDate>
+    <pubDate>Sun, 12 Jul 2026 06:40:31 +0800</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -739,6 +739,14 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
       <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-07-11/TaiwanDaily_Podcast_Final.mp3" length="20381823" type="audio/mpeg"/>
       <itunes:duration>14:09</itunes:duration>
       <pubDate>Sat, 11 Jul 2026 06:52:45 +0800</pubDate>
+    </item>
+    <item>
+      <title>Taiwan Daily Insider - 2026-07-12</title>
+      <description><![CDATA[Today on Taiwan Daily Insider, Eric covers the recent TWD depreciation, driven by US dollar strength and significant dividend outflows, and its impact on your purchasing power. We then dive into TSMC's anticipated stock surge following its July 17th earnings call, highlighting its continued indispensable role in AI chip manufacturing. Also featured is the Ministry of Labor's push for workers to switch to the 'new system' of labor pensions, potentially boosting retirement savings by millions. We also discuss warnings of a historic memory chip shortage by 2027 and Taiwan's crucial role in addressing global tech demand. For local flavor, don't miss Mayday's 'Back to That Day' concert at the Taipei Dome and the 'Love Transmission Care Concert' in New Taipei City. Tune in for these vital updates and more!]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-07-12/TaiwanDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-07-12/TaiwanDaily_Podcast_Final.mp3" length="17869053" type="audio/mpeg"/>
+      <itunes:duration>12:24</itunes:duration>
+      <pubDate>Sun, 12 Jul 2026 06:40:31 +0800</pubDate>
     </item>
   </channel>
 </rss>
