@@ -24,10 +24,10 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Sat, 11 Jul 2026 22:40:34 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 12 Jul 2026 22:40:26 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Sun, 12 Jul 2026 06:40:31 +0800</pubDate>
+    <pubDate>Mon, 13 Jul 2026 06:40:23 +0800</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -747,6 +747,14 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
       <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-07-12/TaiwanDaily_Podcast_Final.mp3" length="17869053" type="audio/mpeg"/>
       <itunes:duration>12:24</itunes:duration>
       <pubDate>Sun, 12 Jul 2026 06:40:31 +0800</pubDate>
+    </item>
+    <item>
+      <title>Taiwan Daily Insider - 2026-07-13</title>
+      <description><![CDATA[Today's Taiwan Daily Insider dives into the massive anticipation surrounding TSMC's investor conference, with foreign investors boosting target prices amid surging AI chip demand and plans for new fabs in Chiayi. We also explore GlobalWafers' significant long-term supply agreement with Micron, further solidifying Taiwan's diverse semiconductor ecosystem. Geopolitically, Taipei reaffirms its South China Sea position as the EU and 14 nations uphold the 2016 ruling, while economically, the New Taiwan Dollar's rising Real Effective Exchange Rate impacts purchasing power. For local flavor, don't miss Taipei's early New Year's Eve open-air cinema and the exciting announcement of Grasshopper's concert next year. Tune in for these essential updates and more!]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-07-13/TaiwanDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-07-13/TaiwanDaily_Podcast_Final.mp3" length="17998829" type="audio/mpeg"/>
+      <itunes:duration>12:29</itunes:duration>
+      <pubDate>Mon, 13 Jul 2026 06:40:23 +0800</pubDate>
     </item>
   </channel>
 </rss>
