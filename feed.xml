@@ -24,10 +24,10 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Sun, 12 Jul 2026 22:40:26 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 13 Jul 2026 22:47:47 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Mon, 13 Jul 2026 06:40:23 +0800</pubDate>
+    <pubDate>Tue, 14 Jul 2026 06:47:43 +0800</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -755,6 +755,14 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
       <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-07-13/TaiwanDaily_Podcast_Final.mp3" length="17998829" type="audio/mpeg"/>
       <itunes:duration>12:29</itunes:duration>
       <pubDate>Mon, 13 Jul 2026 06:40:23 +0800</pubDate>
+    </item>
+    <item>
+      <title>Taiwan Daily Insider - 2026-07-14</title>
+      <description><![CDATA[Today on Taiwan Daily Insider, we delve into TSMC's record-breaking June revenue and its implications amidst foreign investor movements, alongside the Central Bank's swift intervention to stabilize the New Taiwan Dollar. We also break down the Ministry of Labor's crucial new pension reforms taking effect August 1st, directly impacting expat financial planning. For your leisure, don't miss Crowd Lu's 'Sad Breakfast Shop' concert and Hsiao Ching-Hung's 'In My Name' tour, both in Taipei. Tune in for these essential updates and more to stay informed about life in Taiwan.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-07-14/TaiwanDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-07-14/TaiwanDaily_Podcast_Final.mp3" length="18757425" type="audio/mpeg"/>
+      <itunes:duration>13:01</itunes:duration>
+      <pubDate>Tue, 14 Jul 2026 06:47:43 +0800</pubDate>
     </item>
   </channel>
 </rss>
