@@ -24,10 +24,10 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Thu, 16 Jul 2026 22:51:15 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 17 Jul 2026 22:41:49 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Fri, 17 Jul 2026 06:51:09 +0800</pubDate>
+    <pubDate>Sat, 18 Jul 2026 06:41:46 +0800</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -787,6 +787,14 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
       <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-07-17/TaiwanDaily_Podcast_Final.mp3" length="19927293" type="audio/mpeg"/>
       <itunes:duration>13:50</itunes:duration>
       <pubDate>Fri, 17 Jul 2026 06:51:09 +0800</pubDate>
+    </item>
+    <item>
+      <title>Taiwan Daily Insider - 2026-07-18</title>
+      <description><![CDATA[Today on Taiwan Daily Insider, Eric covers a historic TAIEX market crash, with the index plummeting over 2,953 points due to a tech selloff and record foreign capital outflow, including a significant drop in TSMC shares. We also discuss the Cabinet's assurance that TSMC's most advanced technology will remain in Taiwan, reinforcing the island's strategic tech position. For your weekend plans, check out the 'Weekend Activity Recommendation' guide for markets and festivals, and the 'Taipei Very Live Opening Concert'. Trending social media topics include frustrations over persistent power outages and public concerns surrounding a recent 'toxic oil incident'. Tune in for essential insights to navigate life in Taiwan.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-07-18/TaiwanDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-07-18/TaiwanDaily_Podcast_Final.mp3" length="19353644" type="audio/mpeg"/>
+      <itunes:duration>13:26</itunes:duration>
+      <pubDate>Sat, 18 Jul 2026 06:41:46 +0800</pubDate>
     </item>
   </channel>
 </rss>
