@@ -24,10 +24,10 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Sat, 18 Jul 2026 22:40:06 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 19 Jul 2026 22:45:54 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Sun, 19 Jul 2026 06:40:03 +0800</pubDate>
+    <pubDate>Mon, 20 Jul 2026 06:45:51 +0800</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -803,6 +803,14 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
       <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-07-19/TaiwanDaily_Podcast_Final.mp3" length="17568749" type="audio/mpeg"/>
       <itunes:duration>12:12</itunes:duration>
       <pubDate>Sun, 19 Jul 2026 06:40:03 +0800</pubDate>
+    </item>
+    <item>
+      <title>Taiwan Daily Insider - 2026-07-20</title>
+      <description><![CDATA[Today on Taiwan Daily Insider, we delve into the challenging landscape of the Taiwan stock market, marked by significant foreign capital outflow, a 14-month low for the New Taiwan Dollar, and expert predictions of further corrections. Amidst this volatility, we examine TSMC's contrasting resilience, with strong international confidence and a surge in shareholder numbers despite broader market downturns. For local events, Taipei's Beian Temple is hosting a Peace and Blessing Pilgrimage, offering a chance to experience traditional culture. Tune in for essential insights to navigate Taiwan's dynamic environment.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-07-20/TaiwanDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-07-20/TaiwanDaily_Podcast_Final.mp3" length="20073369" type="audio/mpeg"/>
+      <itunes:duration>13:56</itunes:duration>
+      <pubDate>Mon, 20 Jul 2026 06:45:51 +0800</pubDate>
     </item>
   </channel>
 </rss>
