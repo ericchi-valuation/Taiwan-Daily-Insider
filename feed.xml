@@ -24,10 +24,10 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Tue, 21 Jul 2026 22:48:11 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 22 Jul 2026 22:56:13 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Wed, 22 Jul 2026 06:48:06 +0800</pubDate>
+    <pubDate>Thu, 23 Jul 2026 06:56:10 +0800</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -827,6 +827,14 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
       <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-07-22/TaiwanDaily_Podcast_Final.mp3" length="19208194" type="audio/mpeg"/>
       <itunes:duration>13:20</itunes:duration>
       <pubDate>Wed, 22 Jul 2026 06:48:06 +0800</pubDate>
+    </item>
+    <item>
+      <title>Taiwan Daily Insider - 2026-07-23</title>
+      <description><![CDATA[Today on Taiwan Daily Insider, we dissect the Taiex's recent rollercoaster ride, including foreign investors ending a 13-day selling streak and AI sectors driving a 592-point rally, alongside the Financial Supervisory Commission's response to the market's largest single-day drop. We also explore the Central Bank's strong efforts to curb the New Taiwan Dollar's depreciation as it approaches 32.5 against the US dollar, noting its decoupling from stock market trends. Plus, we delve into the global semiconductor outlook, with TSMC poised to outperform despite ADR weakness, and discussions around India as a potential future hub. For local flavor, don't miss the 2026 Dihua Street Fireworks featuring a special Spider-Man theme. Tune in for these essential updates and more to navigate your life in Taiwan.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-07-23/TaiwanDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-07-23/TaiwanDaily_Podcast_Final.mp3" length="17605111" type="audio/mpeg"/>
+      <itunes:duration>12:13</itunes:duration>
+      <pubDate>Thu, 23 Jul 2026 06:56:10 +0800</pubDate>
     </item>
   </channel>
 </rss>
