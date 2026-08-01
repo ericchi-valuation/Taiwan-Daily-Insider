@@ -24,10 +24,10 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Fri, 31 Jul 2026 22:55:05 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 01 Aug 2026 22:47:01 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Sat, 01 Aug 2026 06:55:01 +0800</pubDate>
+    <pubDate>Sun, 02 Aug 2026 06:46:57 +0800</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -907,6 +907,14 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
       <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-08-01/TaiwanDaily_Podcast_Final.mp3" length="21155466" type="audio/mpeg"/>
       <itunes:duration>14:41</itunes:duration>
       <pubDate>Sat, 01 Aug 2026 06:55:01 +0800</pubDate>
+    </item>
+    <item>
+      <title>Taiwan Daily Insider - 2026-08-02</title>
+      <description><![CDATA[Today on Taiwan Daily Insider, we dive into the incredible 3,000-point surge in the Taiwan stock market, with TSMC leading the charge and experts calling it a bull market. We also cover Apple's confirmation of rapidly increasing production at TSMC's Arizona plant, highlighting Taiwan's global tech influence. Plus, a crucial new policy means employers refusing to help with voluntary pension contributions will face surcharges from August. For local events, don't miss the ongoing '2026 Dadaocheng Summer Festival' with its dazzling fireworks and drone shows, and explore the '2026 New Taipei San-Ying Fun Theme Activities' for cultural experiences. Tune in for more insights into Taiwan's economic, political, and cultural landscape.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-08-02/TaiwanDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-08-02/TaiwanDaily_Podcast_Final.mp3" length="19610689" type="audio/mpeg"/>
+      <itunes:duration>13:37</itunes:duration>
+      <pubDate>Sun, 02 Aug 2026 06:46:57 +0800</pubDate>
     </item>
   </channel>
 </rss>
