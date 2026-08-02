@@ -24,10 +24,10 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Sat, 01 Aug 2026 22:47:01 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 02 Aug 2026 22:46:50 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Sun, 02 Aug 2026 06:46:57 +0800</pubDate>
+    <pubDate>Mon, 03 Aug 2026 06:46:48 +0800</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -915,6 +915,14 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
       <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-08-02/TaiwanDaily_Podcast_Final.mp3" length="19610689" type="audio/mpeg"/>
       <itunes:duration>13:37</itunes:duration>
       <pubDate>Sun, 02 Aug 2026 06:46:57 +0800</pubDate>
+    </item>
+    <item>
+      <title>Taiwan Daily Insider - 2026-08-03</title>
+      <description><![CDATA[Today's Taiwan Daily Insider dives deep into the projected 2031 bankruptcy of Taiwan's Labor Insurance Fund, discussing the implications of 'late retirement, less payout' and a new transfer option for old-system workers. We also analyze the dynamic Taiwan stock market, which saw a recent thousand-point after-hours drop but shows signs of stabilization, bolstered by an upward revision of Q2 GDP to 12.92%. In tech news, Intel is emerging as a strong competitor to TSMC in advanced packaging, while TSMC continues its strategic global investments. For local events, the '2026 Dadaocheng Summer Festival' dazzled with fireworks and drones, and the 'Malaysian Fo Guang Choir' is hoping to perform at the Taipei Dome. Tune in for these vital updates and more to navigate life in Taiwan.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-08-03/TaiwanDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-08-03/TaiwanDaily_Podcast_Final.mp3" length="18280324" type="audio/mpeg"/>
+      <itunes:duration>12:41</itunes:duration>
+      <pubDate>Mon, 03 Aug 2026 06:46:48 +0800</pubDate>
     </item>
   </channel>
 </rss>
