@@ -24,10 +24,10 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Sat, 08 Aug 2026 22:19:31 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 09 Aug 2026 22:22:42 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Sun, 09 Aug 2026 06:19:26 +0800</pubDate>
+    <pubDate>Mon, 10 Aug 2026 06:22:38 +0800</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -971,6 +971,14 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
       <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-08-09/TaiwanDaily_Podcast_Final.mp3" length="19428249" type="audio/mpeg"/>
       <itunes:duration>13:29</itunes:duration>
       <pubDate>Sun, 09 Aug 2026 06:19:26 +0800</pubDate>
+    </item>
+    <item>
+      <title>Taiwan Daily Insider - 2026-08-10</title>
+      <description><![CDATA[Today's Taiwan Daily Insider brings you major news: TSMC is reportedly acquiring AUO plants to boost advanced packaging, DGBAS is set to revise Taiwan's economic growth to a near 39-year high of 10%, and the Ministry of Labor is studying amendments to the labor pension system for better integration and voluntary contributions. For events, don't miss the 'New Taipei Street Dance School' Hip-Hop Concert at Banqiao Fuzhong Plaza and the exciting countdown activities for aespa's Taipei Dome concert. Tune in for these stories and more to stay informed about life in Taiwan!]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-08-10/TaiwanDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-08-10/TaiwanDaily_Podcast_Final.mp3" length="22044465" type="audio/mpeg"/>
+      <itunes:duration>15:18</itunes:duration>
+      <pubDate>Mon, 10 Aug 2026 06:22:38 +0800</pubDate>
     </item>
   </channel>
 </rss>
