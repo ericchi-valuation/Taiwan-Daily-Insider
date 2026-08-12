@@ -24,10 +24,10 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Tue, 11 Aug 2026 22:34:33 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 12 Aug 2026 22:32:48 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Wed, 12 Aug 2026 06:34:29 +0800</pubDate>
+    <pubDate>Thu, 13 Aug 2026 06:32:43 +0800</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -995,6 +995,14 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
       <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-08-12/TaiwanDaily_Podcast_Final.mp3" length="21993683" type="audio/mpeg"/>
       <itunes:duration>15:16</itunes:duration>
       <pubDate>Wed, 12 Aug 2026 06:34:29 +0800</pubDate>
+    </item>
+    <item>
+      <title>Taiwan Daily Insider - 2026-08-13</title>
+      <description><![CDATA[Today on Taiwan Daily Insider, the Taiex surged nearly 400 points, driven by strong performances in silicon photonics and silicon wafer sectors, signaling robust economic confidence. We also delved into the New Taiwan Dollar's appreciation due to foreign capital inflows and discussed the implications of 'US-Japan currency activism' for your finances. In tech, TSMC's AI dominance and Taiwan's unique 'macro-city' status for chip manufacturing continue to draw global attention and investment. For your leisure, check out Marie Claire's 'August 2026 Nationwide Event Guide' for summer activities and the Changhua 40 Brands x Glass Mazu exhibition at Taipei SOGO. Tune in for all the details affecting foreign professionals in Taiwan.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-08-13/TaiwanDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-08-13/TaiwanDaily_Podcast_Final.mp3" length="21169258" type="audio/mpeg"/>
+      <itunes:duration>14:42</itunes:duration>
+      <pubDate>Thu, 13 Aug 2026 06:32:43 +0800</pubDate>
     </item>
   </channel>
 </rss>
