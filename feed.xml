@@ -24,10 +24,10 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Sun, 16 Aug 2026 22:13:09 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 17 Aug 2026 22:26:40 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Mon, 17 Aug 2026 06:13:05 +0800</pubDate>
+    <pubDate>Tue, 18 Aug 2026 06:26:37 +0800</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -1035,6 +1035,14 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
       <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-08-17/TaiwanDaily_Podcast_Final.mp3" length="19850806" type="audio/mpeg"/>
       <itunes:duration>13:47</itunes:duration>
       <pubDate>Mon, 17 Aug 2026 06:13:05 +0800</pubDate>
+    </item>
+    <item>
+      <title>Taiwan Daily Insider - 2026-08-18</title>
+      <description><![CDATA[Today on Taiwan Daily Insider, we dive into the Central Bank's significant policy shift regarding the Taiwan dollar, moving towards a more market-driven exchange rate. We also analyze the Taiex's rally past 46,000 points, with market observers looking beyond TSMC to new 'dark horse' growth sectors, and CNN's revelation of Taiwan's three additional 'trump cards' dominating global manufacturing. For local events, the BIGBANG concert at the Taipei Dome has a special presale today for CTBC cardholders. Tune in for more insights on Taiwan's dynamic economy and what's trending on social media.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-08-18/TaiwanDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-08-18/TaiwanDaily_Podcast_Final.mp3" length="23775443" type="audio/mpeg"/>
+      <itunes:duration>16:30</itunes:duration>
+      <pubDate>Tue, 18 Aug 2026 06:26:37 +0800</pubDate>
     </item>
   </channel>
 </rss>
