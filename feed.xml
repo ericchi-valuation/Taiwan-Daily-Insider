@@ -24,10 +24,10 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Sat, 22 Aug 2026 22:13:50 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 23 Aug 2026 22:13:49 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Sun, 23 Aug 2026 06:13:46 +0800</pubDate>
+    <pubDate>Mon, 24 Aug 2026 06:13:46 +0800</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -1083,6 +1083,14 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
       <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-08-23/TaiwanDaily_Podcast_Final.mp3" length="19941712" type="audio/mpeg"/>
       <itunes:duration>13:50</itunes:duration>
       <pubDate>Sun, 23 Aug 2026 06:13:46 +0800</pubDate>
+    </item>
+    <item>
+      <title>Taiwan Daily Insider - 2026-08-24</title>
+      <description><![CDATA[Today on Taiwan Daily Insider, we dive into Nvidia CEO Jensen Huang's reported visit to Taiwan, underscoring TSMC's critical role in global AI production and the tech sector's future. We also break down essential labor pension insights for expats, particularly the benefits of voluntary contributions for those with multiple jobs, and explore President Lai's powerful 'peace through strength' message on the 823 Artillery Battle anniversary. Get ready for culture with the 2026 Taipei Arts Festival, kicking off September 5th with a free opening performance featuring giant elephant puppets in Shilin. Tune in for these stories and more to stay informed about life in Taiwan.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-08-24/TaiwanDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-08-24/TaiwanDaily_Podcast_Final.mp3" length="19127319" type="audio/mpeg"/>
+      <itunes:duration>13:16</itunes:duration>
+      <pubDate>Mon, 24 Aug 2026 06:13:46 +0800</pubDate>
     </item>
   </channel>
 </rss>
