@@ -24,10 +24,10 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Sun, 23 Aug 2026 22:13:49 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 24 Aug 2026 22:17:59 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Mon, 24 Aug 2026 06:13:46 +0800</pubDate>
+    <pubDate>Tue, 25 Aug 2026 06:17:56 +0800</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -1091,6 +1091,14 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
       <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-08-24/TaiwanDaily_Podcast_Final.mp3" length="19127319" type="audio/mpeg"/>
       <itunes:duration>13:16</itunes:duration>
       <pubDate>Mon, 24 Aug 2026 06:13:46 +0800</pubDate>
+    </item>
+    <item>
+      <title>Taiwan Daily Insider - 2026-08-25</title>
+      <description><![CDATA[Today on Taiwan Daily Insider, Eric covers the launch of a campaign for workers' rights by Indonesian migrant fishers, highlighting the need for stronger labor protections. The Taiwan Stock Exchange experienced a significant 461-point drop and a four-and-a-half-month low in trading volume, though semiconductor and passive component stocks showed resilience. TSMC's N2 process ramp-up led Goldman Sachs to significantly revise its wafer fab equipment expenditure forecast, reinforcing Taiwan's]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-08-25/TaiwanDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-08-25/TaiwanDaily_Podcast_Final.mp3" length="20754225" type="audio/mpeg"/>
+      <itunes:duration>14:24</itunes:duration>
+      <pubDate>Tue, 25 Aug 2026 06:17:56 +0800</pubDate>
     </item>
   </channel>
 </rss>
