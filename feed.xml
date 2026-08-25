@@ -24,10 +24,10 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Mon, 24 Aug 2026 22:17:59 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 25 Aug 2026 22:21:53 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Tue, 25 Aug 2026 06:17:56 +0800</pubDate>
+    <pubDate>Wed, 26 Aug 2026 06:21:49 +0800</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -1099,6 +1099,14 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
       <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-08-25/TaiwanDaily_Podcast_Final.mp3" length="20754225" type="audio/mpeg"/>
       <itunes:duration>14:24</itunes:duration>
       <pubDate>Tue, 25 Aug 2026 06:17:56 +0800</pubDate>
+    </item>
+    <item>
+      <title>Taiwan Daily Insider - 2026-08-26</title>
+      <description><![CDATA[Today on Taiwan Daily Insider, Eric covers the Taiex's impressive 407-point rebound, with TSMC playing a key role and sectors like finance and biotech shining. We delve into Nvidia's critical earnings report and its implications for Taiwan's AI supply chain, alongside insights from the Jackson Hole meeting affecting global monetary policy. Plus, we examine Hon Hai's stock dynamics with foreign investor sell-offs met by 'national team' support, and TSMC's Dresden plant plans. For local flavor, we highlight the upcoming Accusefive concert at the Taipei Arena and trending social media discussions on childhood Taekwondo and typhoon watch. Tune in for these stories and more to stay informed on Taiwan's economic and cultural landscape.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-08-26/TaiwanDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-08-26/TaiwanDaily_Podcast_Final.mp3" length="21525986" type="audio/mpeg"/>
+      <itunes:duration>14:56</itunes:duration>
+      <pubDate>Wed, 26 Aug 2026 06:21:49 +0800</pubDate>
     </item>
   </channel>
 </rss>
