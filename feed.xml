@@ -24,10 +24,10 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Sat, 29 Aug 2026 23:44:06 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 31 Aug 2026 00:04:02 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Sun, 30 Aug 2026 07:44:01 +0800</pubDate>
+    <pubDate>Mon, 31 Aug 2026 08:03:59 +0800</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -1139,6 +1139,14 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
       <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-08-30/TaiwanDaily_Podcast_Final.mp3" length="18252739" type="audio/mpeg"/>
       <itunes:duration>12:40</itunes:duration>
       <pubDate>Sun, 30 Aug 2026 07:44:01 +0800</pubDate>
+    </item>
+    <item>
+      <title>Taiwan Daily Insider - 2026-08-31</title>
+      <description><![CDATA[Today on Taiwan Daily Insider, we delve into the Central Bank's growing dilemma over interest rate hikes amid global inflationary pressures, examining the potential impact on your finances. We also explore how TSMC is further cementing its global dominance in the AI chip race, with record capital expenditure projections and potential price increases, highlighting Taiwan's critical role in tech. Additionally, the Mainland Affairs Council has issued a crucial advisory for "high-risk nationals" traveling to China, urging extreme caution. For local events, mark your calendar for the 2026 Taipei International Plastics & Rubber Industry Show (TaipeiPLAS) starting September 15th, focusing on smart manufacturing and sustainability. Tune in for these insights and more to stay informed about Taiwan.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-08-31/TaiwanDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-08-31/TaiwanDaily_Podcast_Final.mp3" length="18104155" type="audio/mpeg"/>
+      <itunes:duration>12:34</itunes:duration>
+      <pubDate>Mon, 31 Aug 2026 08:03:59 +0800</pubDate>
     </item>
   </channel>
 </rss>
