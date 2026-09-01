@@ -24,10 +24,10 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Tue, 01 Sep 2026 00:55:51 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 01 Sep 2026 23:43:39 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Tue, 01 Sep 2026 08:55:47 +0800</pubDate>
+    <pubDate>Wed, 02 Sep 2026 07:43:29 +0800</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -1155,6 +1155,14 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
       <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-09-01/TaiwanDaily_Podcast_Final.mp3" length="18620752" type="audio/mpeg"/>
       <itunes:duration>12:55</itunes:duration>
       <pubDate>Tue, 01 Sep 2026 08:55:47 +0800</pubDate>
+    </item>
+    <item>
+      <title>Taiwan Daily Insider - 2026-09-02</title>
+      <description><![CDATA[Today on Taiwan Daily Insider, we dive into Taiwan's robust stock market, which saw significant institutional buying and is poised to challenge new highs, with foreign investors pouring in over NT$110 billion. TSMC unveiled its ambitious AI strategy for manufacturing upgrades and announced expansion into Kaohsiung's Baipu Park for advanced packaging. We also touch on rising expectations for a central bank rate hike and a report on the PLA's island-landing capabilities. For your calendar, don't miss the 'Elephants Are Coming' parade in Shilin from September 5-6, and the charming 'a-We Taiwan Themed Exhibition' at C-LAB. Tune in for more insights on Taiwan's dynamic economy and culture!]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-09-02/TaiwanDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-09-02/TaiwanDaily_Podcast_Final.mp3" length="19044563" type="audio/mpeg"/>
+      <itunes:duration>13:13</itunes:duration>
+      <pubDate>Wed, 02 Sep 2026 07:43:29 +0800</pubDate>
     </item>
   </channel>
 </rss>
