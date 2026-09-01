@@ -24,10 +24,10 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Mon, 31 Aug 2026 00:04:02 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 01 Sep 2026 00:55:51 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Mon, 31 Aug 2026 08:03:59 +0800</pubDate>
+    <pubDate>Tue, 01 Sep 2026 08:55:47 +0800</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -1147,6 +1147,14 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
       <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-08-31/TaiwanDaily_Podcast_Final.mp3" length="18104155" type="audio/mpeg"/>
       <itunes:duration>12:34</itunes:duration>
       <pubDate>Mon, 31 Aug 2026 08:03:59 +0800</pubDate>
+    </item>
+    <item>
+      <title>Taiwan Daily Insider - 2026-09-01</title>
+      <description><![CDATA[Today on Taiwan Daily Insider, we analyze the TAIEX's strong performance, holding above 46,000 points after MSCI rebalancing, and the New Taiwan Dollar's historic August surge impacting your purchasing power. We also cover TSMC's ambitious silicon photonics market share projection and MediaTek's significant $3.9 billion convertible bond, backed by Nvidia and Alphabet. For local events, BIGBANG has an additional Taipei Dome concert with tickets on sale September 4th, and K-pop sensation LE SSERAFIM will perform in Taipei in November 2026. Join us for these stories and more insights into Taiwan's dynamic landscape.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-09-01/TaiwanDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-09-01/TaiwanDaily_Podcast_Final.mp3" length="18620752" type="audio/mpeg"/>
+      <itunes:duration>12:55</itunes:duration>
+      <pubDate>Tue, 01 Sep 2026 08:55:47 +0800</pubDate>
     </item>
   </channel>
 </rss>
