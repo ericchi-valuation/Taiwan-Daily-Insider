@@ -24,10 +24,10 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Wed, 02 Sep 2026 23:44:15 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 03 Sep 2026 23:41:49 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Thu, 03 Sep 2026 07:44:11 +0800</pubDate>
+    <pubDate>Fri, 04 Sep 2026 07:41:46 +0800</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -1171,6 +1171,14 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
       <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-09-03/TaiwanDaily_Podcast_Final.mp3" length="19093464" type="audio/mpeg"/>
       <itunes:duration>13:15</itunes:duration>
       <pubDate>Thu, 03 Sep 2026 07:44:11 +0800</pubDate>
+    </item>
+    <item>
+      <title>Taiwan Daily Insider - 2026-09-04</title>
+      <description><![CDATA[Today on Taiwan Daily Insider, we analyze the New Taiwan Dollar's recent stability and the Central Bank's intervention, alongside the dynamic shifts in Taiwan's stock market. We also explore TSMC's expansion creating new opportunities for foreign businesses and the Executive Yuan's approval of a record budget. Geopolitically, China has boycotted the Gwangju Biennale due to Taiwan's inclusion. For local events, K-Pop sensation BIGBANG is holding an additional concert at the Taipei Dome with presales today, and the Malaysian Fo Guang Chorus is vying for a performance there. Tune in for these stories and more insights into life and business in Taiwan!]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-09-04/TaiwanDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-09-04/TaiwanDaily_Podcast_Final.mp3" length="17921715" type="audio/mpeg"/>
+      <itunes:duration>12:26</itunes:duration>
+      <pubDate>Fri, 04 Sep 2026 07:41:46 +0800</pubDate>
     </item>
   </channel>
 </rss>
