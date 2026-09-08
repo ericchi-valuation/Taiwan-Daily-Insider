@@ -24,10 +24,10 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Mon, 07 Sep 2026 23:54:07 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 08 Sep 2026 23:49:27 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Tue, 08 Sep 2026 07:54:04 +0800</pubDate>
+    <pubDate>Wed, 09 Sep 2026 07:49:23 +0800</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -1211,6 +1211,14 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
       <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-09-08/TaiwanDaily_Podcast_Final.mp3" length="19241422" type="audio/mpeg"/>
       <itunes:duration>13:21</itunes:duration>
       <pubDate>Tue, 08 Sep 2026 07:54:04 +0800</pubDate>
+    </item>
+    <item>
+      <title>Taiwan Daily Insider - 2026-09-09</title>
+      <description><![CDATA[Today on Taiwan Daily Insider, Eric reports on TSMC's deepened partnership with ASML on advanced 12-inch High NA EUV photomasks, solidifying Taiwan's role in future chip technology amidst global competition with Intel and Samsung. The TAIEX saw a 220-point dip, closing at 47,105, though TSMC showed resilience. The New Taiwan Dollar has strengthened to a 3-month high against major currencies, impacting expat purchasing power and remittances. Taiwan's Central Bank Governor, Yang Chin-long, has earned an 'A-' rating for the second consecutive year, underscoring the nation's financial stability. Today's Taipei events include the New Taipei Green Life Music Festival on September 12th, featuring markets and live bands, and Accusefive's highly anticipated concert at the Taipei Arena in November. Tune in for insights on these top stories and more!]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-09-09/TaiwanDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-09-09/TaiwanDaily_Podcast_Final.mp3" length="18721062" type="audio/mpeg"/>
+      <itunes:duration>13:00</itunes:duration>
+      <pubDate>Wed, 09 Sep 2026 07:49:23 +0800</pubDate>
     </item>
   </channel>
 </rss>
