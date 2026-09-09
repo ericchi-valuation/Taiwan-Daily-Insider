@@ -24,10 +24,10 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Tue, 08 Sep 2026 23:49:27 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 09 Sep 2026 23:43:02 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Wed, 09 Sep 2026 07:49:23 +0800</pubDate>
+    <pubDate>Thu, 10 Sep 2026 07:42:58 +0800</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -1219,6 +1219,14 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
       <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-09-09/TaiwanDaily_Podcast_Final.mp3" length="18721062" type="audio/mpeg"/>
       <itunes:duration>13:00</itunes:duration>
       <pubDate>Wed, 09 Sep 2026 07:49:23 +0800</pubDate>
+    </item>
+    <item>
+      <title>Taiwan Daily Insider - 2026-09-10</title>
+      <description><![CDATA[Today's Taiwan Daily Insider dives deep into TSMC's accelerated 1.4nm production and its massive impact on Taiwan's semiconductor supply chain, alongside significant institutional investor confidence in the tech sector. We also cover the Ministry of Labor's new automated pension payout system for 65-year-olds and crucial geopolitical discussions on Taiwan's asymmetric defense strategy. For local events, Stray Kids is set for a Taipei Dome concert on December 12th, and the 2026 New Taipei Drone Exhibition and Forum is open for free registration. Tune in for these stories and more insights into Taiwan's dynamic landscape.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-09-10/TaiwanDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-09-10/TaiwanDaily_Podcast_Final.mp3" length="23073271" type="audio/mpeg"/>
+      <itunes:duration>16:01</itunes:duration>
+      <pubDate>Thu, 10 Sep 2026 07:42:58 +0800</pubDate>
     </item>
   </channel>
 </rss>
