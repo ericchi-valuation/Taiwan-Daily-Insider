@@ -24,10 +24,10 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Thu, 10 Sep 2026 23:34:52 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 11 Sep 2026 23:42:46 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Fri, 11 Sep 2026 07:34:48 +0800</pubDate>
+    <pubDate>Sat, 12 Sep 2026 07:42:42 +0800</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -1235,6 +1235,14 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
       <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-09-11/TaiwanDaily_Podcast_Final.mp3" length="15501105" type="audio/mpeg"/>
       <itunes:duration>10:45</itunes:duration>
       <pubDate>Fri, 11 Sep 2026 07:34:48 +0800</pubDate>
+    </item>
+    <item>
+      <title>Taiwan Daily Insider - 2026-09-12</title>
+      <description><![CDATA[Today on Taiwan Daily Insider, we dive into TSMC's 2-nanometer production boom in Kaohsiung and their innovative STCO strategy to tackle AI challenges, alongside a look at Taiwan's recent stock market downturn and NTD depreciation. We also explore the potential eleventh consecutive minimum wage hike and Micron's generous employee rewards. For your leisure, the highly anticipated Yoshitomo Nara 'Ice Box Room' exhibition debuts, and tickets for the YOASOBI concert at Taipei Dome go on sale soon. Tune in for all the essential updates and insights for life in Taiwan.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-09-12/TaiwanDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-09-12/TaiwanDaily_Podcast_Final.mp3" length="19047697" type="audio/mpeg"/>
+      <itunes:duration>13:13</itunes:duration>
+      <pubDate>Sat, 12 Sep 2026 07:42:42 +0800</pubDate>
     </item>
   </channel>
 </rss>
