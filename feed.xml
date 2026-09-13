@@ -24,10 +24,10 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Sat, 12 Sep 2026 23:36:12 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 13 Sep 2026 23:47:51 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Sun, 13 Sep 2026 07:36:08 +0800</pubDate>
+    <pubDate>Mon, 14 Sep 2026 07:47:48 +0800</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -1251,6 +1251,14 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
       <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-09-13/TaiwanDaily_Podcast_Final.mp3" length="23297089" type="audio/mpeg"/>
       <itunes:duration>16:10</itunes:duration>
       <pubDate>Sun, 13 Sep 2026 07:36:08 +0800</pubDate>
+    </item>
+    <item>
+      <title>Taiwan Daily Insider - 2026-09-14</title>
+      <description><![CDATA[Today's Taiwan Daily Insider covers the critical 'Super Central Bank Week' as Taiwan considers interest rate hikes amid inflation, the Taiex's battle for 46,000 points, and the implications for foreign investors. We also explore TSMC's advanced process expansion and its new Co-packaged Optics growth curve, alongside Taiwan's emergence as a key AI battleground with investments from giants like Nvidia and Google. Plus, we celebrate the naturalization of the 400th foreign high-level expert. For local flavor, we highlight Tsai Chin's emotional return to the stage in Taipei. Tune in for all the essential updates!]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-09-14/TaiwanDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-09-14/TaiwanDaily_Podcast_Final.mp3" length="14067923" type="audio/mpeg"/>
+      <itunes:duration>09:46</itunes:duration>
+      <pubDate>Mon, 14 Sep 2026 07:47:48 +0800</pubDate>
     </item>
   </channel>
 </rss>
