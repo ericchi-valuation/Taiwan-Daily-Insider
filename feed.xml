@@ -24,10 +24,10 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Sun, 13 Sep 2026 23:47:51 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 15 Sep 2026 00:07:38 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Mon, 14 Sep 2026 07:47:48 +0800</pubDate>
+    <pubDate>Tue, 15 Sep 2026 08:07:35 +0800</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -1259,6 +1259,14 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
       <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-09-14/TaiwanDaily_Podcast_Final.mp3" length="14067923" type="audio/mpeg"/>
       <itunes:duration>09:46</itunes:duration>
       <pubDate>Mon, 14 Sep 2026 07:47:48 +0800</pubDate>
+    </item>
+    <item>
+      <title>Taiwan Daily Insider - 2026-09-15</title>
+      <description><![CDATA[Today's Taiwan Daily Insider covers the Taiwan stock market's significant drop below 46,000 points due to foreign capital outflow, leading to TWD depreciation. We also discuss the Central Bank's potential interest rate hike and its implications for the housing market. Additionally, there's a quick update on US-bought SkyGuardian drone testing in Taiwan. For local events, BOYNEXTDOOR has added more Taipei concert dates at Linkou Arena, and New Taipei City's Christmasland is facing questions over its naming rights. Tune in for more insights into Taiwan's economic landscape and lifestyle.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-09-15/TaiwanDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-09-15/TaiwanDaily_Podcast_Final.mp3" length="17381921" type="audio/mpeg"/>
+      <itunes:duration>12:04</itunes:duration>
+      <pubDate>Tue, 15 Sep 2026 08:07:35 +0800</pubDate>
     </item>
   </channel>
 </rss>
