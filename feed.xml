@@ -24,10 +24,10 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Tue, 15 Sep 2026 23:52:21 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 17 Sep 2026 00:02:31 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Wed, 16 Sep 2026 07:52:17 +0800</pubDate>
+    <pubDate>Thu, 17 Sep 2026 08:02:25 +0800</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -1275,6 +1275,14 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
       <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-09-16/TaiwanDaily_Podcast_Final.mp3" length="20408782" type="audio/mpeg"/>
       <itunes:duration>14:10</itunes:duration>
       <pubDate>Wed, 16 Sep 2026 07:52:17 +0800</pubDate>
+    </item>
+    <item>
+      <title>Taiwan Daily Insider - 2026-09-17</title>
+      <description><![CDATA[Today on Taiwan Daily Insider, Eric dives into the latest financial news, covering the U.S. Fed's dovish rate hike and its ripples across Taiwan's stock market, alongside the crucial Central Bank meeting happening today. We also explore TSMC's CoWoS capacity crunch, which is pushing tech giants to diversify their supply chains, and a U.S. Senator's firm statement on Taiwan's security. For your lifestyle, don't miss the 2026 Department Store Anniversary Sales and the highly anticipated YOASOBI ticket lottery for the Taipei Dome. Tune in for these stories and more insights into life in Taiwan!]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-09-17/TaiwanDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-09-17/TaiwanDaily_Podcast_Final.mp3" length="19026382" type="audio/mpeg"/>
+      <itunes:duration>13:12</itunes:duration>
+      <pubDate>Thu, 17 Sep 2026 08:02:25 +0800</pubDate>
     </item>
   </channel>
 </rss>
