@@ -24,10 +24,10 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Fri, 18 Sep 2026 23:48:34 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 19 Sep 2026 23:48:07 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Sat, 19 Sep 2026 07:48:27 +0800</pubDate>
+    <pubDate>Sun, 20 Sep 2026 07:48:03 +0800</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -1299,6 +1299,14 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
       <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-09-19/TaiwanDaily_Podcast_Final.mp3" length="19139857" type="audio/mpeg"/>
       <itunes:duration>13:17</itunes:duration>
       <pubDate>Sat, 19 Sep 2026 07:48:27 +0800</pubDate>
+    </item>
+    <item>
+      <title>Taiwan Daily Insider - 2026-09-20</title>
+      <description><![CDATA[Today's Taiwan Daily Insider features TSMC's ambitious A14 and A16 plant expansions, with facilities projected for completion by 2028 and trial production starting this year in Kaohsiung. We also cover the US potentially delaying arms sales to Taiwan until after upcoming summits, impacting defense firms and sparking geopolitical discussions. Taiwan's stock market has surged to become the world's fourth largest by market cap, driven by strong tech performance and significant foreign investment. For local events, New Taipei City is hosting the '2026 Chao Yue Xinzhuang' cultural event, and Taipei's 'Good Stay PASS' offers discounts at 160 hotels and restaurants. Tune in for more insights and discussions on these critical topics!]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-09-20/TaiwanDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-09-20/TaiwanDaily_Podcast_Final.mp3" length="21674571" type="audio/mpeg"/>
+      <itunes:duration>15:03</itunes:duration>
+      <pubDate>Sun, 20 Sep 2026 07:48:03 +0800</pubDate>
     </item>
   </channel>
 </rss>
