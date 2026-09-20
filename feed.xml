@@ -24,10 +24,10 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Sat, 19 Sep 2026 23:48:07 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 20 Sep 2026 23:43:47 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Sun, 20 Sep 2026 07:48:03 +0800</pubDate>
+    <pubDate>Mon, 21 Sep 2026 07:43:44 +0800</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -1307,6 +1307,14 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
       <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-09-20/TaiwanDaily_Podcast_Final.mp3" length="21674571" type="audio/mpeg"/>
       <itunes:duration>15:03</itunes:duration>
       <pubDate>Sun, 20 Sep 2026 07:48:03 +0800</pubDate>
+    </item>
+    <item>
+      <title>Taiwan Daily Insider - 2026-09-21</title>
+      <description><![CDATA[Today's Taiwan Daily Insider dives into the Taiex's bullish run, with foreign investors pouring NT$86.9 billion into the market and analysts eyeing 48,000 points. We also cover the Central Bank's inflation outlook, which suggests low impact from AI, and its decision not to raise interest rates despite imported inflation concerns. Plus, the Central Bank has fine-tuned housing credit controls, releasing NT$500 billion to boost the construction sector. For local flavor, check out the BIGBANG concert ticket opportunities and the 2026 Chao Yue Xinzhuang festival. Tune in for insights on Taiwan's economy, policy shifts, and vibrant lifestyle.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-09-21/TaiwanDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-09-21/TaiwanDaily_Podcast_Final.mp3" length="18789399" type="audio/mpeg"/>
+      <itunes:duration>13:02</itunes:duration>
+      <pubDate>Mon, 21 Sep 2026 07:43:44 +0800</pubDate>
     </item>
   </channel>
 </rss>
