@@ -24,10 +24,10 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Tue, 22 Sep 2026 23:57:50 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 24 Sep 2026 00:10:08 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Wed, 23 Sep 2026 07:57:46 +0800</pubDate>
+    <pubDate>Thu, 24 Sep 2026 08:10:05 +0800</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -1331,6 +1331,14 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
       <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-09-23/TaiwanDaily_Podcast_Final.mp3" length="18912906" type="audio/mpeg"/>
       <itunes:duration>13:08</itunes:duration>
       <pubDate>Wed, 23 Sep 2026 07:57:46 +0800</pubDate>
+    </item>
+    <item>
+      <title>Taiwan Daily Insider - 2026-09-24</title>
+      <description><![CDATA[Today on Taiwan Daily Insider, the Taiex made history by soaring past 48,000 points, fueled by a robust electronics sector and a recovery in memory chips. We also dive into TSMC's anticipated wafer price hike, which could impact next-gen device costs, and the critical role AI plays in the potential Trump-Xi meeting. For your social calendar, Yurika Nakamura will hold her first Taipei concert '4U GALAXY' in November, and a BIGBANG pop-up store with exclusive surprises opens today at the Taipei Dome. Tune in for these stories and more insights for foreign professionals in Taiwan.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-09-24/TaiwanDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-09-24/TaiwanDaily_Podcast_Final.mp3" length="22671404" type="audio/mpeg"/>
+      <itunes:duration>15:44</itunes:duration>
+      <pubDate>Thu, 24 Sep 2026 08:10:05 +0800</pubDate>
     </item>
   </channel>
 </rss>
