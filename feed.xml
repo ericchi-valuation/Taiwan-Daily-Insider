@@ -24,10 +24,10 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Wed, 30 Sep 2026 00:54:21 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 01 Oct 2026 00:59:58 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Wed, 30 Sep 2026 08:54:17 +0800</pubDate>
+    <pubDate>Thu, 01 Oct 2026 08:59:52 +0800</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -1387,6 +1387,14 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
       <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-09-30/TaiwanDaily_Podcast_Final.mp3" length="16888520" type="audio/mpeg"/>
       <itunes:duration>11:43</itunes:duration>
       <pubDate>Wed, 30 Sep 2026 08:54:17 +0800</pubDate>
+    </item>
+    <item>
+      <title>Taiwan Daily Insider - 2026-10-01</title>
+      <description><![CDATA[Today on Taiwan Daily Insider, we delve into the Taiwan stock market's record-breaking 65.51% surge in the first three quarters, highlighting its resilience and broad-based sector strength. We also examine TSMC's unwavering dominance in the AI semiconductor boom, with its 2nm capacity already sold out for 2027, solidifying Taiwan's global tech leadership. Geopolitically, we discuss Chinese President Xi Jinping's continued focus on Taiwan in recent international engagements. For local flavor, we feature the 'Oyster Baby Pop-Up Store' in Taipei, offering a whimsical experience with a giant shell pearl pool and unique merchandise. Tune in for these stories and more insights into life and business in Taiwan!]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-10-01/TaiwanDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-10-01/TaiwanDaily_Podcast_Final.mp3" length="19991867" type="audio/mpeg"/>
+      <itunes:duration>13:52</itunes:duration>
+      <pubDate>Thu, 01 Oct 2026 08:59:52 +0800</pubDate>
     </item>
   </channel>
 </rss>
