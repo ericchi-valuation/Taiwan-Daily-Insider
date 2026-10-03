@@ -24,10 +24,10 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Fri, 02 Oct 2026 01:15:07 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 03 Oct 2026 00:51:34 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Fri, 02 Oct 2026 09:15:04 +0800</pubDate>
+    <pubDate>Sat, 03 Oct 2026 08:51:30 +0800</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -1403,6 +1403,14 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
       <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-10-02/TaiwanDaily_Podcast_Final.mp3" length="23230633" type="audio/mpeg"/>
       <itunes:duration>16:07</itunes:duration>
       <pubDate>Fri, 02 Oct 2026 09:15:04 +0800</pubDate>
+    </item>
+    <item>
+      <title>Taiwan Daily Insider - 2026-10-03</title>
+      <description><![CDATA[Today on Taiwan Daily Insider, Eric covers the Central Bank's new challenges in managing foreign capital flows and its plans for special financial inspections. We also delve into the significant minimum wage increase to NT$30,900 next year, impacting labor costs for businesses. Defense updates include the arrival of Taiwan's first two F-16V Block 70 fighter jets and the Coast Guard's expulsion of Chinese boats from controlled waters. The Taiwan stock market hit a new record high, and TSMC is implementing innovative water-saving technology. For local events, BIGBANG is holding a concert at the Taipei Dome on October 9th with pop-up stores, and the Taipei Caesar Hotel is offering a VIP ticket housing project. Tune in for more insights on Taiwan's economy, defense, and lifestyle.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-10-03/TaiwanDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-10-03/TaiwanDaily_Podcast_Final.mp3" length="18134248" type="audio/mpeg"/>
+      <itunes:duration>12:35</itunes:duration>
+      <pubDate>Sat, 03 Oct 2026 08:51:30 +0800</pubDate>
     </item>
   </channel>
 </rss>
