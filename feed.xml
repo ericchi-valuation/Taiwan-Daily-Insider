@@ -24,10 +24,10 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Wed, 07 Oct 2026 01:10:39 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 08 Oct 2026 01:29:17 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Wed, 07 Oct 2026 09:10:35 +0800</pubDate>
+    <pubDate>Thu, 08 Oct 2026 09:29:13 +0800</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -1443,6 +1443,14 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
       <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-10-07/TaiwanDaily_Podcast_Final.mp3" length="20606894" type="audio/mpeg"/>
       <itunes:duration>14:18</itunes:duration>
       <pubDate>Wed, 07 Oct 2026 09:10:35 +0800</pubDate>
+    </item>
+    <item>
+      <title>Taiwan Daily Insider - 2026-10-08</title>
+      <description><![CDATA[Today on Taiwan Daily Insider, we delved into the TAIEX's volatile journey towards the 50,000-point milestone, discussing the impact of global events and foreign investor movements, alongside the recent depreciation of the New Taiwan Dollar amidst an 'Asian currency war.' We also highlighted a significant Ministry of Labor subsidy program offering up to 90,000 NTD for eligible individuals. For local events, New Taipei City is hosting various October commercial district activities in areas like Korea Street, Wulai, and Sanxia, showcasing local culture and unique offerings. Tune in for all the details on these crucial developments.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-10-08/TaiwanDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-10-08/TaiwanDaily_Podcast_Final.mp3" length="20596863" type="audio/mpeg"/>
+      <itunes:duration>14:18</itunes:duration>
+      <pubDate>Thu, 08 Oct 2026 09:29:13 +0800</pubDate>
     </item>
   </channel>
 </rss>
