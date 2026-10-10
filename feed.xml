@@ -24,10 +24,10 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Fri, 09 Oct 2026 01:37:45 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 10 Oct 2026 01:29:00 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Fri, 09 Oct 2026 09:37:42 +0800</pubDate>
+    <pubDate>Sat, 10 Oct 2026 09:28:56 +0800</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -1459,6 +1459,14 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
       <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-10-09/TaiwanDaily_Podcast_Final.mp3" length="17563733" type="audio/mpeg"/>
       <itunes:duration>12:11</itunes:duration>
       <pubDate>Fri, 09 Oct 2026 09:37:42 +0800</pubDate>
+    </item>
+    <item>
+      <title>Taiwan Daily Insider - 2026-10-10</title>
+      <description><![CDATA[Today on Taiwan Daily Insider, we analyze institutional investor activity in Taiwan's stock market, noting significant foreign buys in Nanya Tech and Wiwynn despite overall institutional outflows, while TSMC's ADRs saw a slight dip despite a broader US market rally. We also cover the Ministry of Labor's plan to raise salary thresholds for foreign technical workers, a key development for expats and talent recruitment. Geopolitically, we examine reports on China's 'gray zone' tactics around critical island chains and the US urging China to halt pressure on Taiwan, alongside a US official's view that war risk may be exaggerated. For local events, celebrate National Day in Xinyi District with flag-raising, Pokémon, and the 101 fireworks display. Tune in for these stories and more insights into life in Taiwan.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-10-10/TaiwanDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-10-10/TaiwanDaily_Podcast_Final.mp3" length="20717862" type="audio/mpeg"/>
+      <itunes:duration>14:23</itunes:duration>
+      <pubDate>Sat, 10 Oct 2026 09:28:56 +0800</pubDate>
     </item>
   </channel>
 </rss>
