@@ -24,10 +24,10 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Sun, 11 Oct 2026 00:38:17 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 12 Oct 2026 00:53:06 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Sun, 11 Oct 2026 08:38:13 +0800</pubDate>
+    <pubDate>Mon, 12 Oct 2026 08:53:02 +0800</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -1475,6 +1475,14 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
       <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-10-11/TaiwanDaily_Podcast_Final.mp3" length="21428184" type="audio/mpeg"/>
       <itunes:duration>14:52</itunes:duration>
       <pubDate>Sun, 11 Oct 2026 08:38:13 +0800</pubDate>
+    </item>
+    <item>
+      <title>Taiwan Daily Insider - 2026-10-12</title>
+      <description><![CDATA[Today's Taiwan Daily Insider features TSMC's aggressive push for advanced packaging in the U.S. by 2028 and its record-breaking Q3 revenue, with market anticipation for its October 15th earnings report. We also explore Taiwan's strategic concentration of foreign exchange reserves in USD assets. For lifestyle, we dive into trending social media topics like 'Happy National Day' and dating 'aftercare.' Plus, don't miss the BABYMONSTER Taipei concert pre-sale today. Tune in for more insights on Taiwan's economy, tech, and vibrant culture.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-10-12/TaiwanDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-10-12/TaiwanDaily_Podcast_Final.mp3" length="18036445" type="audio/mpeg"/>
+      <itunes:duration>12:31</itunes:duration>
+      <pubDate>Mon, 12 Oct 2026 08:53:02 +0800</pubDate>
     </item>
   </channel>
 </rss>
