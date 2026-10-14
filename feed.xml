@@ -24,10 +24,10 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Mon, 12 Oct 2026 00:53:06 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 14 Oct 2026 00:47:38 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Mon, 12 Oct 2026 08:53:02 +0800</pubDate>
+    <pubDate>Wed, 14 Oct 2026 08:47:35 +0800</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -1483,6 +1483,14 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
       <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-10-12/TaiwanDaily_Podcast_Final.mp3" length="18036445" type="audio/mpeg"/>
       <itunes:duration>12:31</itunes:duration>
       <pubDate>Mon, 12 Oct 2026 08:53:02 +0800</pubDate>
+    </item>
+    <item>
+      <title>Taiwan Daily Insider - 2026-10-14</title>
+      <description><![CDATA[Today on Taiwan Daily Insider, Eric covers the latest market shifts, including a strong bullish outlook for TSMC from major foreign banks and its advanced packaging strategies, despite a significant outflow of foreign capital leading to a notable depreciation of the Taiwan dollar. We also delve into civil groups pushing for higher labor pension contributions and Nvidia's strategic pre-payment to King Yuan Electronics for US capacity. For your evening, don't miss the BABYMONSTER Taipei Concert tickets going on sale today, October 14th. Tune in for all the essential insights to navigate life and business in Taiwan.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-10-14/TaiwanDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-10-14/TaiwanDaily_Podcast_Final.mp3" length="20878359" type="audio/mpeg"/>
+      <itunes:duration>14:29</itunes:duration>
+      <pubDate>Wed, 14 Oct 2026 08:47:35 +0800</pubDate>
     </item>
   </channel>
 </rss>
