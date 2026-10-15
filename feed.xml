@@ -24,10 +24,10 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Wed, 14 Oct 2026 00:47:38 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 15 Oct 2026 00:15:05 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Wed, 14 Oct 2026 08:47:35 +0800</pubDate>
+    <pubDate>Thu, 15 Oct 2026 08:15:00 +0800</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -1491,6 +1491,14 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
       <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-10-14/TaiwanDaily_Podcast_Final.mp3" length="20878359" type="audio/mpeg"/>
       <itunes:duration>14:29</itunes:duration>
       <pubDate>Wed, 14 Oct 2026 08:47:35 +0800</pubDate>
+    </item>
+    <item>
+      <title>Taiwan Daily Insider - 2026-10-15</title>
+      <description><![CDATA[Today on Taiwan Daily Insider, we delved into TSMC's ambitious 40% revenue growth target for 2027, propelled by the AI boom, and the critical challenge of the semiconductor industry's escalating power demands, with Taipower planning an 'integrated grid' to cope. We also explored CPC's significant US$4.4 billion investment in Alaska's LNG project to bolster Taiwan's energy security, alongside a look at the New Taiwan Dollar's recent dramatic shifts and their impact on trade conditions for expats. For local flavor, we highlighted the revitalization of Taipei's Xing'an Market with 12 youth creative brands and a proposal for an international performance hall in New Taipei. Tune in for essential insights on Taiwan's economy, infrastructure, and local happenings.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-10-15/TaiwanDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-10-15/TaiwanDaily_Podcast_Final.mp3" length="18408220" type="audio/mpeg"/>
+      <itunes:duration>12:46</itunes:duration>
+      <pubDate>Thu, 15 Oct 2026 08:15:00 +0800</pubDate>
     </item>
   </channel>
 </rss>
