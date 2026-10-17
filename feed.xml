@@ -24,10 +24,10 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Fri, 16 Oct 2026 00:01:29 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 17 Oct 2026 00:06:49 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Fri, 16 Oct 2026 08:01:25 +0800</pubDate>
+    <pubDate>Sat, 17 Oct 2026 08:06:45 +0800</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -1507,6 +1507,14 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
       <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-10-16/TaiwanDaily_Podcast_Final.mp3" length="17849617" type="audio/mpeg"/>
       <itunes:duration>12:23</itunes:duration>
       <pubDate>Fri, 16 Oct 2026 08:01:25 +0800</pubDate>
+    </item>
+    <item>
+      <title>Taiwan Daily Insider - 2026-10-17</title>
+      <description><![CDATA[Today on Taiwan Daily Insider, we dive into significant foreign capital outflows from the Taiwan stock market, totaling NT$681.7 billion over eight days, alongside the New Taiwan Dollar's recent depreciation, making it the weakest Asian currency this week. We also analyze TSMC's record-breaking third-quarter results amidst a global tech downturn and futures market plunge. For your weekend, check out Hebe Tien's '要去什麼地方' concert at Taipei Arena and a comprehensive '2026 Weekend Activity Guide' featuring seven major events across Taiwan, including 'The Little Prince' and hot air balloon festivals. Tune in for these insights and more to stay informed on life in Taiwan.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-10-17/TaiwanDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-10-17/TaiwanDaily_Podcast_Final.mp3" length="20357373" type="audio/mpeg"/>
+      <itunes:duration>14:08</itunes:duration>
+      <pubDate>Sat, 17 Oct 2026 08:06:45 +0800</pubDate>
     </item>
   </channel>
 </rss>
