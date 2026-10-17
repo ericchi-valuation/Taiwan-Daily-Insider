@@ -24,10 +24,10 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Sat, 17 Oct 2026 00:06:49 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 17 Oct 2026 23:39:37 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Sat, 17 Oct 2026 08:06:45 +0800</pubDate>
+    <pubDate>Sun, 18 Oct 2026 07:39:33 +0800</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -1515,6 +1515,14 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
       <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-10-17/TaiwanDaily_Podcast_Final.mp3" length="20357373" type="audio/mpeg"/>
       <itunes:duration>14:08</itunes:duration>
       <pubDate>Sat, 17 Oct 2026 08:06:45 +0800</pubDate>
+    </item>
+    <item>
+      <title>Taiwan Daily Insider - 2026-10-18</title>
+      <description><![CDATA[Today on Taiwan Daily Insider, Eric covers TSMC's strategic 3nm Kumamoto Fab 2, set to receive significant Japanese subsidies and begin production in late 2027, further cementing Taiwan's global tech leadership. We also delve into Taiwan's stock market, which saw a 2,202-point drop and 7 trillion TWD loss, analyzing foreign selling while highlighting the economy's robust underlying fundamentals. The Central Bank's monetary policy and its strategy of diversifying reserve assets, including gold, are also discussed, with implications for the TWD's stability and expat finances. Plus, we explore the ongoing semiconductor supply chain reshuffle and the burgeoning opportunities in AI server components for Taiwan's tech sector. For events, XG holds a concert at the Taipei Arena, and the New Taipei City Market Festival offers day-to-night local exploration. Tune in for more insights!]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-10-18/TaiwanDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-10-18/TaiwanDaily_Podcast_Final.mp3" length="17612008" type="audio/mpeg"/>
+      <itunes:duration>12:13</itunes:duration>
+      <pubDate>Sun, 18 Oct 2026 07:39:33 +0800</pubDate>
     </item>
   </channel>
 </rss>
