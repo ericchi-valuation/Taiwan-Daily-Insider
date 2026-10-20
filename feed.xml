@@ -24,10 +24,10 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Sun, 18 Oct 2026 23:51:16 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 20 Oct 2026 00:51:30 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Mon, 19 Oct 2026 07:51:12 +0800</pubDate>
+    <pubDate>Tue, 20 Oct 2026 08:51:25 +0800</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -1531,6 +1531,14 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
       <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-10-19/TaiwanDaily_Podcast_Final.mp3" length="20595609" type="audio/mpeg"/>
       <itunes:duration>14:18</itunes:duration>
       <pubDate>Mon, 19 Oct 2026 07:51:12 +0800</pubDate>
+    </item>
+    <item>
+      <title>Taiwan Daily Insider - 2026-10-20</title>
+      <description><![CDATA[Today's Taiwan Daily Insider dives into Intel CEO Pat Gelsinger's insights on TSMC's lead and China's tech progress, alongside a significant 650-point rebound in the Taiwan stock market driven by foreign and domestic institutional buying. We also cover the Central Bank's rare intervention to stabilize the TWD amidst volatility, and TSMC's continued leadership in AI. For local events, don't miss the Taipei International Electronics Show, showcasing tech innovations, and the 2026 New Taipei City Market Festival, highlighting market transformations. Tune in for more essential insights into Taiwan's economy, tech, and lifestyle.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-10-20/TaiwanDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-10-20/TaiwanDaily_Podcast_Final.mp3" length="17838960" type="audio/mpeg"/>
+      <itunes:duration>12:23</itunes:duration>
+      <pubDate>Tue, 20 Oct 2026 08:51:25 +0800</pubDate>
     </item>
   </channel>
 </rss>
