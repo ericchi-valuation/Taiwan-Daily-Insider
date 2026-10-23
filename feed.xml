@@ -24,10 +24,10 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Tue, 20 Oct 2026 00:51:30 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 23 Oct 2026 00:18:18 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Tue, 20 Oct 2026 08:51:25 +0800</pubDate>
+    <pubDate>Fri, 23 Oct 2026 08:18:13 +0800</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -1539,6 +1539,14 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
       <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-10-20/TaiwanDaily_Podcast_Final.mp3" length="17838960" type="audio/mpeg"/>
       <itunes:duration>12:23</itunes:duration>
       <pubDate>Tue, 20 Oct 2026 08:51:25 +0800</pubDate>
+    </item>
+    <item>
+      <title>Taiwan Daily Insider - 2026-10-23</title>
+      <description><![CDATA[Today on Taiwan Daily Insider, we cover global semiconductor market turbulence following sharp declines in US tech stocks, TSMC's strategic moves to bypass rare earth constraints, and the National Security Bureau's latest assessment on escalating election interference tactics. We also look at foreign capital flows on the Taiex and explore trending social discussions on overseas careers and living arrangements. For weekend events, we highlight the rescheduled concert by Gao Ming-jun due to recent severe weather, alongside ticket sales details for Kenshi Yonezu's upcoming shows at the Taipei Dome. Tune in for your complete daily digest of business, policy, and cultural news from Taiwan!]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-10-23/TaiwanDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-10-23/TaiwanDaily_Podcast_Final.mp3" length="22112174" type="audio/mpeg"/>
+      <itunes:duration>15:21</itunes:duration>
+      <pubDate>Fri, 23 Oct 2026 08:18:13 +0800</pubDate>
     </item>
   </channel>
 </rss>
