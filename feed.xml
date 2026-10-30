@@ -24,10 +24,10 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Thu, 29 Oct 2026 01:25:44 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 30 Oct 2026 01:29:50 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Thu, 29 Oct 2026 09:25:41 +0800</pubDate>
+    <pubDate>Fri, 30 Oct 2026 09:29:46 +0800</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -1555,6 +1555,14 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
       <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-10-29/TaiwanDaily_Podcast_Final.mp3" length="21612504" type="audio/mpeg"/>
       <itunes:duration>15:00</itunes:duration>
       <pubDate>Thu, 29 Oct 2026 09:25:41 +0800</pubDate>
+    </item>
+    <item>
+      <title>Taiwan Daily Insider - 2026-10-30</title>
+      <description><![CDATA[Today on Taiwan Daily Insider, we dive into Taiwan's stock market downturn, with the Taiex falling over 1200 points and TSMC shares impacted by global tech tremors. We also explore the Central Bank's debate on normalizing monetary policy to counter the 'low-interest rate trap' and TWD depreciation pressures, plus new employment incentives from the Ministry of Labor offering up to 108,000 TWD. For local fun, get ready for the 2026 New Taipei Christmasland starting November 13th, and check out Aesop's unique 'Queer Bookstores' in Taipei and Taichung for a free book selection event. Tune in for these stories and more insights for your life in Taiwan!]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-10-30/TaiwanDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-10-30/TaiwanDaily_Podcast_Final.mp3" length="19228256" type="audio/mpeg"/>
+      <itunes:duration>13:21</itunes:duration>
+      <pubDate>Fri, 30 Oct 2026 09:29:46 +0800</pubDate>
     </item>
   </channel>
 </rss>
