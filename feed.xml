@@ -24,10 +24,10 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Sat, 31 Oct 2026 01:15:37 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 01 Nov 2026 00:37:24 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Sat, 31 Oct 2026 09:15:33 +0800</pubDate>
+    <pubDate>Sun, 01 Nov 2026 08:37:21 +0800</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -1571,6 +1571,14 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
       <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-10-31/TaiwanDaily_Podcast_Final.mp3" length="16943691" type="audio/mpeg"/>
       <itunes:duration>11:45</itunes:duration>
       <pubDate>Sat, 31 Oct 2026 09:15:33 +0800</pubDate>
+    </item>
+    <item>
+      <title>Taiwan Daily Insider - 2026-11-01</title>
+      <description><![CDATA[Today's Taiwan Daily Insider reports on significant movements in the Taiwan stock market, with foreign investors initiating a large sell-off while investment trusts maintain long-term optimism. We also cover AU Optronics' strategic sale of its Taichung plant to TSMC to bolster its financial health, and TSMC's Phoenix fabs attracting a new Sunbelt Real Estate Fund. The Ministry of Labor clarified choices for Labor Insurance retirement pensions and announced new contribution rules for farmers and fishermen. For local events, New Taipei hosted a Halloween activity with public officials, and a unique 'Redundant Word Gym' event was held in Kaohsiung during the Taipei mayoral debate. Tune in for more insights into Taiwan's dynamic economy and lifestyle.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-11-01/TaiwanDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-11-01/TaiwanDaily_Podcast_Final.mp3" length="19189386" type="audio/mpeg"/>
+      <itunes:duration>13:19</itunes:duration>
+      <pubDate>Sun, 01 Nov 2026 08:37:21 +0800</pubDate>
     </item>
   </channel>
 </rss>
