@@ -24,10 +24,10 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Mon, 02 Nov 2026 01:10:54 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 03 Nov 2026 03:13:14 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Mon, 02 Nov 2026 09:10:50 +0800</pubDate>
+    <pubDate>Tue, 03 Nov 2026 11:13:10 +0800</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -1587,6 +1587,14 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
       <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-11-02/TaiwanDaily_Podcast_Final.mp3" length="16933660" type="audio/mpeg"/>
       <itunes:duration>11:45</itunes:duration>
       <pubDate>Mon, 02 Nov 2026 09:10:50 +0800</pubDate>
+    </item>
+    <item>
+      <title>Taiwan Daily Insider - 2026-11-03</title>
+      <description><![CDATA[Today's Taiwan Daily Insider dives into the recent market downturn, where the Taiex shed 291 points, led by a four-day decline in TSMC shares, though analysts suggest a potential rebound. We also explore the central bank's proactive measures to stabilize the Taiwan dollar against foreign capital outflow, including easing curbs for exporters. Plus, we examine how global political uncertainties, particularly the 'Trump factor,' might be influencing foreign investor sentiment in Taiwan. For your weekend plans, check out Vogue Taiwan's 'November Weekend Inspiration List' for must-visit markets and exhibitions in Taipei and Chiayi. Tune in for these stories and more insights into Taiwan's dynamic landscape.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-11-03/TaiwanDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-11-03/TaiwanDaily_Podcast_Final.mp3" length="18778741" type="audio/mpeg"/>
+      <itunes:duration>13:02</itunes:duration>
+      <pubDate>Tue, 03 Nov 2026 11:13:10 +0800</pubDate>
     </item>
   </channel>
 </rss>
