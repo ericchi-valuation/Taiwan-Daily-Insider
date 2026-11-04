@@ -24,10 +24,10 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Tue, 03 Nov 2026 03:13:14 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 04 Nov 2026 01:51:05 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Tue, 03 Nov 2026 11:13:10 +0800</pubDate>
+    <pubDate>Wed, 04 Nov 2026 09:50:58 +0800</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -1595,6 +1595,14 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
       <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-11-03/TaiwanDaily_Podcast_Final.mp3" length="18778741" type="audio/mpeg"/>
       <itunes:duration>13:02</itunes:duration>
       <pubDate>Tue, 03 Nov 2026 11:13:10 +0800</pubDate>
+    </item>
+    <item>
+      <title>Taiwan Daily Insider - 2026-11-04</title>
+      <description><![CDATA[Today on Taiwan Daily Insider, we dive deep into the dramatic market 'blood bath' as the Taiex plunged 1,612 points, marking the seventh largest single-day drop in history, driven by a massive foreign capital outflow. We also cover the New Taiwan Dollar's depreciation to a 1.5-year low and how TSMC showed surprising resilience amidst the turmoil. For local events, don't miss the Show Up Taipei United Arena Concert offering discount vouchers, and mark your calendars for 5566's 'NEVER DIE' Tour returning to Taipei in 2027. Tune in for all the details shaping Taiwan's economy and lifestyle.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-11-04/TaiwanDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-11-04/TaiwanDaily_Podcast_Final.mp3" length="18622633" type="audio/mpeg"/>
+      <itunes:duration>12:55</itunes:duration>
+      <pubDate>Wed, 04 Nov 2026 09:50:58 +0800</pubDate>
     </item>
   </channel>
 </rss>
