@@ -24,10 +24,10 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Sat, 07 Nov 2026 01:29:51 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 08 Nov 2026 01:03:22 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Sat, 07 Nov 2026 09:29:47 +0800</pubDate>
+    <pubDate>Sun, 08 Nov 2026 09:03:18 +0800</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -1627,6 +1627,14 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
       <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-11-07/TaiwanDaily_Podcast_Final.mp3" length="22151671" type="audio/mpeg"/>
       <itunes:duration>15:22</itunes:duration>
       <pubDate>Sat, 07 Nov 2026 09:29:47 +0800</pubDate>
+    </item>
+    <item>
+      <title>Taiwan Daily Insider - 2026-11-08</title>
+      <description><![CDATA[Today on Taiwan Daily Insider, TSMC clarifies that it will not compete with memory giants in 3D DRAM production, an international baseball star receives Taiwan's Employment Gold Card, and IPAC emphasizes Taiwan Strait security as a global priority. For weekend activities in Taipei, check out the ITF Kinmen Pavilion at the Nangang Exhibition Center for island travel promotions, or visit the Hello Kitty Taiwan Sensibility pop-up store near Huashan 1914 Creative Park for exclusive collectibles and local dining. Tune in for your complete daily briefing on Taiwan's latest business, policy, and lifestyle updates!]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-11-08/TaiwanDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-11-08/TaiwanDaily_Podcast_Final.mp3" length="18699120" type="audio/mpeg"/>
+      <itunes:duration>12:59</itunes:duration>
+      <pubDate>Sun, 08 Nov 2026 09:03:18 +0800</pubDate>
     </item>
   </channel>
 </rss>
