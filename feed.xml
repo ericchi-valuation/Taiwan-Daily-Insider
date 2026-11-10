@@ -24,10 +24,10 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Mon, 09 Nov 2026 01:23:50 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 10 Nov 2026 03:59:43 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Mon, 09 Nov 2026 09:23:47 +0800</pubDate>
+    <pubDate>Tue, 10 Nov 2026 11:59:38 +0800</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -1643,6 +1643,14 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
       <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-11-09/TaiwanDaily_Podcast_Final.mp3" length="21619399" type="audio/mpeg"/>
       <itunes:duration>15:00</itunes:duration>
       <pubDate>Mon, 09 Nov 2026 09:23:47 +0800</pubDate>
+    </item>
+    <item>
+      <title>Taiwan Daily Insider - 2026-11-10</title>
+      <description><![CDATA[Today's episode covers the Taiex posting its second-largest single-day rally following National Stabilization Fund intervention pledges, TIER forecasting a stellar 12.34% GDP growth driven by record-breaking exports, and Central Bank Governor Yang Chin-long reassuring markets over November foreign capital outflows. For local happenings, we feature the launch of the 2026 New Taipei City Christmasland in Banqiao offering seven themed light zones, and the weekend Ocean Current Music Festival hosted alongside a city parade in Taipei. Tune in to stay fully informed on Taiwan's economic moves and local lifestyle highlights!]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-11-10/TaiwanDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-11-10/TaiwanDaily_Podcast_Final.mp3" length="16821437" type="audio/mpeg"/>
+      <itunes:duration>11:40</itunes:duration>
+      <pubDate>Tue, 10 Nov 2026 11:59:38 +0800</pubDate>
     </item>
   </channel>
 </rss>
