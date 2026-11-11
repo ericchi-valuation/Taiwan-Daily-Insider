@@ -24,10 +24,10 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Tue, 10 Nov 2026 03:59:43 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 11 Nov 2026 01:38:14 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Tue, 10 Nov 2026 11:59:38 +0800</pubDate>
+    <pubDate>Wed, 11 Nov 2026 09:38:10 +0800</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -1651,6 +1651,14 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
       <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-11-10/TaiwanDaily_Podcast_Final.mp3" length="16821437" type="audio/mpeg"/>
       <itunes:duration>11:40</itunes:duration>
       <pubDate>Tue, 10 Nov 2026 11:59:38 +0800</pubDate>
+    </item>
+    <item>
+      <title>Taiwan Daily Insider - 2026-11-11</title>
+      <description><![CDATA[In today's episode, TSMC expands its AI ecosystem presence by acquiring equity stakes in Anthropic and OpenAI alongside a 60 percent surge in October sales, while Taiwan's corporate revenue hits a record 6.74 trillion New Taiwan Dollars as exporters and the Central Bank steady the local currency. We also cover defense monitoring of Chinese 'area denial' military drills in the Western Pacific and examine mid-career investment strategies trending on local social media. For upcoming events, New Taipei City Christmasland opens on November 13th with major holiday light displays in Banqiao, and FTISLAND concert tickets go on sale on November 14th via ibon. Tune in for these updates alongside your daily weather and currency report!]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-11-11/TaiwanDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-11-11/TaiwanDaily_Podcast_Final.mp3" length="19032650" type="audio/mpeg"/>
+      <itunes:duration>13:12</itunes:duration>
+      <pubDate>Wed, 11 Nov 2026 09:38:10 +0800</pubDate>
     </item>
   </channel>
 </rss>
