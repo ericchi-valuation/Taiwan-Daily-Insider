@@ -24,10 +24,10 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Wed, 11 Nov 2026 01:38:14 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 12 Nov 2026 02:40:18 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Wed, 11 Nov 2026 09:38:10 +0800</pubDate>
+    <pubDate>Thu, 12 Nov 2026 10:40:13 +0800</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -1659,6 +1659,14 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
       <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-11-11/TaiwanDaily_Podcast_Final.mp3" length="19032650" type="audio/mpeg"/>
       <itunes:duration>13:12</itunes:duration>
       <pubDate>Wed, 11 Nov 2026 09:38:10 +0800</pubDate>
+    </item>
+    <item>
+      <title>Taiwan Daily Insider - 2026-11-12</title>
+      <description><![CDATA[Today on Taiwan Daily Insider, Eric covers Taiwan's stock market surging 1,545 points alongside expert warnings of 45,000-point resistance, Barings' rare investment report on TSMC, G7 foreign ministers expressing concern over military moves east of Taiwan, and Acer founder Stan Shih being named Taiwan's 2026 APEC envoy. For weekend plans, check out the Taipei Dome Events for upcoming baseball games and concerts, or visit the Single Mothers Charity Carnival for local community activities. Tune in for your complete daily briefing on Taiwan business, foreign policy, and local trends!]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-11-12/TaiwanDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-11-12/TaiwanDaily_Podcast_Final.mp3" length="20946694" type="audio/mpeg"/>
+      <itunes:duration>14:32</itunes:duration>
+      <pubDate>Thu, 12 Nov 2026 10:40:13 +0800</pubDate>
     </item>
   </channel>
 </rss>
