@@ -24,10 +24,10 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Mon, 23 Nov 2026 02:08:21 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 24 Nov 2026 05:45:17 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Mon, 23 Nov 2026 10:08:18 +0800</pubDate>
+    <pubDate>Tue, 24 Nov 2026 13:45:13 +0800</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -1755,6 +1755,14 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
       <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-11-23/TaiwanDaily_Podcast_Final.mp3" length="21093398" type="audio/mpeg"/>
       <itunes:duration>14:38</itunes:duration>
       <pubDate>Mon, 23 Nov 2026 10:08:18 +0800</pubDate>
+    </item>
+    <item>
+      <title>Taiwan Daily Insider - 2026-11-24</title>
+      <description><![CDATA[Today's episode covers the Taiwan Stock Exchange cutting margin maintenance ratios to stabilize markets following a historic 778-point rebound, TSMC's massive stock rally alongside executive confidence in AI demand, and the Ministry of the Interior's new housing policy rollout as Taiwan officially enters a super-aged society. We also highlight two major upcoming local events: the BIGBANG 20th Anniversary Exhibition Taipei Station (tickets on sale starting today, Nov 24) and Mayday Ashin's first solo concert at Taipei Arena on Dec 6. Tune in for your complete daily briefing on Taiwan business, market trends, policy, and lifestyle.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-11-24/TaiwanDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-11-24/TaiwanDaily_Podcast_Final.mp3" length="24576043" type="audio/mpeg"/>
+      <itunes:duration>17:03</itunes:duration>
+      <pubDate>Tue, 24 Nov 2026 13:45:13 +0800</pubDate>
     </item>
   </channel>
 </rss>
