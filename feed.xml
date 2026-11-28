@@ -24,10 +24,10 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Fri, 27 Nov 2026 03:56:10 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 28 Nov 2026 03:44:23 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Fri, 27 Nov 2026 11:56:06 +0800</pubDate>
+    <pubDate>Sat, 28 Nov 2026 11:44:18 +0800</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -1787,6 +1787,14 @@ New episode every weekday. No fluff, no filler. Just Taiwan, decoded.</descripti
       <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-11-27/TaiwanDaily_Podcast_Final.mp3" length="19044562" type="audio/mpeg"/>
       <itunes:duration>13:13</itunes:duration>
       <pubDate>Fri, 27 Nov 2026 11:56:06 +0800</pubDate>
+    </item>
+    <item>
+      <title>Taiwan Daily Insider - 2026-11-28</title>
+      <description><![CDATA[Today on Taiwan Daily Insider, we examine Taiwan's stunning economic growth forecast revision to 13.28 percent by DGBAS, TSMC's announcement of its A14 process node readiness, and election day across Taiwan for the 2026 9-in-1 local elections and nuclear referendum. In local events, the 2026 New Taipei Christmasland features Kanahei's Small Animals with four massive light districts, while the 2026 New Taipei Christmas Market hosts over one hundred stalls alongside the Asia Esports Finals. Tune in for all the details and practical insights to kick off your weekend!]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-11-28/TaiwanDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/Taiwan-Daily-Insider/releases/download/ep-2026-11-28/TaiwanDaily_Podcast_Final.mp3" length="22816852" type="audio/mpeg"/>
+      <itunes:duration>15:50</itunes:duration>
+      <pubDate>Sat, 28 Nov 2026 11:44:18 +0800</pubDate>
     </item>
   </channel>
 </rss>
